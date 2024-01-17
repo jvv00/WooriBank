@@ -5,29 +5,72 @@
   width: 100%;
   height: $hd-height;
   position: relative;
+  border-bottom: 2px solid $primary-400;
   .hd_wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
     width: 1220px;
+    height: 100%;
     margin: 0 auto;
-    .hd_logo img {
+    padding: 50px 0 15px 0;
+    .hd_logo {
       width: 112px;
+      position: relative;
+      padding-top: 6px;
+      img {
+        width: 100%;
+      }
     }
     .tnb {
       width: 100%;
+      position: absolute;
       display: inline-block;
+      top: 15px;
+      font-family: "WooridaumL";
+      font-size: 12px;
       .tnb_left {
         float: left;
         li {
           display: inline;
+          margin-right: 15px;
         }
       }
       .tnb_right {
         float: right;
         li {
           display: inline;
+          margin-right: 15px;
         }
       }
       .tnb_lang {
         float: right;
+      }
+    }
+    .gnb {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      margin-right: 315px;
+      .gnb_1depth {
+        li {
+          display: inline-block;
+          font-family: "WooridaumB";
+          font-size: 18px;
+          padding: 0 20px;
+          .gnb_2depth {
+            display: none;
+          }
+        }
+      }
+      .gnb_right {
+        position: absolute;
+        right: 0;
+        display: flex;
+        font-size: 25px;
+        .gnb_search {
+          margin-right: 15px;
+        }
       }
     }
   }

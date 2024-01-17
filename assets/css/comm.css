@@ -271,32 +271,73 @@ legend {
   width: 100%;
   height: 100px;
   position: relative;
+  border-bottom: 2px solid #0067ac;
 }
 #header .hd_wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
   width: 1220px;
+  height: 100%;
   margin: 0 auto;
+  padding: 50px 0 15px 0;
+}
+#header .hd_wrap .hd_logo {
+  width: 112px;
+  position: relative;
+  padding-top: 6px;
 }
 #header .hd_wrap .hd_logo img {
-  width: 112px;
+  width: 100%;
 }
 #header .hd_wrap .tnb {
   width: 100%;
+  position: absolute;
   display: inline-block;
+  top: 15px;
+  font-family: "WooridaumL";
+  font-size: 12px;
 }
 #header .hd_wrap .tnb .tnb_left {
   float: left;
 }
 #header .hd_wrap .tnb .tnb_left li {
   display: inline;
+  margin-right: 15px;
 }
 #header .hd_wrap .tnb .tnb_right {
   float: right;
 }
 #header .hd_wrap .tnb .tnb_right li {
   display: inline;
+  margin-right: 15px;
 }
 #header .hd_wrap .tnb .tnb_lang {
   float: right;
+}
+#header .hd_wrap .gnb {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-right: 315px;
+}
+#header .hd_wrap .gnb .gnb_1depth li {
+  display: inline-block;
+  font-family: "WooridaumB";
+  font-size: 18px;
+  padding: 0 20px;
+}
+#header .hd_wrap .gnb .gnb_1depth li .gnb_2depth {
+  display: none;
+}
+#header .hd_wrap .gnb .gnb_right {
+  position: absolute;
+  right: 0;
+  display: flex;
+  font-size: 25px;
+}
+#header .hd_wrap .gnb .gnb_right .gnb_search {
+  margin-right: 15px;
 }
 
 #footer {
