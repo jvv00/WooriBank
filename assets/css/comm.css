@@ -165,11 +165,11 @@ input[type=password] {
 
 /* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
 /* skipnavigation */
-#sskip {
+#skip {
   position: relative;
   z-index: 3000;
 }
-#sskip a {
+#skip a {
   position: absolute;
   top: -35px;
   left: 0;
@@ -182,7 +182,7 @@ input[type=password] {
   text-align: center;
   opacity: 0;
 }
-#sskip a:focus {
+#skip a:focus {
   top: 0;
   opacity: 1;
   z-index: 1000;
