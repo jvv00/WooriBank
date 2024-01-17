@@ -1,3 +1,24 @@
 @import "variables", "mixins", "fonts", "reset";
 
+// 헤더
+#header {
+  width: 100%;
+  height: $hd-height;
+  position: relative;
+  .hd_wrap {
+    width: 1220px;
+    margin: 0 auto;
+    .hd_logo img {
+      width: 112px;
+    }
+  }
+}
+
+// 푸터
+#footer {
+  display: none;
+  width: 100%;
+  height: $ft-height;
+}
+
 @import "main";
