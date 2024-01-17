@@ -11,6 +11,25 @@
     .hd_logo img {
       width: 112px;
     }
+    .tnb {
+      width: 100%;
+      display: inline-block;
+      .tnb_left {
+        float: left;
+        li {
+          display: inline;
+        }
+      }
+      .tnb_right {
+        float: right;
+        li {
+          display: inline;
+        }
+      }
+      .tnb_lang {
+        float: right;
+      }
+    }
   }
 }
 

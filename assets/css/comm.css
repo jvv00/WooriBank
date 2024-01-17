@@ -279,6 +279,25 @@ legend {
 #header .hd_wrap .hd_logo img {
   width: 112px;
 }
+#header .hd_wrap .tnb {
+  width: 100%;
+  display: inline-block;
+}
+#header .hd_wrap .tnb .tnb_left {
+  float: left;
+}
+#header .hd_wrap .tnb .tnb_left li {
+  display: inline;
+}
+#header .hd_wrap .tnb .tnb_right {
+  float: right;
+}
+#header .hd_wrap .tnb .tnb_right li {
+  display: inline;
+}
+#header .hd_wrap .tnb .tnb_lang {
+  float: right;
+}
 
 #footer {
   display: none;
