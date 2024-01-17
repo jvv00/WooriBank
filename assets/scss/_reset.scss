@@ -130,8 +130,8 @@ input {
 body {
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", "맑은 고딕",
-    sans-serif;
+  font-family: "WooridaumR", "Pretendard", "Noto Sans KR", "Malgun Gothic",
+    "맑은 고딕", sans-serif;
   color: $default;
 }
 
@@ -169,12 +169,13 @@ hr {
 }
 
 input[type="password"] {
-  font-family: "Malgun Gothic";
+  font-family: "WooridaumR", "Pretendard", "Noto Sans KR", "Malgun Gothic",
+    "맑은 고딕", sans-serif;
 }
 
 /* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
 /* skipnavigation */
-#u-skip {
+#sskip {
   position: relative;
   z-index: 3000;
 
