@@ -319,16 +319,34 @@ legend {
   display: flex;
   align-items: center;
   margin: 0 auto;
-  margin-right: 315px;
+  margin-right: 280px;
+}
+#header .hd_wrap .gnb .gnb_1depth {
+  position: relative;
 }
 #header .hd_wrap .gnb .gnb_1depth li {
+  position: relative;
   display: inline-block;
   font-family: "WooridaumB";
   font-size: 18px;
-  padding: 0 20px;
+  padding: 0 25px;
 }
 #header .hd_wrap .gnb .gnb_1depth li .gnb_2depth {
-  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  padding: 10px;
+  min-width: 140px;
+  background-color: #fff;
+  border: 1px solid #20c4f4;
+}
+#header .hd_wrap .gnb .gnb_1depth li .gnb_2depth li {
+  display: block;
+  padding: 8px;
+  font-family: "WooridaumL";
+  font-size: 14px;
 }
 #header .hd_wrap .gnb .gnb_right {
   position: absolute;
