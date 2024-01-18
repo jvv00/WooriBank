@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // gnb 메뉴 호버 시
+  // gnb 메뉴 호버
   $(".gnb_1depth > li").hover(
     function () {
       $(this).find(".gnb_2depth").stop().slideDown(300);
@@ -19,6 +19,29 @@ $(document).ready(function () {
     },
     function () {
       $(this).children("a").css("font-family", "WooridaumL");
+    }
+  );
+
+  // tnb Language 클릭
+  $(".tnb_lang").click(function () {
+    $(this).find(".tnb_lang_sel").stop().slideDown(300);
+    $(this).find(".la-angle-up, .la-angle-down").toggle();
+  });
+
+  $(".tnb_lang").mouseleave(function () {
+    setTimeout(function () {
+      $(".tnb_lang_sel").slideUp(300, function () {
+        $(this).parent().find(".la-angle-up, .la-angle-down").toggle();
+      });
+    }, 1000);
+  });
+
+  $(".tnb_lang_sel > li").hover(
+    function () {
+      $(this).children("a").css("border-bottom", "1px solid #333333");
+    },
+    function () {
+      $(this).children("a").css("border-bottom", "none");
     }
   );
 });

@@ -44,8 +44,35 @@
         }
       }
       .tnb_lang {
+        position: relative;
         float: right;
         cursor: pointer;
+        .la-angle-up {
+          display: none;
+        }
+        .tnb_lang_sel {
+          display: none;
+          overflow: hidden;
+          position: absolute;
+          z-index: 100;
+          top: 20px;
+          left: 0;
+          text-align: center;
+          border-radius: 6px;
+          background-color: $white;
+          border: 1px solid $gray-300;
+          li {
+            width: 75px;
+            height: 40px;
+            padding: 0 12px;
+            text-align: center;
+            line-height: 40px;
+            border-bottom: 1px solid $gray-300;
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
       }
     }
     .gnb {

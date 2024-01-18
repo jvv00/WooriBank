@@ -313,8 +313,35 @@ legend {
   margin-right: 15px;
 }
 #header .hd_wrap .tnb .tnb_lang {
+  position: relative;
   float: right;
   cursor: pointer;
+}
+#header .hd_wrap .tnb .tnb_lang .la-angle-up {
+  display: none;
+}
+#header .hd_wrap .tnb .tnb_lang .tnb_lang_sel {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+  top: 20px;
+  left: 0;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #dadada;
+}
+#header .hd_wrap .tnb .tnb_lang .tnb_lang_sel li {
+  width: 75px;
+  height: 40px;
+  padding: 0 12px;
+  text-align: center;
+  line-height: 40px;
+  border-bottom: 1px solid #dadada;
+}
+#header .hd_wrap .tnb .tnb_lang .tnb_lang_sel li:last-child {
+  border-bottom: none;
 }
 #header .hd_wrap .gnb {
   display: flex;
