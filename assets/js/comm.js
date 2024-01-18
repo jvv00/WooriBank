@@ -44,4 +44,24 @@ $(document).ready(function () {
       $(this).children("a").css("border-bottom", "none");
     }
   );
+
+  // footer more 호버
+  $(".ft_more_1depth > li").hover(
+    function () {
+      $(this).find("ul").stop().fadeIn(200);
+    },
+    function () {
+      $(this).find("ul").stop().fadeOut(200);
+    }
+  );
+
+  // footer img 호버
+  $(".ft_img_info1, .ft_img_info2, .ft_img_info3").hover(
+    function () {
+      $(this).find("span").stop().fadeIn(200);
+    },
+    function () {
+      $(this).find("span").stop().fadeOut(200);
+    }
+  );
 });
