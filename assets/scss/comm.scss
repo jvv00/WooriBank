@@ -5,7 +5,7 @@
   width: 100%;
   height: $hd-height;
   position: relative;
-  border-bottom: 2px solid $primary-400;
+  border-bottom: 1px solid $primary-400;
   .hd_wrap {
     position: relative;
     display: flex;
@@ -45,6 +45,7 @@
       }
       .tnb_lang {
         float: right;
+        cursor: pointer;
       }
     }
     .gnb {
@@ -53,26 +54,26 @@
       margin: 0 auto;
       margin-right: 280px;
       .gnb_1depth {
-        position: relative;
         li {
-          position: relative;
           display: inline-block;
           font-family: "WooridaumB";
           font-size: 18px;
-          padding: 0 25px;
+          padding: 5px 25px;
           .gnb_2depth {
+            display: none;
+            overflow: hidden;
             position: absolute;
-            top: 100%;
+            top: 102%;
             left: 50%;
             transform: translateX(-50%);
-            z-index: 100;
-            padding: 10px;
-            min-width: 140px;
+            padding: 20px;
+            width: 100vw;
             background-color: $white;
-            border: 1px solid $primary-200;
+            border-bottom: 1px solid $gray-300;
+            text-align: center;
             li {
-              display: block;
-              padding: 8px;
+              display: inline-block;
+              padding: 8px 30px;
               font-family: "WooridaumL";
               font-size: 14px;
             }
@@ -86,6 +87,7 @@
         font-size: 25px;
         .gnb_search {
           margin-right: 15px;
+          cursor: pointer;
         }
       }
     }
