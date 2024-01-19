@@ -372,6 +372,7 @@ legend {
   background-color: #fff;
   border-bottom: 1px solid #dadada;
   text-align: center;
+  z-index: 100;
 }
 #header .hd_wrap .gnb .gnb_1depth li .gnb_2depth li {
   display: inline-block;
@@ -503,4 +504,11 @@ legend {
 }
 #footer .ft_wrap .ft_right .ft_call .call_internal {
   padding-bottom: 20px;
+}
+
+#main .main_wrap {
+  position: relative;
+  align-items: center;
+  width: 1220px;
+  margin: 0 auto;
 }

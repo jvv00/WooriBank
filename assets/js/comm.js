@@ -64,4 +64,24 @@ $(document).ready(function () {
       $(this).find("span").stop().fadeOut(200);
     }
   );
+
+  // 메인 슬라이드
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+    loopAdditionalSlides: 1,
+  });
 });
