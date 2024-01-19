@@ -66,9 +66,7 @@ $(document).ready(function () {
   );
 
   // 메인 슬라이드
-  var swiper;
-
-  swiper = new Swiper(".mySwiper", {
+  var swiper = new Swiper(".swiper-container1", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: false,
@@ -111,4 +109,38 @@ $(document).ready(function () {
   });
 
   swiper.on("slideChange", updateButtonIcons);
+
+  // 추천상품 슬라이드
+  var swiper = new Swiper(".swiper-container2", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+      el: ".custom-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+    loopAdditionalSlides: 1,
+    initialSlide: 0,
+  });
+
+  // 이벤트 슬라이드
+  var swiper = new Swiper(".swiper-container3", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+      el: ".custom-pagination2",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next2",
+      prevEl: ".swiper-button-prev2",
+    },
+    loop: true,
+    loopAdditionalSlides: 1,
+    initialSlide: 0,
+  });
 });
