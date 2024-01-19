@@ -66,13 +66,12 @@ $(document).ready(function () {
   );
 
   // 메인 슬라이드
-  var swiper = new Swiper(".mySwiper", {
+  var swiper;
+
+  swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
+    autoplay: false,
     pagination: {
       el: ".swiper-pagination",
       type: "fraction",
@@ -83,20 +82,33 @@ $(document).ready(function () {
     },
     loop: true,
     loopAdditionalSlides: 1,
+    initialSlide: 0,
   });
 
+  swiper.autoplay.start();
+
   var playPauseButton = document.getElementById("button-play-pause");
+  var buttonPlay = playPauseButton.querySelector(".button-play");
+  var buttonPause = playPauseButton.querySelector(".button-pause");
+
+  function updateButtonIcons() {
+    if (swiper.autoplay.running) {
+      buttonPlay.style.display = "none";
+      buttonPause.style.display = "inline";
+    } else {
+      buttonPlay.style.display = "inline";
+      buttonPause.style.display = "none";
+    }
+  }
+
   playPauseButton.addEventListener("click", function (event) {
     if (swiper.autoplay.running) {
-      // 슬라이드가 재생 중이면
-      swiper.autoplay.stop(); // 슬라이드 멈춤
-      playPauseButton.querySelector(".button-play").style.display = "inline";
-      playPauseButton.querySelector(".button-pause").style.display = "none";
+      swiper.autoplay.stop();
     } else {
-      // 슬라이드가 멈춰있으면
-      swiper.autoplay.start(); // 슬라이드 재생
-      playPauseButton.querySelector(".button-play").style.display = "none";
-      playPauseButton.querySelector(".button-pause").style.display = "inline";
+      swiper.autoplay.start();
     }
+    updateButtonIcons();
   });
+
+  swiper.on("slideChange", updateButtonIcons);
 });
