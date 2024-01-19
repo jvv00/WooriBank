@@ -4,10 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/comm.css" />
 </head>
 <body>
-    <div id="login">
-        <h2 class="title">로그인</h2>
+    <div class="login-wrap">
+        <div class="login inner"></div>
+        <div class="login-title-wrap">
+            <h2 class="title">로그인</h2>
+            <div class="notice">
+                <p class="notice-title">안전한 인터넷뱅킹 이용을 위해 꼭 알아두세요!</p>
+                <ul class="check-list">
+                    <li>우리은행은 어떠한 이유로도 보안카드번호 35개 전체 입력을 요구하지 않습니다.</li>
+                    <li>우리은행 홈페이지는 인터넷 주소창에 자물쇠 등 보안 아이콘이 있습니다.</li>
+                </ul>
+            </div>
+            </div>
+            <div class="login-type-box">
+                <div class="login-box">
+                    <h3>우리WON인증서</h3>
+                    <p>스마트폰, 태블릿, PC 등 모든 기기에서 이용 가능해요.</p>
+                    <div class="btn-box">
+                        <a href="#" id="WonLogin" class="btn1" onclick="">우리WON인증서 로그인</a>
+                    </div>
+                    <div class="add_menu">
+                        <ul class="menu-list">
+                            <li>
+                                <a href="#">인증서 발급하기</a>
+                            </li>
+                            <li>
+                                <a href="#">우리WON인증서 안내</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="login-box">
+                    <h3>아이디 로그인</h3>
+                    <div class="btn-box">
+                        <div class="inner-box">
+                            <div class="section-id">
+                                <label for="userId">아이디:</label>
+                                <input type="text" id="userId" name="userId" required>
+                            </div>
+                            <div class="section-pw">
+                                <label for="password">비밀번호:</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                        </div>
+                        <a class="btn1 id-login" href="#" id="IdLogin" onclick="">로그인</a>
+                        <div class="add_menu">
+                            <ul class="menu-list">
+                                <li>
+                                    <a href="#">아이디 비밀번호 찾기</a>
+                                </li>
+                                <li>
+                                    <a href="#">회원가입</a>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="login-box">
+                    <h3>인증서 로그인</h3>
+                    <div class="btn-box">
+                        <a href="#" id="fincert-Login" class="btn1" onclick="">금융인증서 로그인</a>
+                        <a href="#" id="cert-Login" class="btn2" onclick="">공동인증서 로그인</a>
+                    </div>
+                    <div class="select-pop">
+                        <span>자동팝업</span>
+                        <div class="radio-box">
+                        <input type="radio" id="rSelect1" name="rSelect" value="1" onclick="">
+                        <label for="rSelect1">사용</label>
+                        </div>
+                        <div class="radio-box">
+                        <input type="radio" id="rSelect2" name="rSelect" value="1" onclick="">
+                        <label for="rSelect1">사용 안함</label>
+                        </div>
+                    </div>
+                    <div class="add_menu">
+                        <ul class="menu-list">
+                            <li>
+                                <a href="#">인증서 발급/재발급</a>
+                            </li>
+                            <li>
+                                <a href="#">타 인증서 등록</a>
+                            </li>
+                            <li>
+                                <a href="#">인증센터</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+        
+        </div>
+        
         <div class="container">
             <!-- <form id="loginForm">
                 <label for="username">Username:</label>
