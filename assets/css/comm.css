@@ -511,4 +511,85 @@ legend {
   align-items: center;
   width: 1220px;
   margin: 0 auto;
+  padding: 30px 0 100px 0;
+}
+#main .main_wrap .main_top {
+  width: 100%;
+  height: 460px;
+  display: flex;
+}
+#main .main_wrap .main_top .main_slide .swiper {
+  width: 800px;
+  height: 460px;
+  border-radius: 30px;
+  border: 1px solid #dadada;
+}
+#main .main_wrap .main_top .main_slide .swiper .swiper-slide .slide_txt {
+  position: absolute;
+  top: 23%;
+  left: 6%;
+}
+#main .main_wrap .main_top .main_slide .swiper .swiper-slide .slide_txt strong {
+  font-size: 50px;
+  line-height: 1.2;
+  font-family: "WooridaumB";
+}
+#main .main_wrap .main_top .main_slide .swiper .swiper-slide .slide_txt p {
+  font-size: 24px;
+  line-height: 1.2;
+  font-family: "WooridaumL";
+  margin-top: 20px;
+}
+#main .main_wrap .main_top .main_slide .swiper .swiper-slide .slide_txt a {
+  display: block;
+  font-size: 20px;
+  margin-top: 20px;
+}
+#main .main_wrap .main_top .main_slide .swiper-btn {
+  position: absolute;
+  display: flex;
+  top: 20px;
+  right: 20px;
+  width: 150px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 20px;
+  opacity: 0.2;
+  z-index: 1;
+}
+#main .main_wrap .main_top .main_slide .swiper-btn .swiper-button-next,
+#main .main_wrap .main_top .main_slide .swiper-btn .swiper-button-prev {
+  height: 25px;
+  padding: 5px;
+  top: 23px;
+  border-radius: 5px;
+  color: #fff !important;
+}
+#main .main_wrap .main_top .main_slide .swiper-btn .swiper-button-prev:after,
+#main .main_wrap .main_top .main_slide .swiper-btn .swiper-button-next:after {
+  font-size: 10px !important;
+  font-weight: 200;
+}
+#main .main_wrap .main_top .main_slide .swiper-btn .swiper-button-next {
+  left: 60px;
+}
+#main .main_wrap .main_top .main_slide .swiper-btn .swiper-pagination {
+  width: 50px;
+  font-size: 13px;
+  top: 5px;
+  left: 90px;
+  color: #fff;
+  font-family: "WooridaumL";
+}
+#main .main_wrap .main_top .main_slide .swiper-btn #button-play-pause {
+  position: absolute;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+  top: 2px;
+  left: 40px;
+}
+#main .main_wrap .main_top .main_slide .swiper-btn #button-play-pause .button-pause {
+  display: none;
+  overflow: hidden;
 }

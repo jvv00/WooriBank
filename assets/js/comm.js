@@ -70,12 +70,12 @@ $(document).ready(function () {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
-      delay: 2500,
+      delay: 5000,
       disableOnInteraction: false,
     },
     pagination: {
       el: ".swiper-pagination",
-      clickable: true,
+      type: "fraction",
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -83,5 +83,20 @@ $(document).ready(function () {
     },
     loop: true,
     loopAdditionalSlides: 1,
+  });
+
+  var playPauseButton = document.getElementById("button-play-pause");
+  playPauseButton.addEventListener("click", function (event) {
+    if (swiper.autoplay.running) {
+      // 슬라이드가 재생 중이면
+      swiper.autoplay.stop(); // 슬라이드 멈춤
+      playPauseButton.querySelector(".button-play").style.display = "inline";
+      playPauseButton.querySelector(".button-pause").style.display = "none";
+    } else {
+      // 슬라이드가 멈춰있으면
+      swiper.autoplay.start(); // 슬라이드 재생
+      playPauseButton.querySelector(".button-play").style.display = "none";
+      playPauseButton.querySelector(".button-pause").style.display = "inline";
+    }
   });
 });
