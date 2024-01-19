@@ -1,0 +1,53 @@
+body {
+    position: relative;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../images/login/Log-in1_2.png) ; 
+    background-size:cover;
+    opacity: 0.5; 
+    z-index: -1; 
+}
+.login.inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 350px;
+}
+.login-title-wrap {
+    padding: 0 350px;
+    .notice-title {
+        text-align: center;
+        font-size: 18px;
+    }
+    .check-list {
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+    }
+}
+.login-type-box{
+    display: flex;
+    justify-content: center;
+    
+    .login-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 393px;
+        height: 360px;
+        border: solid 1px #e2e2e2;
+        border-radius: 10px;
+        margin-right:20px ;
+
+    }
+}
