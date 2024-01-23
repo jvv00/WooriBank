@@ -308,6 +308,35 @@
         }
         .card_story {
           height: 358px;
+          h3 {
+            padding-bottom: 30px;
+          }
+          a {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            img {
+              width: 65px;
+              height: 65px;
+              padding: 5px;
+              border: 1px solid $gray-300;
+              border-radius: 50px;
+              margin-right: 15px;
+            }
+            strong {
+              font-size: 20px;
+            }
+            .la-angle-right {
+              position: absolute;
+              right: 38px;
+            }
+          }
+        }
+        .card_news {
+          height: 488px;
+          h3 {
+            padding-bottom: 17px;
+          }
         }
       }
     }
