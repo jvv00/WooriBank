@@ -83,19 +83,17 @@ $(document).ready(function () {
     initialSlide: 0,
   });
 
-  swiper.autoplay.start();
-
   var playPauseButton = document.getElementById("button-play-pause");
   var buttonPlay = playPauseButton.querySelector(".button-play");
   var buttonPause = playPauseButton.querySelector(".button-pause");
 
   function updateButtonIcons() {
     if (swiper.autoplay.running) {
-      buttonPlay.style.display = "none";
-      buttonPause.style.display = "inline";
-    } else {
       buttonPlay.style.display = "inline";
       buttonPause.style.display = "none";
+    } else {
+      buttonPlay.style.display = "none";
+      buttonPause.style.display = "inline";
     }
   }
 
@@ -109,6 +107,7 @@ $(document).ready(function () {
   });
 
   swiper.on("slideChange", updateButtonIcons);
+  swiper.autoplay.start();
 
   // 추천상품 슬라이드
   var swiper = new Swiper(".swiper-container2", {

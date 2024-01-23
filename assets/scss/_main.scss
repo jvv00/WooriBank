@@ -1,4 +1,8 @@
 #main {
+  background-image: url(../../images/main/mainbg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
   .main_wrap {
     position: relative;
     align-items: center;
@@ -81,7 +85,7 @@
             cursor: pointer;
             top: 2px;
             left: 40px;
-            .button-pause {
+            .button-play {
               display: none;
               overflow: hidden;
             }
@@ -174,6 +178,7 @@
           border: 1px solid $gray-300;
           border-radius: 30px;
           padding: 38px;
+          background-color: $white;
           &:last-child {
             margin-right: 0;
           }
