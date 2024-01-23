@@ -186,28 +186,36 @@
         .card_rec {
           height: 396px;
           .cardslide_btn {
-            width: 100px;
-            height: 20px;
             position: absolute;
             display: flex;
             top: 50px;
-            right: 20px;
-            z-index: 5;
-            .swiper-button-next,
-            .swiper-button-prev {
+            right: 70px;
+            cursor: pointer;
+            .custom-button-next,
+            .custom-button-prev {
               height: 25px;
               padding: 5px;
               border-radius: 50px;
               border: 1px solid $gray-300;
+              position: relative;
+              top: -12px;
             }
-            .swiper-button-prev:after,
-            .swiper-button-next:after {
+            .custom-button-prev:before,
+            .custom-button-next:before {
               font-size: 10px !important;
               font-weight: 200;
               color: $default;
             }
-            .swiper-button-prev {
-              left: -10px;
+            .la-angle-left:before,
+            .la-angle-right:before {
+              position: relative;
+              top: -3.5px;
+            }
+            .custom-button-next {
+              left: 60px;
+            }
+            .custom-button-prev {
+              left: -40px;
             }
             .custom-pagination {
               width: 50px;
@@ -236,30 +244,39 @@
           }
         }
         .card_event {
-          height: 660px;
+          height: 483px;
+          background-image: url(../../images/main/eventbg.png);
           .cardslide_btn2 {
-            width: 100px;
-            height: 20px;
             position: absolute;
             display: flex;
             top: 50px;
-            right: 20px;
-            z-index: 5;
-            .swiper-button-next2,
-            .swiper-button-prev2 {
+            right: 70px;
+            cursor: pointer;
+            .custom-button-next2,
+            .custom-button-prev2 {
               height: 25px;
               padding: 5px;
               border-radius: 50px;
+              position: relative;
+              top: -12px;
               border: 1px solid $gray-300;
             }
-            .swiper-button-prev2.big1,
-            .swiper-button-next2:after {
+            .custom-button-prev2:before,
+            .custom-button-next2:before {
               font-size: 10px !important;
               font-weight: 200;
               color: $default;
             }
-            .swiper-button-pre2v {
-              left: -10px;
+            .la-angle-left:before,
+            .la-angle-right:before {
+              position: relative;
+              top: -3.5px;
+            }
+            .custom-button-next2 {
+              left: 60px;
+            }
+            .custom-button-prev2 {
+              left: -40px;
             }
             .custom-pagination2 {
               width: 50px;
@@ -273,19 +290,24 @@
           }
           .mySwiper {
             .swiper-slide {
-              text-align: center;
+              text-align: left;
               img {
-                width: 217px;
+                width: 100%;
+                margin-top: 20px;
               }
               strong {
                 font-size: 25px;
                 line-height: 1.2;
               }
               p {
+                margin-top: 10px;
                 font-family: "WooridaumL";
               }
             }
           }
+        }
+        .card_story {
+          height: 358px;
         }
       }
     }

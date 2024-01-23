@@ -119,11 +119,11 @@ $(document).ready(function () {
       type: "fraction",
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".custom-button-next",
+      prevEl: ".custom-button-prev",
     },
     loop: true,
-    loopAdditionalSlides: 1,
+    loopAdditionalSlides: 0,
     initialSlide: 0,
   });
 
@@ -136,11 +136,11 @@ $(document).ready(function () {
       type: "fraction",
     },
     navigation: {
-      nextEl: ".swiper-button-next2",
-      prevEl: ".swiper-button-prev2",
+      nextEl: ".custom-button-next2",
+      prevEl: ".custom-button-prev2",
     },
     loop: true,
-    loopAdditionalSlides: 1,
+    loopAdditionalSlides: 0,
     initialSlide: 0,
   });
 });
