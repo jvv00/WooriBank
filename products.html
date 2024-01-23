@@ -24,10 +24,17 @@
     />
     <meta name="twitter:domain" content="사이트 명" />
     <link rel="stylesheet" href="./assets/css/comm.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="wrap">
       <div id="main">
+        <div class="header"></div>
         <div class="intro">
           <div class="circle">
             <img src="./images/products/intro_bgi.png" alt="" />
@@ -49,7 +56,7 @@
                   </h3>
                 </div>
               </li>
-              <li>
+              <li class="pd2">
                 <img src="./images/products/money hands.png" alt="" />
                 <div class="txt">
                   <h2>주거 안정 월세 대출</h2>
@@ -108,14 +115,14 @@
           <section class="product3">
             <h1>일반 신용 대출 추천 상품</h1>
             <ul>
-              <li>
+              <li class="aaa">
                 <img src="./images/products/wall.png" alt="" />
                 <div class="txt">
                   <h2>우리 사잇돌 중금리 대출</h2>
                   <h3>생활안정자금 대출<br />고정 금리(5년 이상) 6.79%</h3>
                 </div>
               </li>
-              <li>
+              <li class="aaa">
                 <img src="./images/products/sun.png" alt="" />
                 <div class="txt">
                   <h2>우리 햇살론15</h2>
@@ -149,9 +156,9 @@
           </section>
           <section class="product4">
             <h1>개인 사업자 추천 상품</h1>
-            <ul>
+            <ul class="ceo">
               <li>
-                <img src="./images/products/wall.png" alt="" />
+                <img src="./images/products/house hand.png" alt="" />
                 <div class="txt">
                   <h2>우리 사장님 생활비 대출</h2>
                   <h3>
@@ -161,7 +168,7 @@
                 </div>
               </li>
               <li>
-                <img src="./images/products/sun.png" alt="" />
+                <img src="./images/products/cursor.png" alt="" />
                 <div class="txt">
                   <h2>우리 Oh!(5) 클릭 대출</h2>
                   <h3>
@@ -171,10 +178,10 @@
                 </div>
               </li>
             </ul>
-            <h1>직장인 추천 상품</h1>
-            <ul>
+            <h1 class="worker-tit">직장인 추천 상품</h1>
+            <ul class="worker">
               <li>
-                <img src="./images/products/love light.png" alt="" />
+                <img src="./images/products/calender.png" alt="" />
                 <div class="txt">
                   <h2>우리 첫급여 신용대출</h2>
                   <h3>
@@ -184,7 +191,7 @@
                 </div>
               </li>
               <li>
-                <img src="./images/products/ring.png" alt="" />
+                <img src="./images/products/new year.png" alt="" />
                 <div class="txt">
                   <h2>우리 WON하는 직장인대출</h2>
                   <h3>
@@ -199,52 +206,73 @@
 
         <div class="help">
           <div class="box box-moreview">
-            <p>더 많은 상품을 보여드릴게요</p>
-            <p>
+            <h1>더 많은 상품을 보여드릴게요</h1>
+            <h2>
               나에게 맞는 상품 찾기<br />
               기업 대출 / 부동산 대출<br />
               낮은 금리 상품
-            </p>
+            </h2>
             <div class="botton">상품 더보기</div>
           </div>
           <div class="box box-guide">
-            <p>상품 가이드가 필요하신가요 ?</p>
-            <p>
+            <h1>상품 가이드가 필요하신가요 ?</h1>
+            <h2>
               준비 서류<br />
               수수료 및 금리 안내<br />
               상담 채널 안내
-            </p>
+            </h2>
             <div class="botton">가이드 보러가기</div>
           </div>
         </div>
 
         <div class="app">
-          <strong
-            >언제, 어디서나<br />
-            우리 함께</strong
-          >
-          <div class="cfl">
-            <div class="clear">
-              Clear
-              <p>방해되는 것은 비워내고</p>
+          <div class="app-txt">
+            <strong>
+              언제, 어디서나<br />
+              <span>우리</span> 함께
+            </strong>
+            <div class="cfl">
+              <div class="clear">
+                Clear
+                <p>방해되는 것은 비워내고</p>
+              </div>
+              <div class="fit">
+                Fit
+                <p>금융 생활에 필요한 것들로 맞춰주고</p>
+              </div>
+              <div class="lead">
+                lead
+                <p>더 나은 금융 여정을 안내할게요</p>
+              </div>
             </div>
-            <div class="fit">
-              Fit
-              <p>금융 생활에 필요한 것들로 맞춰주고</p>
-            </div>
-            <div class="lead">
-              lead
-              <p>더 나은 금융 여정을 안내할게요</p>
-            </div>
+            <strong>
+              간편해진 모바일 앱으로<br />
+              손쉬운 금융생활
+            </strong>
           </div>
-          <strong
-            >간편해진 모바일 앱으로<br />
-            손쉬운 금융생활</strong
-          >
-          <img src="" alt="" />
+
+          <img src="./images/products/mokup.png" alt="" />
         </div>
 
-        <div class="service"></div>
+        <div class="service">
+          <h1>다양한 서비스를 이용해보세요</h1>
+          <section>
+            <img src="./images/products/forex.png" alt="" />
+            <p>환율 조회</p>
+          </section>
+          <section>
+            <img src="./images/products/loan.png" alt="" />
+            <p>금리 조회</p>
+          </section>
+          <section>
+            <img src="./images/products/graph2 1.png" alt="" />
+            <p>수익률 조회</p>
+          </section>
+          <section>
+            <img src="./images/products/fund.png" alt="" />
+            <p>펀드 기준가</p>
+          </section>
+        </div>
       </div>
     </div>
   </body>
