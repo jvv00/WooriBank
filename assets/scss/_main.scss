@@ -248,6 +248,9 @@
         .card_event {
           height: 483px;
           background-image: url(../../images/main/eventbg.png);
+          h3 {
+            padding-bottom: 25px;
+          }
           .cardslide_btn2 {
             position: absolute;
             display: flex;
@@ -295,7 +298,7 @@
               text-align: left;
               img {
                 width: 100%;
-                margin-top: 20px;
+                margin-top: 10px;
               }
               strong {
                 font-size: 25px;
