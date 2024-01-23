@@ -375,6 +375,31 @@
           position: absolute;
           top: 1013px;
           left: 417px;
+          h3 {
+            padding-bottom: 15px;
+          }
+          ul {
+            a {
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              img {
+                width: 180px;
+                border-radius: 100px;
+                border: 1px solid $gray-300;
+                margin-bottom: 20px;
+              }
+              strong {
+                font-size: 23px;
+              }
+              p {
+                font-family: "WooridaumL";
+                margin-bottom: 30px;
+              }
+            }
+          }
         }
         .card_notice {
           height: 488px;
@@ -449,6 +474,15 @@
           position: absolute;
           top: 1408px;
           right: 0;
+          background-image: url(../../images/main/info.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          h2 {
+            font-size: 25px;
+          }
+          p {
+            font-family: "WooridaumL";
+          }
         }
       }
     }
