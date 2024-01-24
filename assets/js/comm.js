@@ -1,3 +1,4 @@
+// comm
 $(document).ready(function () {
   // gnb 메뉴 호버
   $(".gnb_1depth > li").hover(
@@ -66,6 +67,7 @@ $(document).ready(function () {
   );
 });
 
+// main
 $(document).ready(function () {
   // 메인 슬라이드
   var mainSwiper = new Swiper(".swiper-container1", {
@@ -141,5 +143,13 @@ $(document).ready(function () {
     loop: true,
     loopAdditionalSlides: 0,
     initialSlide: 0,
+  });
+});
+
+// introduce
+$(document).ready(function () {
+  var historySwiper = new Swiper(".mySwiper", {
+    slidesPerView: 0.5,
+    freeMode: true,
   });
 });
