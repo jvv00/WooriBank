@@ -1,3 +1,4 @@
+// comm
 $(document).ready(function () {
   // gnb 메뉴 호버
   $(".gnb_1depth > li").hover(
@@ -64,12 +65,16 @@ $(document).ready(function () {
       $(this).find("span").stop().fadeOut(200);
     }
   );
+});
 
+// main
+$(document).ready(function () {
   // 메인 슬라이드
-  var swiper = new Swiper(".swiper-container1", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: false,
+  var mainSwiper = new Swiper(".swiper-container1", {
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       type: "fraction",
@@ -83,34 +88,31 @@ $(document).ready(function () {
     initialSlide: 0,
   });
 
-  var playPauseButton = document.getElementById("button-play-pause");
-  var buttonPlay = playPauseButton.querySelector(".button-play");
-  var buttonPause = playPauseButton.querySelector(".button-pause");
-
-  function updateButtonIcons() {
-    if (swiper.autoplay.running) {
-      buttonPlay.style.display = "inline";
-      buttonPause.style.display = "none";
-    } else {
-      buttonPlay.style.display = "none";
-      buttonPause.style.display = "inline";
-    }
-  }
-
-  playPauseButton.addEventListener("click", function (event) {
-    if (swiper.autoplay.running) {
-      swiper.autoplay.stop();
-    } else {
-      swiper.autoplay.start();
-    }
-    updateButtonIcons();
+  $(".swiper-button-play").on("click", function () {
+    mainSwiper.autoplay.start();
+    console.log("play");
+  });
+  $(".swiper-button-pause").on("click", function () {
+    mainSwiper.autoplay.stop();
+    console.log("stop");
   });
 
-  swiper.on("slideChange", updateButtonIcons);
-  swiper.autoplay.start();
+  $(".swiper-button-play").on("click", function () {
+    mainSwiper.autoplay.start();
+    $(".swiper-button-play").hide();
+    $(".swiper-button-pause").show();
+    console.log("play");
+  });
+
+  $(".swiper-button-pause").on("click", function () {
+    mainSwiper.autoplay.stop();
+    $(".swiper-button-play").show();
+    $(".swiper-button-pause").hide();
+    console.log("stop");
+  });
 
   // 추천상품 슬라이드
-  var swiper = new Swiper(".swiper-container2", {
+  var recSwiper = new Swiper(".swiper-container2", {
     spaceBetween: 30,
     centeredSlides: true,
     pagination: {
@@ -127,7 +129,7 @@ $(document).ready(function () {
   });
 
   // 이벤트 슬라이드
-  var swiper = new Swiper(".swiper-container3", {
+  var eventSwiper = new Swiper(".swiper-container3", {
     spaceBetween: 30,
     centeredSlides: true,
     pagination: {
@@ -142,4 +144,42 @@ $(document).ready(function () {
     loopAdditionalSlides: 0,
     initialSlide: 0,
   });
+});
+
+// introduce
+$(document).ready(function () {
+  var historySwiper = new Swiper(".swiper-container4", {
+    slidesPerView: 0.5,
+    freeMode: true,
+  });
+
+  // 메인 텍스트 애니메이션
+  gsap.from(".intro_main", {
+    opacity: 0,
+    y: 50,
+    duration: 2,
+    ease: "power1.out",
+  });
+
+  // 목업 이미지 애니메이션
+  gsap.registerPlugin(ScrollTrigger);
+
+  function fadeInOnScroll(element, direction) {
+    gsap.from(element, {
+      opacity: 0,
+      x: direction === "left" ? -50 : 50,
+      duration: 3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: element,
+        start: "top 80%",
+        end: "bottom 50%",
+        scrub: true,
+      },
+    });
+  }
+
+  fadeInOnScroll(".mokup-pc", "right");
+  fadeInOnScroll(".mokup-mobile", "left");
+  fadeInOnScroll(".mokup-tablet", "right");
 });
