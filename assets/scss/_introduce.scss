@@ -1,8 +1,75 @@
-.intro_wrap {
-  position: relative;
-  align-items: center;
-  width: 1220px;
-  margin: 0 auto;
-  padding: 30px 0 100px 0;
-  text-align: center;
+#introduce {
+  background-image: url(../../images/introduce/mainbg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  .intro_wrap {
+    position: relative;
+    align-items: center;
+    width: 1220px;
+    margin: 0 auto;
+    padding: 30px 0 100px 0;
+    text-align: center;
+    .intro_main {
+      height: 820px;
+      padding: 200px 0;
+      img {
+        width: 450px;
+        padding: 20px 0;
+      }
+      h2 {
+        font-size: 38px;
+        font-family: "WooridaumB";
+        line-height: 1.2;
+      }
+    }
+    .intro_mokup {
+      height: 1570px;
+      position: relative;
+      padding: 200px 0;
+      p {
+        font-size: 30px;
+        line-height: 1.2;
+        position: absolute;
+      }
+      img {
+        position: absolute;
+      }
+      .mokup-pc {
+        height: 360px;
+        .pc-img {
+          width: 35%;
+          right: 0;
+          top: 0;
+        }
+        p {
+          top: 150px;
+          left: 630px;
+        }
+      }
+      .mokup-mobile {
+        height: 360px;
+        .mobile-img {
+          width: 20%;
+          left: 0;
+          top: -50px;
+        }
+        p {
+          top: 170px;
+          left: 280px;
+        }
+      }
+      .mokup-tablet {
+        height: 360px;
+        .tablet-img {
+          width: 35%;
+          right: 0;
+          bottom: 0;
+        }
+        p {
+          top: 185px;
+          left: 400px;
+        }
+      }
+    }
+  }
 }

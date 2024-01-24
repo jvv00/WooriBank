@@ -41,8 +41,9 @@
     />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script defer src="assets/js/comm.js"></script>
   </head>
   <body>
@@ -177,7 +178,10 @@
       <main id="introduce">
         <div class="intro_wrap">
           <div class="intro_main">
-            <img src="" alt="우리 마음속 첫번째 금융" />
+            <img
+              src="./images/introduce/maintxt.png"
+              alt="우리 마음속 첫번째 금융"
+            />
             <h2>
               우리나라의 자부심과 금융강국을 향한 내일!
               <br />
@@ -185,11 +189,30 @@
             </h2>
           </div>
           <div class="intro_mokup">
-            <h3>
-              PC에서도, 모바일에서도
-              <br />
-              나와 가장 가까이 있는 은행
-            </h3>
+            <div class="mokup-pc">
+              <img
+                src="./images/introduce/mokupd.png"
+                alt="데스크탑"
+                class="pc-img"
+              />
+              <p>PC에서도</p>
+            </div>
+            <div class="mokup-mobile">
+              <img
+                src="./images/introduce/mokupm.png"
+                alt="모바일"
+                class="mobile-img"
+              />
+              <p>모바일에서도</p>
+            </div>
+            <div class="mokup-tablet">
+              <img
+                src="./images/introduce/mokupt.png"
+                alt="태블릿"
+                class="tablet-img"
+              />
+              <p>나와 가장 가까이 있는 은행</p>
+            </div>
           </div>
           <div class="intro_history">
             <div class="swiper mySwiper swiper-container4">

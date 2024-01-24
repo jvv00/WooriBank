@@ -148,8 +148,39 @@ $(document).ready(function () {
 
 // introduce
 $(document).ready(function () {
-  var historySwiper = new Swiper(".mySwiper", {
+  var historySwiper = new Swiper(".swiper-container4", {
     slidesPerView: 0.5,
     freeMode: true,
   });
+
+  // 메인 텍스트 애니메이션
+  gsap.from(".intro_main", {
+    opacity: 0,
+    y: 50,
+    duration: 2,
+    ease: "power1.out",
+  });
+
+  // 목업 이미지 애니메이션
+  gsap.registerPlugin(ScrollTrigger);
+
+  function fadeInOnScroll(element, direction) {
+    gsap.from(element, {
+      opacity: 0,
+      x: direction === "left" ? -50 : 50,
+      duration: 3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: element,
+        start: "top 80%",
+        end: "bottom 50%",
+        scrub: true,
+        markers: true,
+      },
+    });
+  }
+
+  fadeInOnScroll(".mokup-pc", "right");
+  fadeInOnScroll(".mokup-mobile", "left");
+  fadeInOnScroll(".mokup-tablet", "right");
 });
