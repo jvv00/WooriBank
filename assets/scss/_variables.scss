@@ -22,6 +22,7 @@ $gray-800: #424242;
 
 $hd-height: 100px;
 $ft-height: 220px;
+$main-height: calc(100vh - $hd-height - $ft-height);
 
 // 반응형 미디어 쿼리
 $breakpoint-sm: 576px;
