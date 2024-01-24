@@ -64,12 +64,15 @@ $(document).ready(function () {
       $(this).find("span").stop().fadeOut(200);
     }
   );
+});
 
+$(document).ready(function () {
   // 메인 슬라이드
-  var swiper = new Swiper(".swiper-container1", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: false,
+  var mainSwiper = new Swiper(".swiper-container1", {
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       type: "fraction",
@@ -83,34 +86,31 @@ $(document).ready(function () {
     initialSlide: 0,
   });
 
-  var playPauseButton = document.getElementById("button-play-pause");
-  var buttonPlay = playPauseButton.querySelector(".button-play");
-  var buttonPause = playPauseButton.querySelector(".button-pause");
-
-  function updateButtonIcons() {
-    if (swiper.autoplay.running) {
-      buttonPlay.style.display = "inline";
-      buttonPause.style.display = "none";
-    } else {
-      buttonPlay.style.display = "none";
-      buttonPause.style.display = "inline";
-    }
-  }
-
-  playPauseButton.addEventListener("click", function (event) {
-    if (swiper.autoplay.running) {
-      swiper.autoplay.stop();
-    } else {
-      swiper.autoplay.start();
-    }
-    updateButtonIcons();
+  $(".swiper-button-play").on("click", function () {
+    mainSwiper.autoplay.start();
+    console.log("play");
+  });
+  $(".swiper-button-pause").on("click", function () {
+    mainSwiper.autoplay.stop();
+    console.log("stop");
   });
 
-  swiper.on("slideChange", updateButtonIcons);
-  swiper.autoplay.start();
+  $(".swiper-button-play").on("click", function () {
+    mainSwiper.autoplay.start();
+    $(".swiper-button-play").hide();
+    $(".swiper-button-pause").show();
+    console.log("play");
+  });
+
+  $(".swiper-button-pause").on("click", function () {
+    mainSwiper.autoplay.stop();
+    $(".swiper-button-play").show();
+    $(".swiper-button-pause").hide();
+    console.log("stop");
+  });
 
   // 추천상품 슬라이드
-  var swiper = new Swiper(".swiper-container2", {
+  var recSwiper = new Swiper(".swiper-container2", {
     spaceBetween: 30,
     centeredSlides: true,
     pagination: {
@@ -127,7 +127,7 @@ $(document).ready(function () {
   });
 
   // 이벤트 슬라이드
-  var swiper = new Swiper(".swiper-container3", {
+  var eventSwiper = new Swiper(".swiper-container3", {
     spaceBetween: 30,
     centeredSlides: true,
     pagination: {

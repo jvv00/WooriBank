@@ -78,17 +78,17 @@
             color: $white;
             font-family: "WooridaumL";
           }
-          #button-play-pause {
+          .swiper-button-play,
+          .swiper-button-pause {
             position: absolute;
             color: $white;
             font-weight: 800;
             cursor: pointer;
-            top: 2px;
+            top: 3px;
             left: 40px;
-            .button-play {
-              display: none;
-              overflow: hidden;
-            }
+          }
+          .swiper-button-play {
+            display: none;
           }
         }
       }
