@@ -175,7 +175,6 @@ $(document).ready(function () {
         start: "top 80%",
         end: "bottom 50%",
         scrub: true,
-        markers: true,
       },
     });
   }

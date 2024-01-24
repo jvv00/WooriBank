@@ -2,6 +2,8 @@
   background-image: url(../../images/introduce/mainbg.png);
   background-repeat: no-repeat;
   background-size: 100%;
+  position: relative;
+  height: 4000px;
   .intro_wrap {
     position: relative;
     align-items: center;
@@ -23,7 +25,7 @@
       }
     }
     .intro_mokup {
-      height: 1570px;
+      height: 1600px;
       position: relative;
       padding: 200px 0;
       p {
@@ -35,7 +37,7 @@
         position: absolute;
       }
       .mokup-pc {
-        height: 360px;
+        height: 400px;
         .pc-img {
           width: 35%;
           right: 0;
@@ -47,7 +49,7 @@
         }
       }
       .mokup-mobile {
-        height: 360px;
+        height: 400px;
         .mobile-img {
           width: 20%;
           left: 0;
@@ -59,15 +61,65 @@
         }
       }
       .mokup-tablet {
-        height: 360px;
+        height: 400px;
         .tablet-img {
           width: 35%;
           right: 0;
           bottom: 0;
         }
         p {
-          top: 185px;
+          top: 230px;
           left: 400px;
+        }
+      }
+    }
+    .intro_history {
+      position: absolute;
+      align-items: center;
+      width: 1550px;
+      height: 500px;
+      display: flex;
+      .swiper-container4 {
+        .swiper-slide {
+          width: 3100px;
+          position: relative;
+          text-align: left;
+          .history_box {
+            width: 3100px;
+            height: 30px;
+            background: linear-gradient(
+              90deg,
+              rgba(32, 196, 244, 1) 0%,
+              rgba(0, 94, 144, 1) 100%
+            );
+          }
+          .history_txt {
+            display: flex;
+            .history_top,
+            .history_bottom {
+              margin-right: 250px;
+              &:last-child {
+                margin-right: 0;
+              }
+              h3 {
+                font-size: 25px;
+                font-family: "WooridaumB";
+              }
+              p {
+                font-size: 20px;
+                font-family: "WooridaumL";
+              }
+            }
+            .history_top {
+              margin-bottom: 50px;
+              &:first-child {
+                padding-left: 250px;
+              }
+            }
+            .history_bottom {
+              margin-top: 50px;
+            }
+          }
         }
       }
     }
