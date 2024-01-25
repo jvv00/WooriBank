@@ -1,9 +1,9 @@
-body {
+#cert-body {
     position: relative;
     white-space: nowrap;
     box-sizing: border-box;
 }
-body::before {
+#cert-body::before {
     content: "";
     position: fixed;
     top: 0;
