@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: 100%;
   position: relative;
-  height: 4000px;
+  height: 5500px;
   .intro_wrap {
     position: relative;
     align-items: center;
@@ -27,7 +27,7 @@
     .intro_mokup {
       height: 1600px;
       position: relative;
-      padding: 200px 0;
+      padding: 250px 0;
       p {
         font-size: 30px;
         line-height: 1.2;
@@ -74,18 +74,19 @@
       }
     }
     .intro_history {
-      position: absolute;
       align-items: center;
-      width: 1550px;
+      width: 1600px;
       height: 500px;
+      margin: 200px 0;
       display: flex;
       .swiper-container4 {
+        overflow: visible;
+        width: 3150px;
         .swiper-slide {
-          width: 3100px;
           position: relative;
           text-align: left;
           .history_box {
-            width: 3100px;
+            width: 4800px;
             height: 30px;
             background: linear-gradient(
               90deg,
@@ -97,9 +98,18 @@
             display: flex;
             .history_top,
             .history_bottom {
-              margin-right: 250px;
-              &:last-child {
-                margin-right: 0;
+              border-left: 1px solid $gray-700;
+              padding-left: 20px;
+              position: relative;
+              &:before {
+                content: "";
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                background-color: $gray-800;
+                border-radius: 50%;
+                left: -3.5px;
+                transform: translateY(-50%);
               }
               h3 {
                 font-size: 25px;
@@ -111,16 +121,102 @@
               }
             }
             .history_top {
-              margin-bottom: 50px;
-              &:first-child {
-                padding-left: 250px;
+              padding-bottom: 200px;
+              position: absolute;
+              bottom: -50px;
+              &:before {
+                bottom: -10px;
               }
             }
             .history_bottom {
-              margin-top: 50px;
+              padding-top: 200px;
+              position: absolute;
+              top: -50px;
+              &:before {
+                top: 0;
+              }
+            }
+            .history_tit {
+              margin-left: 250px;
+              h3,
+              h4 {
+                display: inline;
+                font-size: 30px;
+              }
+              h4 {
+                color: $primary-400;
+              }
             }
           }
         }
+      }
+    }
+    .intro_insurance {
+      position: absolute;
+      padding: 100px 0;
+      left: -350px;
+      display: flex;
+      align-items: end;
+      text-align: left;
+      img {
+        width: 700px;
+      }
+      span {
+        position: absolute;
+        left: 720px;
+        bottom: 180px;
+        font-size: 30px;
+      }
+      p {
+        margin-left: 20px;
+        font-size: 25px;
+        font-family: "WooridaumL";
+      }
+    }
+    .intro_card {
+      position: absolute;
+      padding: 100px 0;
+      right: -350px;
+      bottom: -1200px;
+      display: flex;
+      align-items: end;
+      text-align: right;
+      img {
+        width: 700px;
+      }
+      span {
+        position: absolute;
+        right: 720px;
+        bottom: 180px;
+        font-size: 30px;
+      }
+      p {
+        margin-right: 20px;
+        font-size: 25px;
+        font-family: "WooridaumL";
+      }
+    }
+    .intro_mydata {
+      position: absolute;
+      padding: 100px 0;
+      left: -350px;
+      bottom: -1800px;
+      display: flex;
+      align-items: end;
+      text-align: left;
+      img {
+        width: 700px;
+      }
+      span {
+        position: absolute;
+        left: 720px;
+        bottom: 180px;
+        font-size: 30px;
+      }
+      p {
+        margin-left: 20px;
+        font-size: 25px;
+        font-family: "WooridaumL";
       }
     }
   }
