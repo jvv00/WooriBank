@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>우리은행 | 은행소개</title>
+    <title>은행소개 | 우리은행</title>
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="우리은행" />
@@ -42,11 +42,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="assets/js/comm.js"></script>
   </head>
-  <body>
+  <body style="overflow-x: hidden">
+    >
     <!-- 스킵메뉴 -->
     <div id="skip">
       <a href="#gnb">주메뉴 바로가기</a>
@@ -83,8 +84,8 @@
               </ul>
             </div>
             <ul class="tnb_right">
-              <li><a href="#">로그인</a></li>
-              <li><a href="#">인증센터</a></li>
+              <li><a href="./login.html">로그인</a></li>
+              <li><a href="./cert-center.html">인증센터</a></li>
             </ul>
           </div>
           <!-- 주메뉴 -->
@@ -122,7 +123,7 @@
                 </ul>
               </li>
               <li>
-                <a href="#">금융상품</a>
+                <a href="./products.html">금융상품</a>
                 <ul class="gnb_2depth">
                   <li><a href="#">추천상품</a></li>
                   <li><a href="#">예금</a></li>
@@ -219,48 +220,46 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="history_txt">
-                    <div class="history_top">
-                      <h3>1956</h3>
+                    <div class="history_top" style="left: 300px">
+                      <h3>1932</h3>
+                      <p>조선신탁주식회사</p>
+                      <p>&#91;&#40;구&#41;한일은행&#93; 창립</p>
+                    </div>
+                    <div class="history_top" style="left: 900px">
+                      <h3>1999</h3>
                       <p>
-                        증권거래소
+                        상업은행과 한일은행이 결합한
                         <br />
-                        상장1호
+                        한빛은행 설립 &#40;자본금 : 4조 3,725억원&#41;
                       </p>
                     </div>
-                    <div class="history_top">
-                      <h3>2001</h3>
-                      <p>
-                        우리금융 그룹 출범
-                        <br />
-                        금융권 최초 편의점 ATM 티켓발매
-                      </p>
-                    </div>
-                    <div class="history_top">
+                    <div class="history_top" style="left: 1500px">
                       <h3>2004</h3>
                       <p>
                         TV뱅킹 국내 첫 서비스 실시
                         <br />
-                        금융IC카드 서비스 실시
+                        은행권 최초 사모투자펀드로 정식 등록
                       </p>
                     </div>
-                    <div class="history_top">
-                      <h3>2012</h3>
+                    <div class="history_top" style="left: 2100px">
+                      <h3>2015</h3>
                       <p>
-                        금융권 최초
+                        우리은행-서울시
                         <br />
-                        패턴인식 활용 서비스 실시
+                        &#39;서울시금고 100주년&#39; 기념식
                       </p>
                     </div>
-                    <div class="history_top">
+                    <div class="history_top" style="left: 2700px">
                       <h3>2020</h3>
                       <p>
-                        한국전력거래소
+                        한국전력거래소 주거래 은행 선정
                         <br />
-                        주거래 은행 선정
+                        금융권 최초 범용성 갖춘 &#39;WON 금융인증서&#39; 출시
                       </p>
                     </div>
-                    <div class="history_top">
-                      <h3>한국금융을 선도하는 우리은행</h3>
+                    <div class="history_top history_tit" style="left: 3300px">
+                      <h3>한국금융을 선도하는</h3>
+                      <h4 class="animated-text">우리은행</h4>
                       <p>그 부지런한 발걸음은 계속됩니다.</p>
                     </div>
                   </div>
@@ -269,46 +268,43 @@
 
                   <div class="history_txt">
                     <div class="history_bottom">
-                      <h3>1938</h3>
+                      <h3>1899</h3>
                       <p>
                         대한천일은행
                         <br />
                         &#91;&#40;구&#41;한국상업은행&#93; 창립
                       </p>
                     </div>
-                    <div class="history_bottom">
-                      <h3>1999</h3>
-                      <p>
-                        한빛은행 설립
-                        <br />
-                        &#40;자본금 : 4조 3,725억원&#41;
-                      </p>
+                    <div class="history_bottom" style="left: 600px">
+                      <p>&#160;</p>
+                      <h3>1956</h3>
+                      <p>증권거래소 상장1호</p>
                     </div>
-                    <div class="history_bottom">
+                    <div class="history_bottom" style="left: 1200px">
                       <h3>2002</h3>
                       <p>
-                        "우리은행"으로
+                        &#34;우리은행&#34;으로 행명 및 CI 변경
                         <br />
-                        행명 변경 및 CI 변경
+                        2002 아시안게임 공식 후원 은행 참여
                       </p>
                     </div>
-                    <div class="history_bottom">
-                      <h3>2008</h3>
+                    <div class="history_bottom" style="left: 1800px">
+                      <h3>2010</h3>
                       <p>
-                        은행권 최초
+                        은행권 최초 &#34;퇴직연금 연구소&#34; 설립
                         <br />
-                        “퇴직연금 연구소” 설립
+                        국내최초 &#34;모바일학생증 서비스&#34; 실시
                       </p>
                     </div>
-                    <div class="history_bottom">
-                      <h3>2015</h3>
+                    <div class="history_bottom" style="left: 2400px">
+                      <h3>2018</h3>
                       <p>
-                        우리은행-서울시
+                        국민연금공단과 주거래은행 계약 체결
                         <br />
-                        ‘서울시금고 100주년’ 기념식
+                        국내은행 최초 아시아지역 현지 심사센터 신설
                       </p>
                     </div>
-                    <div class="history_bottom">
+                    <div class="history_bottom" style="left: 3000px">
                       <h3>2023</h3>
                       <p>
                         금융권 최초 무역금융
@@ -321,8 +317,8 @@
               </div>
             </div>
           </div>
-          <!-- <div class="intro_insurance">
-            <img src="" alt="" />
+          <div class="intro_insurance">
+            <img src="./images/introduce/insurance.jpg" alt="보험" />
             <span>보험</span>
             <p>
               조회부터 상담, 가입까지 한 번에
@@ -331,24 +327,23 @@
             </p>
           </div>
           <div class="intro_card">
-            <img src="" alt="" />
             <span>카드</span>
             <p>
               계획적이고 실속있는 소비를 위해
-
               <br />
               더욱 다양한 혜택과 서비스를 가득 담은 우리카드
             </p>
+            <img src="./images/introduce/card.png" alt="우리카드" />
           </div>
           <div class="intro_mydata">
-            <img src="" alt="" />
+            <img src="./images/introduce/mydata.png" alt="" />
             <span>마이데이터</span>
             <p>
               금력, 나의 금융을 관리할 수 있는 힘
               <br />
               나만의 똑똑한 금융 생활 트레이너 우리 마이데이터 서비스
             </p>
-          </div> -->
+          </div>
         </div>
       </main>
       <!-- 푸터 -->
