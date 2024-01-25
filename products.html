@@ -30,8 +30,11 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script defer src="./assets/js/products.js"></script>
   </head>
@@ -39,23 +42,21 @@
     <div class="wrap">
       <div class="hd-height">header</div>
       <div class="intro">
-        <div class="circle-contain">
-          <div class="circle">
-            <!-- <img src="./images/products/intro.png" alt="" /> -->
-          </div>
-          <h1>
-            내가
-            <span>WON</span>
-            하는<br />금융 생활의 답
-          </h1>
+        <div class="circle">
+          <img src="./images/products/intro.png" alt="" />
         </div>
+        <h1>
+          내가
+          <span>WON</span>
+          하는<br />금융 생활의 답
+        </h1>
       </div>
 
       <div class="products">
         <section class="product1">
           <h1>대한민국 청년들을 위한 금융 상품</h1>
           <ul>
-            <li>
+            <li data-aos="fade-right">
               <img src="./images/products/house1.png" alt="" />
               <div class="txt">
                 <h2>버팀목 전세 자금</h2>
@@ -65,7 +66,7 @@
                 </h3>
               </div>
             </li>
-            <li class="pd2">
+            <li class="pd2" data-aos="fade-left">
               <img src="./images/products/money hands.png" alt="" />
               <div class="txt">
                 <h2>주거 안정 월세 대출</h2>
@@ -75,7 +76,7 @@
                 </h3>
               </div>
             </li>
-            <li>
+            <li data-aos="fade-right">
               <img src="./images/products/people.png" alt="" />
               <div class="txt">
                 <h2>우리 청년맞춤형 전세대출</h2>
@@ -87,7 +88,7 @@
 
         <section class="product2">
           <h1>집에서도 간편하게 스마트 뱅킹 대출</h1>
-          <ul>
+          <ul data-aos="fade-up">
             <li>
               <img src="./images/products/car.png" alt="" />
               <div class="txt">
@@ -121,17 +122,18 @@
             </li>
           </ul>
         </section>
+
         <section class="product3">
           <h1>일반 신용 대출 추천 상품</h1>
           <ul>
-            <li class="aaa">
+            <li class="aaa" data-aos="zoom-in">
               <img src="./images/products/wall.png" alt="" />
               <div class="txt">
                 <h2>우리 사잇돌 중금리 대출</h2>
                 <h3>생활안정자금 대출<br />고정 금리(5년 이상) 6.79%</h3>
               </div>
             </li>
-            <li class="aaa">
+            <li class="aaa" data-aos="zoom-in">
               <img src="./images/products/sun.png" alt="" />
               <div class="txt">
                 <h2>우리 햇살론15</h2>
@@ -141,7 +143,7 @@
                 </h3>
               </div>
             </li>
-            <li>
+            <li data-aos="zoom-in">
               <img src="./images/products/love light.png" alt="" />
               <div class="txt">
                 <h2>우리 홈마스터론</h2>
@@ -151,7 +153,7 @@
                 </h3>
               </div>
             </li>
-            <li>
+            <li data-aos="zoom-in">
               <img src="./images/products/ring.png" alt="" />
               <div class="txt">
                 <h2>우리 상생 올케어 대출</h2>
@@ -163,9 +165,10 @@
             </li>
           </ul>
         </section>
+
         <section class="product4">
           <h1>개인 사업자 추천 상품</h1>
-          <ul class="ceo">
+          <ul class="ceo" data-aos="fade-left">
             <li>
               <img src="./images/products/house hand.png" alt="" />
               <div class="txt">
@@ -188,7 +191,7 @@
             </li>
           </ul>
           <h1 class="worker-tit">직장인 추천 상품</h1>
-          <ul class="worker">
+          <ul class="worker" data-aos="fade-right">
             <li>
               <img src="./images/products/calender.png" alt="" />
               <div class="txt">
@@ -222,7 +225,7 @@
               기업 대출 / 부동산 대출<br />
               낮은 금리 상품
             </h2>
-            <div class="botton">상품 더보기</div>
+            <a href="#" class="botton">상품 더보기</a>
           </div>
           <div class="box box-guide">
             <h1>상품 가이드가 필요하신가요 ?</h1>
@@ -231,7 +234,7 @@
               수수료 및 금리 안내<br />
               상담 채널 안내
             </h2>
-            <div class="botton">가이드 보러가기</div>
+            <a href="#" class="botton">가이드 보러가기</a>
           </div>
         </div>
       </div>
@@ -244,18 +247,18 @@
             함께
           </strong>
           <div class="cfl">
-            <span class="clear">
+            <p class="clear">
               Clear
-              <p>방해되는 것은 비워내고</p>
-            </span>
-            <span class="fit">
+              <span>방해되는 것은 비워내고</span>
+            </p>
+            <p class="fit">
               Fit
-              <p>금융 생활에 필요한 것들로 맞춰주고</p>
-            </span>
-            <span class="lead">
+              <span>금융 생활에 필요한 것들로 맞춰주고</span>
+            </p>
+            <p class="lead">
               lead
-              <p>더 나은 금융 여정을 안내할게요</p>
-            </span>
+              <span>더 나은 금융 여정을 안내할게요</span>
+            </p>
           </div>
           <strong class="txt-bottom">
             간편해진 모바일 앱으로<br />

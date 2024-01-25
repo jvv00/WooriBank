@@ -11,47 +11,13 @@ window.addEventListener("resize", function () {
 });
 
 // intro
-// gsap.registerPlugin(ScrollTrigger);
-
-// const tl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".circle-contain",
-//     start: "top top",
-//     end: "bottom top",
-//     pin: true,
-//     markers: true,
-//     pinSpacing: false,
-//     scrub: true,
-//   },
-// });
-// tl.to(".circle", {
-//   scale: 5,
+// type = "text/javascript";
+// const banner = document.querySelector(".circle");
+// window.addEventListener("scroll", function () {
+//   const value = 800 + window.scrollY;
+//   banner.style.clipPath = "circle(" + value + "px at center center)";
 // });
 
-gsap.registerPlugin(ScrollTrigger);
-
-const tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".circle-contain",
-    start: "top top",
-    end: "+=100%",
-    pin: true,
-    markers: true,
-    pinSpacing: false,
-    scrub: true,
-    toggleActions: "play none none none", // 변경된 부분
-    // fromto:
-  },
-});
-
-tl.to(".circle", {
-  scale: 5,
-});
-
-ScrollTrigger.create({
-  trigger: ".products",
-  start: "top top",
-  end: "+=100%",
-  pin: true,
-  pinSpacing: false,
+AOS.init({
+  duration: 1000,
 });
