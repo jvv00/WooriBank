@@ -15,6 +15,7 @@
   position: relative;
   font-family: "Noto Sans KR", sans-serif;
   white-space: nowrap;
+  overflow-x: hidden;
   // height: 1000vh;
 }
 
@@ -24,34 +25,30 @@
 }
 
 .intro {
-  height: 500vh;
-}
-
-.circle-contain {
-  position: relative;
-  width: 100%;
-  height: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // overflow: hidden;
-  .circle {
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1920px;
-    border-radius: 50%;
-    background: url(../../images/products/intro.png) no-repeat 0 0 / cover;
-  }
+  height: 900px;
   h1 {
-    z-index: 1000;
     font-weight: 700;
     font-size: 80px;
     text-align: center;
     span {
       color: #008cdf;
+    }
+  }
+  .circle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 900px;
+    background: #e91e63;
+    clip-path: circle(800px at center center);
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
@@ -245,6 +242,7 @@
   }
   h2 {
     font-size: 32px;
+    font-weight: 500;
     color: #555555;
     padding: 0 146px 80px;
   }
@@ -257,6 +255,13 @@
       background-color: #f9fafb;
       border-radius: 85px;
       text-align: center;
+      a {
+        transition: color 0.2s ease;
+        &:hover {
+          background-color: #008cdf;
+          color: #fff;
+        }
+      }
     }
     .botton {
       margin: 0 140px 0;
@@ -270,6 +275,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .box-moreview {
       margin-right: 50px;
     }
@@ -298,7 +304,7 @@
     font-weight: 600;
     color: #008cdf;
     display: flex;
-    p {
+    span {
       color: #000000;
       font-weight: 300;
     }
