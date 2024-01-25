@@ -1,0 +1,127 @@
+#introduce {
+  background-image: url(../../images/introduce/mainbg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  height: 4000px;
+  .intro_wrap {
+    position: relative;
+    align-items: center;
+    width: 1220px;
+    margin: 0 auto;
+    padding: 30px 0 100px 0;
+    text-align: center;
+    .intro_main {
+      height: 820px;
+      padding: 200px 0;
+      img {
+        width: 450px;
+        padding: 20px 0;
+      }
+      h2 {
+        font-size: 38px;
+        font-family: "WooridaumB";
+        line-height: 1.2;
+      }
+    }
+    .intro_mokup {
+      height: 1600px;
+      position: relative;
+      padding: 200px 0;
+      p {
+        font-size: 30px;
+        line-height: 1.2;
+        position: absolute;
+      }
+      img {
+        position: absolute;
+      }
+      .mokup-pc {
+        height: 400px;
+        .pc-img {
+          width: 35%;
+          right: 0;
+          top: 0;
+        }
+        p {
+          top: 150px;
+          left: 630px;
+        }
+      }
+      .mokup-mobile {
+        height: 400px;
+        .mobile-img {
+          width: 20%;
+          left: 0;
+          top: -50px;
+        }
+        p {
+          top: 170px;
+          left: 280px;
+        }
+      }
+      .mokup-tablet {
+        height: 400px;
+        .tablet-img {
+          width: 35%;
+          right: 0;
+          bottom: 0;
+        }
+        p {
+          top: 230px;
+          left: 400px;
+        }
+      }
+    }
+    .intro_history {
+      position: absolute;
+      align-items: center;
+      width: 1550px;
+      height: 500px;
+      display: flex;
+      .swiper-container4 {
+        .swiper-slide {
+          width: 3100px;
+          position: relative;
+          text-align: left;
+          .history_box {
+            width: 3100px;
+            height: 30px;
+            background: linear-gradient(
+              90deg,
+              rgba(32, 196, 244, 1) 0%,
+              rgba(0, 94, 144, 1) 100%
+            );
+          }
+          .history_txt {
+            display: flex;
+            .history_top,
+            .history_bottom {
+              margin-right: 250px;
+              &:last-child {
+                margin-right: 0;
+              }
+              h3 {
+                font-size: 25px;
+                font-family: "WooridaumB";
+              }
+              p {
+                font-size: 20px;
+                font-family: "WooridaumL";
+              }
+            }
+            .history_top {
+              margin-bottom: 50px;
+              &:first-child {
+                padding-left: 250px;
+              }
+            }
+            .history_bottom {
+              margin-top: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
