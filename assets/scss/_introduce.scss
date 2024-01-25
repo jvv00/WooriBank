@@ -1,0 +1,223 @@
+#introduce {
+  background-image: url(../../images/introduce/mainbg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  height: 5500px;
+  .intro_wrap {
+    position: relative;
+    align-items: center;
+    width: 1220px;
+    margin: 0 auto;
+    padding: 30px 0 100px 0;
+    text-align: center;
+    .intro_main {
+      height: 820px;
+      padding: 200px 0;
+      img {
+        width: 450px;
+        padding: 20px 0;
+      }
+      h2 {
+        font-size: 38px;
+        font-family: "WooridaumB";
+        line-height: 1.2;
+      }
+    }
+    .intro_mokup {
+      height: 1600px;
+      position: relative;
+      padding: 250px 0;
+      p {
+        font-size: 30px;
+        line-height: 1.2;
+        position: absolute;
+      }
+      img {
+        position: absolute;
+      }
+      .mokup-pc {
+        height: 400px;
+        .pc-img {
+          width: 35%;
+          right: 0;
+          top: 0;
+        }
+        p {
+          top: 150px;
+          left: 630px;
+        }
+      }
+      .mokup-mobile {
+        height: 400px;
+        .mobile-img {
+          width: 20%;
+          left: 0;
+          top: -50px;
+        }
+        p {
+          top: 170px;
+          left: 280px;
+        }
+      }
+      .mokup-tablet {
+        height: 400px;
+        .tablet-img {
+          width: 35%;
+          right: 0;
+          bottom: 0;
+        }
+        p {
+          top: 230px;
+          left: 400px;
+        }
+      }
+    }
+    .intro_history {
+      align-items: center;
+      width: 1600px;
+      height: 500px;
+      margin: 200px 0;
+      display: flex;
+      .swiper-container4 {
+        overflow: visible;
+        width: 3150px;
+        .swiper-slide {
+          position: relative;
+          text-align: left;
+          .history_box {
+            width: 4800px;
+            height: 30px;
+            background: linear-gradient(
+              90deg,
+              rgba(32, 196, 244, 1) 0%,
+              rgba(0, 94, 144, 1) 100%
+            );
+          }
+          .history_txt {
+            display: flex;
+            .history_top,
+            .history_bottom {
+              border-left: 1px solid $gray-700;
+              padding-left: 20px;
+              position: relative;
+              &:before {
+                content: "";
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                background-color: $gray-800;
+                border-radius: 50%;
+                left: -3.5px;
+                transform: translateY(-50%);
+              }
+              h3 {
+                font-size: 25px;
+                font-family: "WooridaumB";
+              }
+              p {
+                font-size: 20px;
+                font-family: "WooridaumL";
+              }
+            }
+            .history_top {
+              padding-bottom: 200px;
+              position: absolute;
+              bottom: -50px;
+              &:before {
+                bottom: -10px;
+              }
+            }
+            .history_bottom {
+              padding-top: 200px;
+              position: absolute;
+              top: -50px;
+              &:before {
+                top: 0;
+              }
+            }
+            .history_tit {
+              margin-left: 250px;
+              h3,
+              h4 {
+                display: inline;
+                font-size: 30px;
+              }
+              h4 {
+                color: $primary-400;
+              }
+            }
+          }
+        }
+      }
+    }
+    .intro_insurance {
+      position: absolute;
+      padding: 100px 0;
+      left: -350px;
+      display: flex;
+      align-items: end;
+      text-align: left;
+      img {
+        width: 700px;
+      }
+      span {
+        position: absolute;
+        left: 720px;
+        bottom: 180px;
+        font-size: 30px;
+      }
+      p {
+        margin-left: 20px;
+        font-size: 25px;
+        font-family: "WooridaumL";
+      }
+    }
+    .intro_card {
+      position: absolute;
+      padding: 100px 0;
+      right: -350px;
+      bottom: -1200px;
+      display: flex;
+      align-items: end;
+      text-align: right;
+      img {
+        width: 700px;
+      }
+      span {
+        position: absolute;
+        right: 720px;
+        bottom: 180px;
+        font-size: 30px;
+      }
+      p {
+        margin-right: 20px;
+        font-size: 25px;
+        font-family: "WooridaumL";
+      }
+    }
+    .intro_mydata {
+      position: absolute;
+      padding: 100px 0;
+      left: -350px;
+      bottom: -1800px;
+      display: flex;
+      align-items: end;
+      text-align: left;
+      img {
+        width: 700px;
+      }
+      span {
+        position: absolute;
+        left: 720px;
+        bottom: 180px;
+        font-size: 30px;
+      }
+      p {
+        margin-left: 20px;
+        font-size: 25px;
+        font-family: "WooridaumL";
+      }
+    }
+  }
+}
