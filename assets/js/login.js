@@ -18,7 +18,7 @@ function toArray(nodeList) {
         toArray(document.querySelectorAll('.faq-list dd')).forEach(function(item) {
           item.style.display = 'none';
         });
-        ansList.style.display = 'block';
+        ansList.style.display = 'flex';
       } else {
         // 이미 선택된 질문이면 선택 취소하고 답변 숨기기
         this.classList.remove('selected');

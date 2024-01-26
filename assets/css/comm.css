@@ -1152,15 +1152,6 @@ legend {
   padding: 8px;
   outline: none; /* 선택 시 검은 테두리 제거 */
 }
-.id-login-box .inner-box .section-id ::-moz-placeholder, .id-login-box .inner-box .section-pw ::-moz-placeholder {
-  color: #8c8c8c;
-  font-family: "Noto Sans KR";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 350;
-  line-height: normal;
-  letter-spacing: -0.36px;
-}
 .id-login-box .inner-box .section-id ::placeholder,
 .id-login-box .inner-box .section-pw ::placeholder {
   color: #8c8c8c;
@@ -1174,6 +1165,7 @@ legend {
 .id-login-box .inner-box .section-id input:focus,
 .id-login-box .inner-box .section-pw input:focus {
   border-color: #0083ca;
+
 }
 .id-login-box .btn2.disabled {
   display: flex;
@@ -1183,13 +1175,30 @@ legend {
   justify-content: center;
   align-items: center;
   border-radius: 3px;
-  background: #dadada;
+  background: #8FBBD6;
   color: #fff;
   text-align: center;
   font-family: "WooridaumR";
   font-size: 14px;
   font-weight: 400;
   letter-spacing: -0.42px;
+}
+.id-login-box .btn2.disabled {
+  display: flex;
+  width: 64px;
+  height: 82px;
+  padding: 10px 15px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  background: #0083ca;
+  color: #fff;
+  text-align: center;
+  font-family: "WooridaumR";
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.42px;
+  cursor: pointer;
 }
 .id-login-box .btn2 {
   display: flex;
@@ -1289,132 +1298,16 @@ legend {
   align-items: center;
   width: 100%;
   padding: 15px 0;
+  flex-shrink: 1;
 }
-.service-wrap .service {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 84px;
-  align-items: flex-start;
-  border-radius: 15px;
-  width: 100%;
-  border: 1px solid #E2E2E2;
-  background: #fff;
-}
-.service-wrap .service .faq-list {
-  color: #333333;
-  font-family: "WooridaumL";
-  font-size: 14px;
-  font-weight: 400;
-  padding: 10px 20px 10px 0;
-  white-space: initial;
-}
-.service-wrap .service .faq-list dt {
-  border-top: 1px solid #dadada;
-  padding: 10px;
-  position: relative;
-  cursor: pointer;
-  padding-right: 50px;
-}
-.service-wrap .service .faq-list dt::before {
-  content: "Q ";
-  display: inline-block;
-  padding-right: 10px;
-}
-.service-wrap .service .faq-list dt::after {
-  content: "+";
-  display: inline-block;
-  position: absolute;
-  text-align: center;
-  right: 10px;
-}
-.service-wrap .service .faq-list dt.selected {
-  color: #0083ca;
-}
-.service-wrap .service .faq-list dt.selected::before {
-  color: #0083ca;
-}
-.service-wrap .service .faq-list dt.selected::after {
-  content: "-";
-  text-align: center;
-}
-.service-wrap .service .faq-list dd {
-  display: none;
-  border-top: 1px solid #dadada;
-  padding: 10px;
-  position: relative;
-  background: #f5f5f5;
-}
-.service-wrap .service .faq-list dd::before {
-  content: "A ";
-  display: inline-block;
-  padding-right: 10px;
-}
-.service-wrap .service .faq-list dd li {
-  white-space: initial;
-}
-.service-wrap .service .faq-list .faq-list dt:first-child {
-  border-top: 0;
-}
-.service-wrap .service .cs-contact-wrap {
-  display: flex;
-  flex-direction: column;
-}
-.service-wrap .service .cs-contact-wrap .contact-list {
-  display: flex;
-  padding: 13px 0 18px 0;
-}
-.service-wrap .service .cs-contact-wrap .contact-list .tel01 {
-  color: #666666;
-  text-align: center;
-  font-family: "WooridaumR";
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: -0.54px;
-  padding-right: 45px;
-}
-.service-wrap .service .cs-contact-wrap .contact-list .tel-tit {
-  color: #008CDF;
-  font-size: 14px;
-  letter-spacing: -0.42px;
-  text-align: left;
-}
-.service-wrap .service .cs-contact-wrap .contact-list .tel02, .service-wrap .service .cs-contact-wrap .contact-list .tel03 {
-  padding: 5px 0;
-}
-.service-wrap .service .cs-contact-wrap .contact-list .tel02 a, .service-wrap .service .cs-contact-wrap .contact-list .tel03 a {
-  padding-right: 7px;
-}
-.service-wrap .service .cs-contact-wrap .contact-list .tel02 {
-  color: #666666;
-  text-align: left;
-  font-family: "WooridaumR";
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: -0.36px;
-  padding-right: 45px;
-}
-.service-wrap .service .cs-contact-wrap .contact-list .tel03 {
-  color: #666666;
-  text-align: left;
-  font-family: "WooridaumR";
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: -0.36px;
-}
-.service-wrap .service .cs-contact-wrap .contact-list .tel03 ul {
-  display: flex;
-}
-.service-wrap .service .cs-contact-wrap .contact-list .tel03 ul li {
-  padding-right: 5px;
-}
-.service-wrap .service h3 {
+.service-wrap h3 {
   color: #333333;
   font-family: "WooridaumB";
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 13px;
 }
-.service-wrap .service h3 a::after {
+.service-wrap h3 a::after {
   content: "\e5cc";
   font-family: "Material Symbols Rounded";
   font-size: 18px;
@@ -1423,7 +1316,142 @@ legend {
   vertical-align: middle;
   margin-left: 3px;
 }
+.service-wrap .service-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 84px;
+  align-items: flex-start;
+  border-radius: 15px;
+  width: 100%;
+  border: 1px solid #E2E2E2;
+  background: #fff;
+  overflow: auto;
+}
+.service-wrap .service-inner .faq-list {
+  color: #333333;
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 20px 10px 0;
+  white-space: initial;
+}
+.service-wrap .service-inner .faq-list dt {
+  border-top: 1px solid #dadada;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  padding-right: 50px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+}
+.service-wrap .service-inner .faq-list dt::before {
+  content: "Q ";
+  display: inline-block;
+  padding-right: 10px;
+}
 
+.service-wrap .service-inner .faq-list dt::after {
+  font-family: "Material Symbols Rounded";
+  content: "\e145";
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  right: 10px;
+}
+.service-wrap .service-inner .faq-list dt.selected {
+  color: #0083ca;
+}
+.service-wrap .service-inner .faq-list dt.selected::before {
+  color: #0083ca;
+}
+.service-wrap .service-inner .faq-list dt.selected::after {
+  font-family: "Material Symbols Rounded";
+  content: "\e931";
+  text-align: center;
+}
+.service-wrap .service-inner .faq-list dd {
+  display: none;
+  border-top: 1px solid #dadada;
+  padding: 10px;
+  position: relative;
+  background: #f5f5f5;
+  font-weight: 400;
+}
+.service-wrap .service-inner .faq-list dd::before {
+
+  content: "A ";
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.service-wrap .service-inner .faq-list dd li {
+  white-space: initial;
+}
+.service-wrap .service-inner .faq-list dd li b {
+  font-weight: 500;
+
+}
+.service-wrap .service-inner .faq-list dd li div {
+  padding: 3px 0;
+}
+.service-wrap .service-inner .faq-list .faq-list dt:first-child {
+  border-top: 0;
+}
+.service-wrap .service-inner .cs-contact-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.service-wrap .service-inner .cs-contact-wrap .contact-list {
+  display: flex;
+  padding: 13px 0 18px 0;
+}
+.service-wrap .service-inner .cs-contact-wrap .contact-list .tel01 {
+  color: #666666;
+  text-align: center;
+  font-family: "WooridaumR";
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.54px;
+  padding-right: 45px;
+}
+
+.service-wrap .service-inner .cs-contact-wrap .contact-list .tel-tit {
+  color: #008CDF;
+  font-size: 14px;
+  letter-spacing: -0.42px;
+  text-align: left;
+}
+
+.service-wrap .service-inner .cs-contact-wrap .contact-list .tel02, .service-wrap .service-inner .cs-contact-wrap .contact-list .tel03 {
+  padding: 5px 0;
+}
+.service-wrap .service-inner .cs-contact-wrap .contact-list .tel02 a, .service-wrap .service-inner .cs-contact-wrap .contact-list .tel03 a {
+  padding-right: 7px;
+}
+.service-wrap .service-inner .cs-contact-wrap .contact-list .tel02 {
+  color: #666666;
+  text-align: left;
+  font-family: "WooridaumR";
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+  padding-right: 45px;
+}
+.service-wrap .service-inner .cs-contact-wrap .contact-list .tel03 {
+  color: #666666;
+  text-align: left;
+  font-family: "WooridaumR";
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+}
+.service-wrap .service-inner .cs-contact-wrap .contact-list .tel03 ul {
+  display: flex;
+}
+.service-wrap .service-inner .cs-contact-wrap .contact-list .tel03 ul li {
+  padding-right: 5px;
+}
 #product-body::before {
   content: "";
   background-image: url(../../images/products/body.png);
@@ -1530,8 +1558,7 @@ legend {
 .product1 ul .pd2 {
   display: flex;
   flex-direction: row-reverse;
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align-last: left;
 }
 
 .product2 {
@@ -1593,8 +1620,7 @@ legend {
   flex-direction: column;
 }
 .product3 ul li img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .product3 ul li .txt {
   padding-top: 70px;
@@ -1726,6 +1752,7 @@ legend {
   color: #008cdf;
   display: flex;
 }
+
 .app span {
   color: #000000;
   font-weight: 300;
@@ -1736,8 +1763,7 @@ legend {
 }
 .app .mokup img {
   height: 682px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .service {
