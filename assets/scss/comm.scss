@@ -250,5 +250,22 @@
   }
 }
 
+// 반응형 미디어쿼리 모바일
+@media (max-width: 768px) {
+  #header {
+    width: 100%;
+    .tnb ul {
+      display: none;
+    }
+    .gnb ul {
+      display: none;
+    }
+  }
+}
+
+// 반응형 미디어쿼리 태블릿
+@media (min-width: 769px) and (max-width: 1023px) {
+}
+
 @import "main";
 @import "introduce";

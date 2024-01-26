@@ -157,8 +157,6 @@ $(document).ready(function () {
   });
 
   // 목업 스크롤트리거
-  gsap.registerPlugin(ScrollTrigger);
-
   function fadeInOnScroll(element, direction) {
     gsap.from(element, {
       opacity: 0,
