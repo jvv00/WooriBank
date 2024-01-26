@@ -1165,6 +1165,7 @@ legend {
 .id-login-box .inner-box .section-id input:focus,
 .id-login-box .inner-box .section-pw input:focus {
   border-color: #0083ca;
+
 }
 .id-login-box .btn2.disabled {
   display: flex;
@@ -1181,6 +1182,23 @@ legend {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: -0.42px;
+}
+.id-login-box .btn2.disabled {
+  display: flex;
+  width: 64px;
+  height: 82px;
+  padding: 10px 15px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  background: #0083ca;
+  color: #fff;
+  text-align: center;
+  font-family: "WooridaumR";
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.42px;
+  cursor: pointer;
 }
 .id-login-box .btn2 {
   display: flex;
@@ -1332,6 +1350,7 @@ legend {
   display: inline-block;
   padding-right: 10px;
 }
+
 .service-wrap .service-inner .faq-list dt::after {
   font-family: "Material Symbols Rounded";
   content: "\e145";
@@ -1360,15 +1379,18 @@ legend {
   font-weight: 400;
 }
 .service-wrap .service-inner .faq-list dd::before {
+
   content: "A ";
   display: inline-block;
   padding-right: 10px;
 }
+
 .service-wrap .service-inner .faq-list dd li {
   white-space: initial;
 }
 .service-wrap .service-inner .faq-list dd li b {
   font-weight: 500;
+
 }
 .service-wrap .service-inner .faq-list dd li div {
   padding: 3px 0;
@@ -1393,12 +1415,14 @@ legend {
   letter-spacing: -0.54px;
   padding-right: 45px;
 }
+
 .service-wrap .service-inner .cs-contact-wrap .contact-list .tel-tit {
   color: #008CDF;
   font-size: 14px;
   letter-spacing: -0.42px;
   text-align: left;
 }
+
 .service-wrap .service-inner .cs-contact-wrap .contact-list .tel02, .service-wrap .service-inner .cs-contact-wrap .contact-list .tel03 {
   padding: 5px 0;
 }
@@ -1428,7 +1452,6 @@ legend {
 .service-wrap .service-inner .cs-contact-wrap .contact-list .tel03 ul li {
   padding-right: 5px;
 }
-
 #product-body::before {
   content: "";
   background-image: url(../../images/products/body.png);
@@ -1449,18 +1472,18 @@ legend {
   overflow-x: hidden;
 }
 
-.hd-height {
-  height: 100px;
-  background-color: lavender;
-}
-
 .intro {
-  height: 900px;
+  height: 1200px;
+  position: relative;
+  background-color: #f9fafb;
 }
 .intro h1 {
   font-weight: 700;
   font-size: 80px;
   text-align: center;
+  position: absolute;
+  left: 40%;
+  top: 40%;
 }
 .intro h1 span {
   color: #008cdf;
@@ -1470,9 +1493,9 @@ legend {
   top: 0;
   left: 0;
   width: 100%;
-  height: 900px;
-  background: #e91e63;
-  clip-path: circle(800px at center center);
+  height: 1200px;
+  -webkit-clip-path: circle(800px at center center);
+          clip-path: circle(800px at center center);
 }
 .intro .circle img {
   position: absolute;
@@ -1480,7 +1503,8 @@ legend {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .products h1 {
@@ -1715,9 +1739,11 @@ legend {
 }
 .app strong {
   font-size: 65px;
+  font-weight: 600;
 }
 .app strong span {
   color: #008cdf;
+  font-weight: 600;
 }
 .app .cfl {
   padding-top: 220px;
@@ -1726,13 +1752,10 @@ legend {
   color: #008cdf;
   display: flex;
 }
-.app .cfl span {
+
+.app span {
   color: #000000;
   font-weight: 300;
-}
-.app .cfl .fit,
-.app .cfl .lead {
-  display: none;
 }
 .app .mokup {
   display: flex;
@@ -1758,8 +1781,20 @@ legend {
   display: flex;
   justify-content: space-evenly;
 }
+.service .service-memu a:hover img {
+  transform: scale3d(1.2, 1.2, 1);
+  transition: transform 0.3s ease;
+}
+.service .service-memu a:hover p {
+  color: #008cdf;
+}
+.service .service-memu a img:not(:hover),
+.service .service-memu a p:not(:hover) {
+  transition: transform 0.3s ease;
+  transform: scale3d(1, 1, 1);
+}
 .service .service-memu p {
-  padding-top: 20px;
+  padding-top: 40px;
   text-align: center;
   font-size: 45px;
   font-weight: 400;
@@ -1990,24 +2025,126 @@ legend {
 
 #cert-body {
   position: relative;
-  white-space: nowrap;
   box-sizing: border-box;
 }
 
 #cert-body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   opacity: 0.5;
   z-index: -1;
 }
 
-.bnr img {
+.cert-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  max-width: 2800px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.inner .bnr {
+  display: flex;
+  justify-content: center;
+}
+.inner .bnr img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.cert-g-wrap {
+  max-width: 1220px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 15px auto;
+}
+
+.cert-type-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.cert-type-box .cert-contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 48%;
+  height: 360px;
+  margin: 15px 10px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  border: 1px solid #e2e2e2;
+  background: #fff;
+}
+.cert-type-box .cert-contain .cert-icon img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.cert-type-box .cert-contain .cert-cont {
+  width: 100%;
+  white-space: wrap;
+  padding: 20px;
+  color: #333333;
+  font-family: "Noto Sans KR";
+  font-size: 13px;
+  font-weight: 400;
+}
+.cert-type-box .cert-contain .cert-cont h3 {
+  color: #333333;
+  font-family: "WooridaumB";
+  font-size: 18px;
+  font-weight: 400;
+}
+.cert-type-box .cert-contain .cert-cont p {
+  padding: 15px 0 5px 0;
+}
+
+.cert-add-menu {
+  display: flex;
+  padding: 0 20px;
+}
+
+.btn3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  border: 1px solid #e2e2e2;
+  background: #fff;
+  margin-right: 8px;
+  transition: all 0.1s;
+}
+.btn3:hover {
+  border: 1px solid #0083ca;
+  transform: scale(1.05);
+}
+.btn3:hover a {
+  color: #0083ca;
+}
+.btn3 a {
+  padding: 5px;
+  color: #333333;
+  text-align: center;
+  font-family: "Noto Sans KR";
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.36px;
 }/*# sourceMappingURL=comm.css.map */

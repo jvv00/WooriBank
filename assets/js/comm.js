@@ -156,9 +156,7 @@ $(document).ready(function () {
     ease: "power1.out",
   });
 
-  // 목업 이미지 애니메이션
-  gsap.registerPlugin(ScrollTrigger);
-
+  // 목업 스크롤트리거
   function fadeInOnScroll(element, direction) {
     gsap.from(element, {
       opacity: 0,
@@ -167,8 +165,8 @@ $(document).ready(function () {
       ease: "power2.out",
       scrollTrigger: {
         trigger: element,
-        start: "top 80%",
-        end: "bottom 50%",
+        start: "top 90%",
+        end: "bottom 40%",
         scrub: true,
       },
     });
@@ -182,5 +180,30 @@ $(document).ready(function () {
   var historySwiper = new Swiper(".swiper-container4", {
     slidesPerView: 0.5,
     freeMode: true,
+  });
+
+  // 상품 스크롤트리거
+  const sections = document.querySelectorAll(
+    ".intro_insurance, .intro_card, .intro_mydata"
+  );
+
+  sections.forEach((section) => {
+    const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+
+    tl.from(section.querySelector("img"), { opacity: 0, y: 100, duration: 1 })
+      .to(section.querySelector("img"), {
+        filter: "brightness(50%)",
+        duration: 1,
+        delay: 0,
+      })
+
+      .to(section.querySelector("strong"), { opacity: 1, duration: 1 })
+      .to(section.querySelector("p"), { opacity: 1, duration: 1 });
+
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top 70%",
+      animation: tl,
+    });
   });
 });
