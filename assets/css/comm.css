@@ -1682,8 +1682,17 @@ legend {
   max-width: 1220px;
 }
 
+@media screen and (max-width: 576px) {
+  .login.inner {
+    width: 100%;
+    padding: 0 16px; /* Adjust padding for smaller screens */
+  }
+}
 .login-title-wrap {
   width: 100%;
+}
+.login-title-wrap .login-mobile-title {
+  display: none;
 }
 .login-title-wrap .notice-title {
   text-align: center;
@@ -1709,6 +1718,36 @@ legend {
   padding-right: 5px;
 }
 
+@media screen and (max-width: 576px) {
+  .login-title-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .login-title-wrap .title {
+    display: none;
+  }
+  .login-title-wrap .login-mobile-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .login-title-wrap .login-mobile-title .home-btn,
+  .login-title-wrap .login-mobile-title .menu-btn {
+    display: flex;
+    align-items: center;
+  }
+  .login-title-wrap .login-mobile-title .material-symbols-outlined {
+    display: flex;
+    width: 100%;
+    font-size: 28px;
+    line-height: 65px;
+    font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+  }
+  .login-title-wrap .notice {
+    display: none;
+  }
+}
 .login-type-box {
   display: flex;
   justify-content: space-between;
@@ -1716,21 +1755,8 @@ legend {
   width: 100%;
   gap: 20px;
 }
-.login-type-box h3 {
-  color: #333333;
-  text-align: center;
-  font-family: "WooridaumB";
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 44px;
-}
-.login-type-box p {
-  color: #666666;
-  text-align: center;
-  font-family: "WooridaumL";
-  font-size: 12px;
-  font-weight: 400;
-  margin-top: 15px;
+.login-type-box .tab-wrap {
+  display: none;
 }
 
 .login-box {
@@ -1741,6 +1767,22 @@ legend {
   height: 360px;
   border: solid 1px #e2e2e2;
   border-radius: 10px;
+}
+.login-box h3 {
+  color: #333333;
+  text-align: center;
+  font-family: "WooridaumB";
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 44px;
+}
+.login-box p {
+  color: #666666;
+  text-align: center;
+  font-family: "WooridaumL";
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 15px;
 }
 .login-box .btn-box {
   display: flex;
@@ -1769,6 +1811,7 @@ legend {
   padding: 30px 0 20px 0;
 }
 .login-box .Won-icon img {
+  display: block;
   width: 100px;
   height: 100px;
 }
@@ -1903,7 +1946,47 @@ legend {
   background: #dadada;
 }
 
+@media screen and (max-width: 576px) {
+  .login-type-box {
+    flex-direction: column; /* Stack boxes vertically for smaller screens */
+    gap: 15px; /* Add some space between login boxes */
+  }
+  .login-type-box .tab-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .login-type-box .tab-btn {
+    width: 33.333%;
+    border-radius: 10px 10px 0px 0px;
+    background: #fff;
+    text-align: center;
+    padding: 18.5px 22.5px;
+  }
+  .login-type-box .tab-btn.active {
+    border-bottom: 1px solid #0083ca; /* 활성화된 경우 색 지정 (예: 빨간색) */
+  }
+  .login-box {
+    display: none;
+    width: 100%; /* Take full width for smaller screens */
+    height: 190px;
+    margin-bottom: 20px; /* Add some space between login boxes */
+    padding: 20px;
+  }
+  .login-box h3, .login-box p {
+    display: none;
+  }
+  .login-box .Won-icon img {
+    display: none;
+  }
+  .login-box.active {
+    display: flex;
+    /* Additional styling as needed */
+  }
+  /* Add styling for tab buttons as needed */
+}
 .notice-wrap {
+  display: flex;
   width: 100%;
   padding: 15px 0;
 }
@@ -1953,6 +2036,11 @@ legend {
   color: #666666;
 }
 
+@media screen and (max-width: 576px) {
+  .notice-wrap {
+    display: none;
+  }
+}
 .service-wrap {
   display: flex;
   justify-content: center;
@@ -1977,7 +2065,8 @@ legend {
   vertical-align: middle;
   margin-left: 3px;
 }
-.service-wrap .service-inner {
+
+.service-inner {
   display: flex;
   justify-content: space-between;
   padding: 30px 84px;
@@ -1988,7 +2077,8 @@ legend {
   background: #fff;
   overflow: auto;
 }
-.service-wrap .service-inner .faq-list {
+
+.faq-list {
   color: #333333;
   font-family: "Noto Sans KR";
   font-size: 14px;
@@ -1996,7 +2086,7 @@ legend {
   padding: 10px 20px 10px 0;
   white-space: initial;
 }
-.service-wrap .service-inner .faq-list dt {
+.faq-list dt {
   border-top: 1px solid #dadada;
   padding: 10px;
   position: relative;
@@ -2006,12 +2096,12 @@ legend {
   font-weight: 400;
   color: #333333;
 }
-.service-wrap .service-inner .faq-list dt::before {
+.faq-list dt::before {
   content: "Q ";
   display: inline-block;
   padding-right: 10px;
 }
-.service-wrap .service-inner .faq-list dt::after {
+.faq-list dt::after {
   font-family: "Material Symbols Rounded";
   content: "\e145";
   display: inline-block;
@@ -2019,18 +2109,18 @@ legend {
   text-align: center;
   right: 10px;
 }
-.service-wrap .service-inner .faq-list dt.selected {
+.faq-list dt.selected {
   color: #0083ca;
 }
-.service-wrap .service-inner .faq-list dt.selected::before {
+.faq-list dt.selected::before {
   color: #0083ca;
 }
-.service-wrap .service-inner .faq-list dt.selected::after {
+.faq-list dt.selected::after {
   font-family: "Material Symbols Rounded";
   content: "\e931";
   text-align: center;
 }
-.service-wrap .service-inner .faq-list dd {
+.faq-list dd {
   display: none;
   border-top: 1px solid #dadada;
   padding: 10px;
@@ -2038,32 +2128,33 @@ legend {
   background: #f5f5f5;
   font-weight: 400;
 }
-.service-wrap .service-inner .faq-list dd::before {
+.faq-list dd::before {
   content: "A ";
   display: inline-block;
   padding-right: 10px;
 }
-.service-wrap .service-inner .faq-list dd li {
+.faq-list dd li {
   white-space: initial;
 }
-.service-wrap .service-inner .faq-list dd li b {
+.faq-list dd li b {
   font-weight: 500;
 }
-.service-wrap .service-inner .faq-list dd li div {
+.faq-list dd li div {
   padding: 3px 0;
 }
-.service-wrap .service-inner .faq-list .faq-list dt:first-child {
+.faq-list .faq-list dt:first-child {
   border-top: 0;
 }
-.service-wrap .service-inner .cs-contact-wrap {
+
+.cs-contact-wrap {
   display: flex;
   flex-direction: column;
 }
-.service-wrap .service-inner .cs-contact-wrap .contact-list {
+.cs-contact-wrap .contact-list {
   display: flex;
   padding: 13px 0 18px 0;
 }
-.service-wrap .service-inner .cs-contact-wrap .contact-list .tel01 {
+.cs-contact-wrap .contact-list .tel01 {
   color: #666666;
   text-align: center;
   font-family: "WooridaumR";
@@ -2072,19 +2163,19 @@ legend {
   letter-spacing: -0.54px;
   padding-right: 45px;
 }
-.service-wrap .service-inner .cs-contact-wrap .contact-list .tel-tit {
+.cs-contact-wrap .contact-list .tel-tit {
   color: #008CDF;
   font-size: 14px;
   letter-spacing: -0.42px;
   text-align: left;
 }
-.service-wrap .service-inner .cs-contact-wrap .contact-list .tel02, .service-wrap .service-inner .cs-contact-wrap .contact-list .tel03 {
+.cs-contact-wrap .contact-list .tel02, .cs-contact-wrap .contact-list .tel03 {
   padding: 5px 0;
 }
-.service-wrap .service-inner .cs-contact-wrap .contact-list .tel02 a, .service-wrap .service-inner .cs-contact-wrap .contact-list .tel03 a {
+.cs-contact-wrap .contact-list .tel02 a, .cs-contact-wrap .contact-list .tel03 a {
   padding-right: 7px;
 }
-.service-wrap .service-inner .cs-contact-wrap .contact-list .tel02 {
+.cs-contact-wrap .contact-list .tel02 {
   color: #666666;
   text-align: left;
   font-family: "WooridaumR";
@@ -2093,7 +2184,7 @@ legend {
   letter-spacing: -0.36px;
   padding-right: 45px;
 }
-.service-wrap .service-inner .cs-contact-wrap .contact-list .tel03 {
+.cs-contact-wrap .contact-list .tel03 {
   color: #666666;
   text-align: left;
   font-family: "WooridaumR";
@@ -2101,13 +2192,105 @@ legend {
   font-weight: 400;
   letter-spacing: -0.36px;
 }
-.service-wrap .service-inner .cs-contact-wrap .contact-list .tel03 ul {
+.cs-contact-wrap .contact-list .tel03 ul {
   display: flex;
 }
-.service-wrap .service-inner .cs-contact-wrap .contact-list .tel03 ul li {
+.cs-contact-wrap .contact-list .tel03 ul li {
   padding-right: 5px;
 }
 
+@media screen and (max-width: 576px) {
+  .service-inner {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    align-items: center;
+    border: 0px;
+  }
+  .service-inner h3 {
+    display: none;
+  }
+  .faq-list {
+    font-size: 13px;
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid #E2E2E2;
+    background: #fff;
+  }
+  .faq-list h3 {
+    display: flex;
+    font-size: 16px;
+  }
+  .faq-list dt {
+    border-top: 0px solid #dadada;
+    padding: 7px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #333333;
+    overflow-x: hidden;
+  }
+  .cs-contact-wrap {
+    flex-direction: column;
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid #E2E2E2;
+    background: #fff;
+  }
+  .cs-contact-wrap .contact-list {
+    display: inline-block;
+    flex-direction: row;
+    padding: 13px 0 18px 0;
+  }
+  .cs-contact-wrap .contact-list h3 {
+    display: flex;
+    font-size: 16px;
+  }
+  .cs-contact-wrap .contact-list .tel01 {
+    color: #666666;
+    display: flex;
+    text-align: center;
+    font-family: "WooridaumR";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.54px;
+    padding-right: 45px;
+  }
+  .cs-contact-wrap .contact-list .tel-tit {
+    color: #008CDF;
+    font-size: 14px;
+    letter-spacing: -0.42px;
+    text-align: left;
+  }
+  .cs-contact-wrap .contact-list .tel02, .cs-contact-wrap .contact-list .tel03 {
+    padding: 5px 0;
+  }
+  .cs-contact-wrap .contact-list .tel02 a, .cs-contact-wrap .contact-list .tel03 a {
+    padding-right: 7px;
+  }
+  .cs-contact-wrap .contact-list .tel02 {
+    color: #666666;
+    text-align: left;
+    font-family: "WooridaumR";
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.36px;
+    padding-right: 45px;
+  }
+  .cs-contact-wrap .contact-list .tel03 {
+    color: #666666;
+    text-align: left;
+    font-family: "WooridaumR";
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.36px;
+  }
+  .cs-contact-wrap .contact-list .tel03 ul {
+    display: flex;
+  }
+  .cs-contact-wrap .contact-list .tel03 ul li {
+    padding-right: 5px;
+  }
+}
 #product-body::before {
   content: "";
   background-image: url(../../images/products/body.png);
