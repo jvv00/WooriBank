@@ -4,17 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WooriBank-Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/comm.css" />
+    <script defer src="./assets/js/menu.js"></script>
   </head>
-  <body>
-    <div class="menu">
-      <h1>전체 메뉴</h1>
-      <div class="botton">
-        <div class="bottons"><a href="#">개인</a></div>
-        <div class="bottons"><a href="#">기업</a></div>
-        <div class="bottons"><a href="#">금융상품</a></div>
-        <div class="bottons"><a href="#">기타서비스</a></div>
+  <body id="menu-body">
+    <div class="menu-wrap">
+      <div class="menu-top">
+        <h1>전체 메뉴</h1>
+        <a href="#" class="close-btn" onclick="closeModal()"
+          ><i class="las la-times"></i
+        ></a>
+      </div>
 
-        <div class="menu1">
+      <div class="botton">
+        <div class="bottons clicked" onclick="changeColor(this)">
+          <a href="#">개인</a>
+        </div>
+        <div class="bottons" onclick="changeColor(this)">
+          <a href="#">기업</a>
+        </div>
+        <div class="bottons" onclick="changeColor(this)">
+          <a href="#">금융상품</a>
+        </div>
+        <div class="bottons" onclick="changeColor(this)">
+          <a href="#">기타서비스</a>
+        </div>
+      </div>
+
+      <div class="menu">
+        <div class="section sec-top border-r">
           <h2>조회</h2>
           <ul>
             <li><a href="#">계좌 조회</a></li>
@@ -24,7 +46,7 @@
             <li><a href="#">기타 내역 조회</a></li>
           </ul>
         </div>
-        <div class="menu2">
+        <div class="section sec-top border-r">
           <h2>이체</h2>
           <ul>
             <li><a href="#">자금 이체</a></li>
@@ -34,7 +56,7 @@
             <li><a href="#">이체 결과 조회</a></li>
           </ul>
         </div>
-        <div class="menu3">
+        <div class="section sec-top">
           <h2>오픈뱅킹</h2>
           <ul>
             <li><a href="#">조회</a></li>
@@ -44,7 +66,7 @@
             <li><a href="#">오픈 뱅킹 혜택</a></li>
           </ul>
         </div>
-        <div class="menu4">
+        <div class="section sec-bottom border-r">
           <h2>공과금</h2>
           <ul>
             <li><a href="#">지로 / CMS / 펌뱅킹</a></li>
@@ -54,7 +76,7 @@
             <li><a href="#">법원비용</a></li>
           </ul>
         </div>
-        <div class="menu5">
+        <div class="section sec-bottom border-r">
           <h2>예금 / 신탁</h2>
           <ul>
             <li><a href="#">신규 / 조회</a></li>
@@ -64,7 +86,7 @@
             <li><a href="#">연금 신탁 관리</a></li>
           </ul>
         </div>
-        <div class="menu6">
+        <div class="section sec-bottom">
           <h2>펀드</h2>
           <ul>
             <li><a href="#">신규 / 조회</a></li>
@@ -76,5 +98,6 @@
         </div>
       </div>
     </div>
+    <div class="modal-background" id="modalBackground"></div>
   </body>
 </html>
