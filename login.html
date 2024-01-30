@@ -50,206 +50,229 @@
 </head>
 <body id="login-body">
     <div class="login-wrap">
-            <div class="login inner">
-                <div class="login-title-wrap">
-                    <h2 class="title">로그인</h2>
-                    <div class="notice">
-                        <p class="notice-title">안전한 인터넷뱅킹 이용을 위해 <span>꼭</span> 알아두세요!</p>
-                        <ul class="check-list">
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 20.9621C9.99133 20.3655 8.32233 19.1485 6.993 17.3111C5.66433 15.4731 5 13.4028 5 11.1001V5.69215L12 3.07715L19 5.69215V11.1001C19 13.4028 18.3357 15.4728 17.007 17.3101C15.6777 19.1481 14.0087 20.3655 12 20.9621ZM12 19.9001C13.6167 19.4001 14.9667 18.4128 16.05 16.9381C17.1333 15.4635 17.7667 13.8175 17.95 12.0001H12V4.14415L6 6.37515V11.5311C6 11.6605 6.01667 11.8168 6.05 12.0001H12V19.9001Z" fill="black"/>
-                                </svg>
-                            우리은행은 어떠한 이유로도 보안카드번호 35개 전체 입력을 요구하지 않습니다.
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M8 10H6C5.46957 10 4.96086 10.2107 4.58579 10.5858C4.21071 10.9609 4 11.4696 4 12V19C4 19.5304 4.21071 20.0391 4.58579 20.4142C4.96086 20.7893 5.46957 21 6 21H18C18.5304 21 19.0391 20.7893 19.4142 20.4142C19.7893 20.0391 20 19.5304 20 19V12C20 11.4696 19.7893 10.9609 19.4142 10.5858C19.0391 10.2107 18.5304 10 18 10H16M8 10V7C8 5.93913 8.42143 4.92172 9.17157 4.17157C9.92172 3.42143 10.9391 3 12 3C13.0609 3 14.0783 3.42143 14.8284 4.17157C15.5786 4.92172 16 5.93913 16 7V10M8 10H16M12 14V17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                우리은행 홈페이지는 인터넷 주소창에 자물쇠 등 보안 아이콘이 있습니다.
-                            </li>
-                        </ul>
+        <div class="login inner">
+            <div class="login-title-wrap">
+                <h2 class="title">로그인</h2>
+                <div class="login-mobile-title">
+                    <div class="home-btn">
+                        <a href="#"><span class="material-symbols-outlined">
+                        home
+                        </span></a>
+                    </div>
+                    <div>
+                        <h2>로그인</h2>
+                    </div>
+                    <div class="menu-btn">
+                        <a href="#"><span class="material-symbols-outlined">
+                            menu
+                            </span></a>
                     </div>
                 </div>
-                <div class="login-type-box">
-                    <div class="login-box">
-                            <h3>우리WON인증서</h3>
-                            <p>스마트폰, 태블릿, PC 등 모든 기기에서 이용 가능해요.</p>
-                            <div class="Won-icon">
-                                <img src="./images/login/wooriWon-cert-icon.jpg" alt="우리WON인증서">
+                <div class="notice">
+                    <p class="notice-title">안전한 인터넷뱅킹 이용을 위해 <span>꼭</span> 알아두세요!</p>
+                    <ul class="check-list">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 20.9621C9.99133 20.3655 8.32233 19.1485 6.993 17.3111C5.66433 15.4731 5 13.4028 5 11.1001V5.69215L12 3.07715L19 5.69215V11.1001C19 13.4028 18.3357 15.4728 17.007 17.3101C15.6777 19.1481 14.0087 20.3655 12 20.9621ZM12 19.9001C13.6167 19.4001 14.9667 18.4128 16.05 16.9381C17.1333 15.4635 17.7667 13.8175 17.95 12.0001H12V4.14415L6 6.37515V11.5311C6 11.6605 6.01667 11.8168 6.05 12.0001H12V19.9001Z" fill="black"/>
+                            </svg>
+                        우리은행은 어떠한 이유로도 보안카드번호 35개 전체 입력을 요구하지 않습니다.
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M8 10H6C5.46957 10 4.96086 10.2107 4.58579 10.5858C4.21071 10.9609 4 11.4696 4 12V19C4 19.5304 4.21071 20.0391 4.58579 20.4142C4.96086 20.7893 5.46957 21 6 21H18C18.5304 21 19.0391 20.7893 19.4142 20.4142C19.7893 20.0391 20 19.5304 20 19V12C20 11.4696 19.7893 10.9609 19.4142 10.5858C19.0391 10.2107 18.5304 10 18 10H16M8 10V7C8 5.93913 8.42143 4.92172 9.17157 4.17157C9.92172 3.42143 10.9391 3 12 3C13.0609 3 14.0783 3.42143 14.8284 4.17157C15.5786 4.92172 16 5.93913 16 7V10M8 10H16M12 14V17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            우리은행 홈페이지는 인터넷 주소창에 자물쇠 등 보안 아이콘이 있습니다.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="login-type-box">
+                <div class="tab-wrap">
+                    <a class="tab-btn active" onclick="showTab('wonCert')">우리WON</a>
+                    <a class="tab-btn" onclick="showTab('idLogin')">아이디</a>
+                    <a class="tab-btn" onclick="showTab('certLogin')">인증서</a>
+                </div>
+                <div id="wonCertTab" class="login-box active" >
+                        <h3>우리WON인증서</h3>
+                        <p>스마트폰, 태블릿, PC 등 모든 기기에서 이용 가능해요.</p>
+                        <div class="Won-icon">
+                            <img src="./images/login/wooriWon-cert-icon.jpg" alt="우리WON인증서">
+                        </div>
+                        <div class="btn-box">
+                            <div class="btn1">
+                                <a href="#" id="WonLogin" class="btn1 main-btn" onclick="">우리WON인증서 로그인</a>
                             </div>
-                            <div class="btn-box">
-                                <div class="btn1">
-                                    <a href="#" id="WonLogin" class="btn1 main-btn" onclick="">우리WON인증서 로그인</a>
+                        </div>
+                        <div class="add_menu">
+                            <ul class="menu-list">
+                                <li>
+                                    <a href="#">인증서 발급하기</a>
+                                </li>
+                                <li>
+                                    <a href="#">우리WON인증서 안내</a>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+                <div id="idLoginTab" class="login-box">
+                        <h3>아이디 로그인</h3>
+                        <div class="btn-box">
+                            <div class="id-login-box">
+                            <div class="inner-box">
+                                <div class="section-id">
+                                    <label for="userId">아이디</label>
+                                    <input type="text" id="userId" name="userId" placeholder="아이디 입력" required >
+                                </div>
+                                <div class="section-pw">
+                                    <label for="password">비밀번호</label>
+                                    <input type="password" id="password" name="password" placeholder="비밀번호 입력" required >
                                 </div>
                             </div>
+                            <div class="btn2" id="IdLogin">
+                                <a class="btn2 disabled id-login" href="#" id="IdLoginBtn" onclick="">로그인</a>
+                            </div>
+                        </div>
                             <div class="add_menu">
                                 <ul class="menu-list">
                                     <li>
-                                        <a href="#">인증서 발급하기</a>
+                                        <a href="#">아이디 비밀번호 찾기</a>
                                     </li>
                                     <li>
-                                        <a href="#">우리WON인증서 안내</a>
+                                        <a href="#">회원가입</a>
                                     </li>
                                 </ul>
                             </div>
+                        
+                        </div>
+                </div>
+                <div id="certLoginTab" class="login-box">
+                    <h3>인증서 로그인</h3>
+                    <div class="btn-box cert-box"> 
+                        <div class="btn1">
+                            <a href="#" id="fincert-Login" class="btn1 main-btn" onclick="">금융인증서 로그인</a>
+                        </div>
+                        <div class="btn1">
+                            <a href="#" id="cert-Login" class="btn1 main-btn" onclick="">공동인증서 로그인</a>
+                        </div>
                     </div>
-                    <div class="login-box">
-                            <h3>아이디 로그인</h3>
-                            <div class="btn-box">
-                                <div class="id-login-box">
-                                <div class="inner-box">
-                                    <div class="section-id">
-                                        <label for="userId">아이디</label>
-                                        <input type="text" id="userId" name="userId" placeholder="아이디 입력" required >
-                                    </div>
-                                    <div class="section-pw">
-                                        <label for="password">비밀번호</label>
-                                        <input type="password" id="password" name="password" placeholder="비밀번호 입력" required >
-                                    </div>
-                                </div>
-                                <div class="btn2" id="IdLogin">
-                                    <a class="btn2 disabled id-login" href="#" id="IdLoginBtn" onclick="">로그인</a>
-                                </div>
-                            </div>
-                                <div class="add_menu">
-                                    <ul class="menu-list">
-                                        <li>
-                                            <a href="#">아이디 비밀번호 찾기</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">회원가입</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            
-                            </div>
+                    <div class="select-pop">
+                        <span>자동팝업</span>
+                        <div class="radio-box">
+                        <input type="radio" id="rSelect1" name="rSelect" value="1" onclick="">
+                        <label for="rSelect1">사용</label>
+                        </div>
+                        <div class="radio-box">
+                        <input type="radio" id="rSelect2" name="rSelect" value="1" onclick="">
+                        <label for="rSelect1">사용 안함</label>
+                        </div>
                     </div>
-                    <div class="login-box">
-                            <h3>인증서 로그인</h3>
-                            <div class="btn-box cert-box"> 
-                                <div class="btn1">
-                                    <a href="#" id="fincert-Login" class="btn1 main-btn" onclick="">금융인증서 로그인</a>
-                                </div>
-                                <div class="btn1">
-                                    <a href="#" id="cert-Login" class="btn1 main-btn" onclick="">공동인증서 로그인</a>
-                                </div>
-                            </div>
-                            <div class="select-pop">
-                                <span>자동팝업</span>
-                                <div class="radio-box">
-                                <input type="radio" id="rSelect1" name="rSelect" value="1" onclick="">
-                                <label for="rSelect1">사용</label>
-                                </div>
-                                <div class="radio-box">
-                                <input type="radio" id="rSelect2" name="rSelect" value="1" onclick="">
-                                <label for="rSelect1">사용 안함</label>
-                                </div>
-                            </div>
-                            <div class="add_menu">
-                                <ul class="menu-list cert">
+                    <div class="add_menu">
+                        <ul class="menu-list cert">
+                            <li>
+                                <a href="#">인증서 발급/재발급</a>
+                            </li>
+                            <li>
+                                <a href="#">타 인증서 등록</a>
+                            </li>
+                            <li>
+                                <a href="#">인증센터</a>
+                            </li>
+                        </ul>
+                    </div>    
+                </div>
+            </div>
+            <div class="notice-wrap">
+                <ul class="banking-notice">
+                    <li>
+                        <span class="material-symbols-rounded">
+                        check_circle
+                        </span>
+                        <a href="#">인터넷 뱅킹 유의사항</a></li>
+                    <li>
+                        <span class="material-symbols-rounded">
+                            error
+                        </span>
+                        <a href="#">인터넷 뱅킹 이용안내</a>
+                    </li>
+                    <li>
+                        <span class="material-symbols-rounded">
+                            verified_user
+                            </span>
+                        <a href="#">보안 프로그램 설치안내</a>
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="service-wrap">
+                <div class="service-inner">
+                    <div class="faq-wrap">
+                        <h3><a href="">자주 묻는 질문</a></h3>
+                        <dl class="faq-list">
+                            <h3><a href="">자주 묻는 질문</a></h3>
+                            <dt>인터넷/스마트뱅킹 이체한도 조회 및 증액하는 방법</dt>
+                            <dd>
+                                <ul class="faq-a">
                                     <li>
-                                        <a href="#">인증서 발급/재발급</a>
+                                        <b>PC</b>
+                                        <div>개인인터넷뱅킹 로그인 → 뱅킹관리 → 인터넷뱅킹관리 → 이체한도조회/축소</div>
                                     </li>
                                     <li>
-                                        <a href="#">타 인증서 등록</a>
+                                        <b>스마트폰</b>
+                                        <div>우리WON뱅킹 로그인→ 전체→ 금융거래→ 계좌조회/관리→ 이체한도 관리</div>
                                     </li>
                                     <li>
-                                        <a href="#">인증센터</a>
+                                        ① 우리WON뱅킹(비로그인) → 三(우측상단 전체메뉴) → 인증/보안→ 비대면 실명확인→ 뱅킹관리→ 이체한도 관리
+                                    </li>
+                                    <li>
+                                        ② [우리WON뱅킹 로그인→ 전체(우측하단≡)→ 금융거래→ 계좌조회/관리→ 계좌관리→ 이체한도 관리]에서 [타행OTP등록],[디지털OTP등록] 또는 [이체한도증액] 가능
                                     </li>
                                 </ul>
-                            </div>
-
+                            </dd>
+                            <dt>공동인증서 암호를 모르거나, 암호 불일치(오류횟수 5회) 이상인 경우</dt>
+                            <dd>
+                                <ul class="faq-a">
+                                    <li>
+                                        공동인증서 암호는 입력값에 대해 오류여부만 체크하고,누적된 오류횟수로 공동인증서 거래를 제한하지 않습니다.
+                                    </li>
+                                    <li>
+                                        '인증서 암호 불일치' 결과가 나오거나, 암호를 모르시는 경우에는 PC 또는 스마트폰에 저장된 공동인증서를 모두 삭제하신 후 인증서를 재발급 받으시길 바랍니다.
+                                    </li>
+                                    <li>
+                                        ※ 인증서 재발급 시 인증서 암호를 등록할 수 있습니다.
+                                    </li>
+                                </ul>
+                            </dd>
+                            <dt>인터넷/스마트뱅킹의 간편이체서비스란?</dt>
+                            <dd>간편이체 지정단말에서 '타인계좌' 또는 '타행계좌'로 간편이체 한도내 이체 시,<br>
+                                보안매체와 인증서 비밀번호 입력이 생략되는 서비스입니다. </dd>
+                        </dl>
+                    </div>
+                    <div class="cs-contact-wrap">
+                    <h3><a href="#">고객센터</a></h3>
+                    <div class="contact-list">
+                        <h3><a href="#">고객센터</a></h3>
+                        <ul class="tel01">
+                        <li><a class="tel-tit" href="#">대표번호</a></li>
+                        <li>1588-5000</li>
+                        <li>1599-5000</li>
+                        </ul>
+                        <ul class="tel02">
+                        <li><a class="tel-tit" href="#">해외</a></li>
+                        <li><a href="#">82-2-2006-5000</a></li>
+                        </ul>
+                        <ul class="tel03">
+                        <li><a class="tel-tit" href="#">신규상담</a></li>
+                        <ul>
+                            <li><a href="#">예적금</a>1599-8100</li>
+                            <li><a href="#">대출</a>1599-8300</li>
+                        </ul>
+                        </ul>
+                    </div>
                     </div>
                 </div>
-                <div class="notice-wrap">
-                    <ul class="banking-notice">
-                        <li>
-                            <span class="material-symbols-rounded">
-                            check_circle
-                            </span>
-                            <a href="#">인터넷 뱅킹 유의사항</a></li>
-                        <li>
-                            <span class="material-symbols-rounded">
-                                error
-                            </span>
-                            <a href="#">인터넷 뱅킹 이용안내</a>
-                        </li>
-                        <li>
-                            <span class="material-symbols-rounded">
-                                verified_user
-                                </span>
-                            <a href="#">보안 프로그램 설치안내</a>
-                        </li>
-                    </ul>
-                    
-                </div>
-                <div class="service-wrap">
-                <div class="service">
-                <div class="faq-wrap">
-                    <h3><a href="">자주 묻는 질문</a></h3>
-                    <dl class="faq-list">
-                        <dt>인터넷/스마트뱅킹 이체한도 조회 및 증액하는 방법</dt>
-                        <dd>
-                            <ul class="faq-a">
-                                <li>
-                                    <b>PC</b>
-                                    <div>개인인터넷뱅킹 로그인 → 뱅킹관리 → 인터넷뱅킹관리 → 이체한도조회/축소</div>
-                                </li>
-                                <li>
-                                    <div><b>스마트폰</b></div>
-                                    <div>우리WON뱅킹 로그인→ 전체→ 금융거래→ 계좌조회/관리→ 이체한도 관리</div>
-                                </li>
-                                <li>
-                                    ① 우리WON뱅킹(비로그인) → 三(우측상단 전체메뉴) → 인증/보안→ 비대면 실명확인→ 뱅킹관리→ 이체한도 관리
-                                </li>
-                                <li>
-                                    ② [우리WON뱅킹 로그인→ 전체(우측하단≡)→ 금융거래→ 계좌조회/관리→ 계좌관리→ 이체한도 관리]에서 [타행OTP등록],[디지털OTP등록] 또는 [이체한도증액] 가능
-                                </li>
-                            </ul>
-                        </dd>
-                        <dt>공동인증서 암호를 모르거나, 암호 불일치(오류횟수 5회) 이상인 경우</dt>
-                        <dd>
-                            <ul class="faq-a">
-                                <li>
-                                    공동인증서 암호는 입력값에 대해 오류여부만 체크하고, 누적된 오류횟수로 공동인증서 거래를 제한하지 않습니다.
-                                </li>
-                                <li>
-                                    '인증서 암호 불일치' 결과가 나오거나, 암호를 모르시는 경우에는 PC 또는 스마트폰에 저장된 공동인증서를 모두 삭제하신 후 인증서를 재발급 받으시길 바랍니다.
-                                </li>
-                                <li>
-                                    ※ 인증서 재발급 시 인증서 암호를 등록할 수 있습니다.
-                                </li>
-                            </ul>
-                        </dd>
-                        <dt>인터넷/스마트뱅킹의 간편이체서비스란?</dt>
-                        <dd>간편이체 지정단말에서 '타인계좌' 또는 '타행계좌'로 간편이체 한도내 이체 시,<br>
-                            보안매체와 인증서 비밀번호 입력이 생략되는 서비스입니다. </dd>
-                    </dl>
             </div>
-            <div class="cs-contact-wrap">
-              <h3><a href="#">고객센터</a></h3>
-              <div class="contact-list">
-                <ul class="tel01">
-                  <li>1588-5000</li>
-                  <li>1599-5000</li>
-                </ul>
-                <ul class="tel02">
-                  <li><a class="tel-tit" href="#">해외</a></li>
-                  <li><a href="#">82-2-2006-5000</a></li>
-                </ul>
-                <ul class="tel03">
-                  <li><a class="tel-tit" href="#">신규상담</a></li>
-                  <ul>
-                    <li><a href="#">예적금</a>1599-8100</li>
-                    <li><a href="#">대출</a>1599-8300</li>
-                  </ul>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+    
     </div>
   </body>
 </html>

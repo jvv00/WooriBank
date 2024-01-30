@@ -1,4 +1,4 @@
-@import "variables", "mixins", "fonts", "reset";
+@import "variables", "mixins", "fonts", "reset", "menu";
 
 // 메인 길이에 상관 없이 푸터 하단 고정
 #main {
@@ -250,4 +250,26 @@
   }
 }
 
+
+// 반응형 미디어쿼리 모바일
+@media (max-width: 768px) {
+  #header {
+    width: 100%;
+    .tnb ul {
+      display: none;
+    }
+    .gnb ul {
+      display: none;
+    }
+  }
+}
+
+// 반응형 미디어쿼리 태블릿
+@media (min-width: 769px) and (max-width: 1023px) {
+}
+
+@import "main";
+@import "introduce";
+
 @import "main", "login", "products", "introduce", "cert";
+

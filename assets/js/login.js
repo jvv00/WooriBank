@@ -18,7 +18,7 @@ function toArray(nodeList) {
         toArray(document.querySelectorAll('.faq-list dd')).forEach(function(item) {
           item.style.display = 'none';
         });
-        ansList.style.display = 'block';
+        ansList.style.display = 'flex';
       } else {
         // 이미 선택된 질문이면 선택 취소하고 답변 숨기기
         this.classList.remove('selected');
@@ -86,3 +86,20 @@ function toArray(nodeList) {
     });
   });
   
+  function showTab(tabName) {
+    // Hide all tabs
+    const tabs = document.querySelectorAll('.login-box');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    // Deactivate all tab buttons
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    tabButtons.forEach(button => button.classList.remove('active'));
+
+    // Show the selected tab
+    const selectedTab = document.getElementById(`${tabName}Tab`);
+    selectedTab.classList.add('active');
+
+    // Activate the corresponding tab button
+    const selectedTabButton = document.querySelector('.tab-wrap .tab-btn.' + tabName);
+    selectedTabButton.classList.add('active');
+}
