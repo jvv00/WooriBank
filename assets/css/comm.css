@@ -594,13 +594,13 @@ legend {
     padding-bottom: 15px;
   }
   #footer .ft_wrap .mobile_top .icons a img {
-    width: 50px;
+    width: 40px;
   }
   #footer .ft_wrap .mobile_top .icons a:first-child img, #footer .ft_wrap .mobile_top .icons a:nth-child(2) img {
-    border-radius: 15px;
+    border-radius: 10px;
   }
   #footer .ft_wrap .mobile_top .icons a:last-child img {
-    height: 50px;
+    height: 40px;
     width: auto;
   }
   #footer .ft_wrap .mobile_bottom {

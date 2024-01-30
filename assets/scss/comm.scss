@@ -337,17 +337,17 @@
           padding-bottom: 15px;
           a {
             img {
-              width: 50px;
+              width: 40px;
             }
             &:first-child,
             &:nth-child(2) {
               img {
-                border-radius: 15px;
+                border-radius: 10px;
               }
             }
             &:last-child {
               img {
-                height: 50px;
+                height: 40px;
                 width: auto;
               }
             }
