@@ -161,9 +161,6 @@
             
         }
     }
-    .cert-box {
-        padding: 30px 0 20px 0;
-    }
     .Won-icon img{
         display: block;
         width: 100px;
@@ -206,7 +203,6 @@
     .inner-box {
         display: flex;
         flex-direction: column;
-        
         .section-id,
         .section-pw {
         display: flex;
@@ -281,6 +277,9 @@
         cursor: pointer;
     }
 }
+.cert-box {
+    padding: 30px 0 20px 0;
+}
 .select-pop {
     display: flex;
     gap: 20px;
@@ -310,7 +309,9 @@
 @media screen and (max-width : $breakpoint-sm) {
     .login-type-box {
         flex-direction: column; /* Stack boxes vertically for smaller screens */
-        gap: 15px; /* Add some space between login boxes */
+        gap: 0; /* Add some space between login boxes */
+        padding: 0;
+        margin-bottom: 16px;
         .tab-wrap {
             display: flex;
             justify-content: space-between;
@@ -320,26 +321,55 @@
         .tab-btn {
             width: 33.333%;
             border-radius: 10px 10px 0px 0px;
+            border-bottom: 2px solid $gray-200;
             background: $white;
             text-align: center;
             padding: 18.5px 22.5px;
-            &.active {
-                border-bottom: 1px solid $primary-300; /* 활성화된 경우 색 지정 (예: 빨간색) */
-            }
+            cursor: pointer;
+        }
+        .tab-btn.active {
+            border-bottom: 2px solid $primary-300; /* 활성화된 경우 색 지정 (예: 빨간색) */
         }
         
     }
     .login-box {
         display: none;
+        justify-content: center;
         width: 100%; /* Take full width for smaller screens */
         height: 190px;
-        margin-bottom: 20px; /* Add some space between login boxes */
-        padding: 20px;
+        border-radius: 0 0 10px 10px;
+        margin-bottom: 0; /* Add some space between login boxes */
+        padding: 0px;
         h3, p{
             display: none;
         }
         .Won-icon img{
             display: none;
+        } 
+        .btn-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .btn1 {
+                padding: 5px 0;
+            }
+            .main-btn {
+                display: flex;
+                width: 200px;
+                padding: 10px 15px;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                border-radius: 30px;
+                color: $white;
+                background: $primary-300;
+                font-family: "WooridaumR";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 30px;
+                
+            }
         }
     }
     .login-box.active {
@@ -349,25 +379,26 @@
         /* Additional styling as needed */
     }
     
-    //   .id-login-box {
-    //     padding: 30px 0 20px 0;
-    //   }
-      
-    //   .select-pop {
-    //     flex-direction: column; /* Stack elements vertically for smaller screens */
-    //     gap: 10px; /* Add some space between elements */
-    //   }
-    
-    //   .menu-list.cert {
-    //     flex-direction: column; /* Stack elements vertically for smaller screens */
-    //     li:nth-child(2)::after {
-    //       display: none; /* Remove the vertical line */
-    //     }
-    //   }
-
-    
-    /* Add styling for tab buttons as needed */
-    
+    .id-login-box {
+        padding: 0;
+        .inner-box{
+            .section-id,
+            .section-pw {
+            padding: 5px 5px 5px 0;
+            
+        }
+    }
+    }
+    .cert-box {
+        padding: 0;
+    }
+    .select-pop {
+        display: none;
+    }
+    .menu-list {
+        margin: 0;
+        padding-top: 15px;
+    }
 }
 
 .notice-wrap {
@@ -465,9 +496,14 @@
     border: 1px solid #E2E2E2;
     background: $white;
     overflow: auto;
+    .service-tit-mb {
+        display: none;
+    }
+}
+.faq-wrap{
+    width: 50%;
 }
 .faq-list {
-    // width: 50%;
     color: $default;
     font-family: "Noto Sans KR";
     font-size: 14px;
@@ -479,10 +515,12 @@
     white-space: initial;
 
     dt {
+        display: block;
         border-top: 1px solid $gray-300;
         padding: 10px;
         position: relative;
         cursor: pointer;
+        width: 100%;
         padding-right: 50px;
         font-size: 14px;
         font-weight: 400;
@@ -511,6 +549,7 @@
                 font-family: 'Material Symbols Rounded';
                 content: "\e931";
                 text-align: center;
+                padding-left: 10px;
             }
         }
     }
@@ -544,59 +583,70 @@
 .cs-contact-wrap {
     display: flex;
     flex-direction: column;
-    // width: 50%;
+    width: 50%;
 
     .contact-list {
         display: flex;
         padding: 13px 0 18px 0;
-        .tel01 {
-            color: $gray-700;
-            text-align: center;
-            font-family: "WooridaumR";
-            font-size: 18px;
-            font-weight: 400;
-            letter-spacing: -0.54px;
-            padding-right: 45px;
-        }
+    }
+    .tel01 {
+        color: $gray-700;
+        text-align: center;
+        font-family: "WooridaumR";
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: -0.54px;
+        padding-right: 45px;
         .tel-tit {
-            color: #008CDF;
-            font-size: 14px;
-            letter-spacing: -0.42px;
-            text-align: left;
+            display: none;
         }
-        .tel02, .tel03 {
-            padding: 5px 0;
-            a {
-                padding-right: 7px ;
+    }
+    .tel-tit {
+        color: #008CDF;
+        font-size: 14px;
+        letter-spacing: -0.42px;
+        text-align: left;
+    }
+    .tel02, .tel03 {
+        padding: 5px 0;
+        a {
+            padding-right: 7px ;
+        }
+    }
+    .tel02 {
+         color: $gray-700;
+        text-align: left;
+        font-family: "WooridaumR";
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: -0.36px;
+        padding-right: 45px;
+    }
+    .tel03 {
+        color: $gray-700;
+        text-align: left;
+        font-family: "WooridaumR";
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: -0.36px;
+        .tel-depth2 {
+            display: flex;
+            li{
+                padding-right: 5px;
             }
         }
-        .tel02 {
-             color: $gray-700;
-            text-align: left;
-            font-family: "WooridaumR";
-            font-size: 12px;
-            font-weight: 400;
-            letter-spacing: -0.36px;
-            padding-right: 45px;
-        }
-        .tel03 {
-            color: $gray-700;
-            text-align: left;
-            font-family: "WooridaumR";
-            font-size: 12px;
-            font-weight: 400;
-            letter-spacing: -0.36px;
-            ul {
-                display: flex;
-                li{
-                    padding-right: 5px;
-                }
-            }
-    
-        }
+
+    }
+    .tel-list {
+        display: flex;
     }
 }
 @media screen and (max-width : $breakpoint-sm) {
+    .service-wrap {
+        max-width: $breakpoint-sm;
+        width: 100%;
+        padding: 0;
+    }
     .service-inner {
         flex-direction: column;
         justify-content: center;
@@ -606,92 +656,63 @@
         h3 {
             display: none;
         }
+        .service-tit-mb {
+            display: flex;
+            font-size: 16px;
+            margin: 0;
+        }
     }
-    .faq-list {
-        // width: 50%;
+    .faq-wrap {
+        width: 100%;
+    }
+    .faq-list,
+    .cs-contact-wrap {
         font-size: 13px;
         border-radius: 10px;
         width: 100%;
         border: 1px solid #E2E2E2;
         background: $white;
-        h3 {
-            display: flex;
-            font-size: 16px;
-        }
-    
+        padding: 12px 10px 5px 10px;
+        margin-bottom: 16px;
+    }
+    .faq-list {
         dt {
-            border-top: 0px solid $gray-300;
+            border-top: 0px;
             padding: 7px;
             // padding-right: 10px;
             font-size: 13px;
-            font-weight: 400;
-            color: $default;
-            overflow-x: hidden;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     
     }
     .cs-contact-wrap {
-        flex-direction: column;
-        border-radius: 10px;
-        width: 100%;
-        border: 1px solid #E2E2E2;
-        background: $white;
-        
         .contact-list {
             display: inline-block;
             flex-direction: row;
-            padding: 13px 0 18px 0;
+            padding: 0;
+            margin-bottom: 16px;
             h3 {
                 display: flex;
                 font-size: 16px;
             }
-            .tel01 {
-                color: $gray-700;
-                display: flex;
-                text-align: center;
-                font-family: "WooridaumR";
-                font-size: 14px;
-                font-weight: 400;
-                letter-spacing: -0.54px;
-                padding-right: 45px;
-
-            }
-            .tel-tit {
-                color: #008CDF;
-                font-size: 14px;
-                letter-spacing: -0.42px;
-                text-align: left;
-            }
-            .tel02, .tel03 {
-                padding: 5px 0;
-                a {
-                    padding-right: 7px ;
-                }
-            }
-            .tel02 {
-                 color: $gray-700;
-                text-align: left;
-                font-family: "WooridaumR";
-                font-size: 12px;
-                font-weight: 400;
-                letter-spacing: -0.36px;
-                padding-right: 45px;
-            }
-            .tel03 {
-                color: $gray-700;
-                text-align: left;
-                font-family: "WooridaumR";
-                font-size: 12px;
-                font-weight: 400;
-                letter-spacing: -0.36px;
-                ul {
-                    display: flex;
-                    li{
-                        padding-right: 5px;
-                    }
-                }
-        
-            }
         }
+        .tel01 {
+            padding-top: 7px;
+            .tel-tit {
+                display: block;
+            }
+            .tel-depth2 {
+                display: flex;
+                li {
+                    text-align: center;
+                    font-size: 12px;
+                    padding-right: 7px;
+                }
+            }
+
+        }
+    
     }
 }
