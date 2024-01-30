@@ -2268,6 +2268,8 @@ legend {
 }
 .faq-list dt.selected {
   color: #0083ca;
+  text-overflow: clip;
+  white-space: initial;
 }
 .faq-list dt.selected::before {
   color: #0083ca;

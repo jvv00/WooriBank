@@ -542,6 +542,8 @@
         }
         &.selected {
             color:  $primary-300;
+            text-overflow: clip;
+            white-space: initial;
             &::before {
                 color:  $primary-300;
             }
