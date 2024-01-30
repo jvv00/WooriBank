@@ -274,6 +274,7 @@ $(document).ready(function () {
         filter: "brightness(50%)",
         duration: 1,
         delay: 0,
+        toggleActions: "restart pause reverse pause",
       })
 
       .to(section.querySelector("strong"), { opacity: 1, duration: 1 })
@@ -284,5 +285,54 @@ $(document).ready(function () {
       start: "top 70%",
       animation: tl,
     });
+  });
+});
+
+// introduce 모바일
+$(document).ready(function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  function handleAnimation(element) {
+    gsap.to(element, {
+      filter: "brightness(0.5)",
+      duration: 1,
+      toggleActions: "restart pause reverse pause",
+    });
+  }
+
+  gsap.utils
+    .toArray(".mobile_insurance, .mobile_card, .mobile_mydata")
+    .forEach((section) => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top 10%",
+        onEnter: () => handleAnimation(section.querySelector("img")),
+        onLeaveBack: () => handleAnimation(section.querySelector("img")),
+      });
+    });
+
+  // 연혁
+  const timelineItems = document.querySelectorAll(".mobile_txt");
+
+  const tl = gsap.timeline({
+    defaults: { opacity: 0, y: 50, ease: "power2.out" },
+  });
+
+  // Create a timeline for each item
+  timelineItems.forEach((item, index) => {
+    tl.from(item, { duration: 0.7 });
+  });
+
+  // ScrollTrigger for the entire timeline
+  gsap.to(".history_txt", {
+    scrollTrigger: {
+      trigger: ".mobile_history",
+      start: "top center", // Adjust as needed
+      end: "bottom center", // Adjust as needed
+      scrub: true,
+      toggleActions: "restart pause reverse pause",
+    },
+    opacity: 1,
+    y: 0,
   });
 });
