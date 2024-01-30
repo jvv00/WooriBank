@@ -1904,6 +1904,23 @@ legend {
   font-weight: 400;
   letter-spacing: -0.42px;
 }
+.id-login-box .btn2.disabled {
+  display: flex;
+  width: 64px;
+  height: 82px;
+  padding: 10px 15px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  background: #0083ca;
+  color: #fff;
+  text-align: center;
+  font-family: "WooridaumR";
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.42px;
+  cursor: pointer;
+}
 .id-login-box .btn2 {
   display: flex;
   width: 64px;
@@ -2851,17 +2868,17 @@ legend {
   justify-content: center;
 }
 
-.inner {
+.cert.inner {
   max-width: 2800px;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.inner .bnr {
+.cert.inner .bnr {
   display: flex;
   justify-content: center;
 }
-.inner .bnr img {
+.cert.inner .bnr img {
   width: 100%;
   height: auto;
   object-fit: contain;
