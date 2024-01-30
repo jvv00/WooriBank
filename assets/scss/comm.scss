@@ -125,6 +125,10 @@
         }
       }
     }
+    .mobile_left,
+    .mobile_right {
+      display: none;
+    }
   }
 }
 
@@ -251,20 +255,54 @@
 }
 
 // 반응형 미디어쿼리 모바일
-@media (max-width: 768px) {
+@media screen and (max-width: $breakpoint-sm) {
   #header {
     width: 100%;
-    .tnb ul {
-      display: none;
-    }
-    .gnb ul {
-      display: none;
+    height: 65px;
+    position: relative;
+    border-bottom: 1px solid $primary-400;
+    .hd_wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+      .hd_logo {
+        width: 90px;
+        position: relative;
+        margin: 0 auto;
+        img {
+          width: 100%;
+        }
+      }
+      .tnb,
+      .gnb {
+        display: none;
+      }
+      .mobile_left,
+      .mobile_right {
+        display: inline;
+        position: absolute;
+        font-size: 30px;
+        color: $primary-400;
+      }
+      .mobile_left {
+        left: 20px;
+        a {
+          color: $primary-400;
+        }
+      }
+      .mobile_right {
+        right: 20px;
+        cursor: pointer;
+        a {
+          color: $primary-400;
+        }
+      }
     }
   }
-}
-
-// 반응형 미디어쿼리 태블릿
-@media (min-width: 769px) and (max-width: 1023px) {
 }
 
 @import "main";
