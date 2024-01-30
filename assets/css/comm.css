@@ -267,6 +267,108 @@ legend {
   content: "";
 }
 
+#menu-body {
+  position: relative;
+}
+
+.menu-wrap {
+  max-width: 1220px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+.menu-wrap h1 {
+  font-size: 25px;
+  padding: 43px 0 30px 50px;
+}
+.menu-wrap .la-times:before {
+  content: "\f00d";
+  font-size: 30px;
+  position: absolute;
+  right: 30px;
+  top: 43px;
+}
+.menu-wrap .botton {
+  font-size: 16px;
+  font-family: "WooridaumR";
+  display: flex;
+  padding-left: 50px;
+  gap: 30px;
+}
+.menu-wrap .botton .bottons {
+  height: 37px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.15);
+}
+.menu-wrap .botton .bottons a {
+  height: 37px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.menu-wrap .botton .bottons.clicked {
+  background-color: #0067ac;
+}
+.menu-wrap .botton .bottons.clicked a {
+  color: #fff;
+}
+.menu-wrap .menu {
+  font-family: "WooridaumL";
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 86px;
+}
+.menu-wrap .menu li {
+  padding: 0 0 10px 10px;
+}
+.menu-wrap .menu li a:hover {
+  color: #0067ac;
+  font-family: "WooridaumR";
+}
+.menu-wrap .menu h2 {
+  font-family: "WooridaumR";
+  font-size: 20px;
+  padding-bottom: 23px;
+}
+.menu-wrap .menu .section {
+  width: 33.333%;
+  padding: 0 0 60px 50px;
+}
+.menu-wrap .menu .sec-top {
+  border-bottom: 2px solid #eeeeee;
+}
+.menu-wrap .menu .sec-bottom {
+  padding: 36px 0 86px 50px;
+}
+.menu-wrap .menu .border-r {
+  border-right: 2px solid #eeeeee;
+}
+.menu-wrap .bar .bar-hori {
+  height: 2px;
+  width: 100%;
+  background-color: #eeeeee;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
 #main {
   height: auto;
   min-height: calc(100vh - 100px - 220px);
@@ -1904,23 +2006,6 @@ legend {
   font-weight: 400;
   letter-spacing: -0.42px;
 }
-.id-login-box .btn2.disabled {
-  display: flex;
-  width: 64px;
-  height: 82px;
-  padding: 10px 15px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
-  background: #0083ca;
-  color: #fff;
-  text-align: center;
-  font-family: "WooridaumR";
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: -0.42px;
-  cursor: pointer;
-}
 .id-login-box .btn2 {
   display: flex;
   width: 64px;
@@ -2850,19 +2935,6 @@ legend {
   box-sizing: border-box;
 }
 
-#cert-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  background-size: cover;
-  opacity: 0.5;
-  z-index: -1;
-}
-
 .cert-wrap {
   display: flex;
   justify-content: center;
@@ -2873,12 +2945,9 @@ legend {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
-.cert.inner .bnr {
-  display: flex;
-  justify-content: center;
-}
-.cert.inner .bnr img {
+.cert.inner img {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -2966,4 +3035,10 @@ legend {
   font-size: 12px;
   font-weight: 400;
   letter-spacing: -0.36px;
+}
+
+@media screen and (max-width: 576px) {
+  .cert.inner {
+    display: none;
+  }
 }/*# sourceMappingURL=comm.css.map */
