@@ -146,6 +146,85 @@ $(document).ready(function () {
   });
 });
 
+// main 모바일
+$(document).ready(function () {
+  // 메인 슬라이드
+  var mobileSwiper1 = new Swiper(".swiper-container-m1", {
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+    loopAdditionalSlides: 1,
+    initialSlide: 0,
+  });
+
+  $(".swiper-button-play").on("click", function () {
+    mobileSwiper1.autoplay.start();
+    console.log("play");
+  });
+  $(".swiper-button-pause").on("click", function () {
+    mobileSwiper1.autoplay.stop();
+    console.log("stop");
+  });
+
+  $(".swiper-button-play").on("click", function () {
+    mobileSwiper1.autoplay.start();
+    $(".swiper-button-play").hide();
+    $(".swiper-button-pause").show();
+    console.log("play");
+  });
+
+  $(".swiper-button-pause").on("click", function () {
+    mobileSwiper1.autoplay.stop();
+    $(".swiper-button-play").show();
+    $(".swiper-button-pause").hide();
+    console.log("stop");
+  });
+
+  // 추천상품 슬라이드
+  var recSwiper = new Swiper(".swiper-container-m2", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+      el: ".custom-pagination-m",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".custom-button-next",
+      prevEl: ".custom-button-prev",
+    },
+    loop: true,
+    loopAdditionalSlides: 0,
+    initialSlide: 0,
+  });
+
+  // 이벤트 슬라이드
+  var eventSwiper = new Swiper(".swiper-container-m3", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+      el: ".custom-pagination-m2",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".custom-button-next2",
+      prevEl: ".custom-button-prev2",
+    },
+    loop: true,
+    loopAdditionalSlides: 0,
+    initialSlide: 0,
+  });
+});
+
 // introduce
 $(document).ready(function () {
   // 메인 텍스트 애니메이션
