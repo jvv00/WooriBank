@@ -251,6 +251,10 @@
         }
       }
     }
+    .mobile_top,
+    .mobile_bottom {
+      display: none;
+    }
   }
 }
 
@@ -299,6 +303,80 @@
         cursor: pointer;
         a {
           color: $primary-400;
+        }
+      }
+    }
+  }
+
+  #footer {
+    width: 100%;
+    height: 170px;
+    position: relative;
+    border-top: none;
+    background-color: $gray-200;
+    .ft_wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      padding: 20px 0;
+      .ft_left,
+      .ft_right {
+        display: none;
+      }
+      .mobile_top {
+        display: block;
+        margin: 0 auto;
+        .icons {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          padding-bottom: 15px;
+          a {
+            img {
+              width: 50px;
+            }
+            &:first-child,
+            &:nth-child(2) {
+              img {
+                border-radius: 15px;
+              }
+            }
+            &:last-child {
+              img {
+                height: 50px;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+      .mobile_bottom {
+        display: block;
+        border-top: 1px solid $gray-300;
+        width: 100%;
+        .link {
+          display: flex;
+          justify-content: center;
+          color: $gray-600;
+          font-family: "WooridaumL";
+          padding-top: 15px;
+          a {
+            color: $gray-600;
+            font-family: "WooridaumL";
+            &:last-child {
+              color: $gray-700;
+              font-family: "WooridaumR";
+            }
+          }
+        }
+        .copy {
+          color: $gray-700;
+          display: flex;
+          justify-content: center;
         }
       }
     }

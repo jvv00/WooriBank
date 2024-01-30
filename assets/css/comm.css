@@ -509,6 +509,10 @@ legend {
 #footer .ft_wrap .ft_right .ft_call .call_internal {
   padding-bottom: 20px;
 }
+#footer .ft_wrap .mobile_top,
+#footer .ft_wrap .mobile_bottom {
+  display: none;
+}
 
 @media screen and (max-width: 576px) {
   #header {
@@ -557,6 +561,72 @@ legend {
   }
   #header .hd_wrap .mobile_right a {
     color: #0067ac;
+  }
+  #footer {
+    width: 100%;
+    height: 170px;
+    position: relative;
+    border-top: none;
+    background-color: #eeeeee;
+  }
+  #footer .ft_wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  #footer .ft_wrap .ft_left,
+  #footer .ft_wrap .ft_right {
+    display: none;
+  }
+  #footer .ft_wrap .mobile_top {
+    display: block;
+    margin: 0 auto;
+  }
+  #footer .ft_wrap .mobile_top .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 15px;
+  }
+  #footer .ft_wrap .mobile_top .icons a img {
+    width: 50px;
+  }
+  #footer .ft_wrap .mobile_top .icons a:first-child img, #footer .ft_wrap .mobile_top .icons a:nth-child(2) img {
+    border-radius: 15px;
+  }
+  #footer .ft_wrap .mobile_top .icons a:last-child img {
+    height: 50px;
+    width: auto;
+  }
+  #footer .ft_wrap .mobile_bottom {
+    display: block;
+    border-top: 1px solid #dadada;
+    width: 100%;
+  }
+  #footer .ft_wrap .mobile_bottom .link {
+    display: flex;
+    justify-content: center;
+    color: #757575;
+    font-family: "WooridaumL";
+    padding-top: 15px;
+  }
+  #footer .ft_wrap .mobile_bottom .link a {
+    color: #757575;
+    font-family: "WooridaumL";
+  }
+  #footer .ft_wrap .mobile_bottom .link a:last-child {
+    color: #666666;
+    font-family: "WooridaumR";
+  }
+  #footer .ft_wrap .mobile_bottom .copy {
+    color: #666666;
+    display: flex;
+    justify-content: center;
   }
 }
 #main {
