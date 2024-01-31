@@ -1,0 +1,536 @@
+#introduce {
+  background-image: url(../../images/introduce/mainbg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  height: 7000px;
+  .intro_wrap {
+    position: relative;
+    align-items: center;
+    width: 1220px;
+    margin: 0 auto;
+    padding: 30px 0 100px 0;
+    text-align: center;
+    .intro_main {
+      height: 820px;
+      padding: 200px 0;
+      img {
+        width: 450px;
+        padding: 20px 0;
+      }
+      h2 {
+        font-size: 38px;
+        font-family: "WooridaumB";
+        line-height: 1.2;
+      }
+    }
+    .intro_mokup {
+      height: 1600px;
+      position: relative;
+      padding: 250px 0;
+      p {
+        font-size: 30px;
+        line-height: 1.2;
+        position: absolute;
+      }
+      img {
+        position: absolute;
+      }
+      .mokup-pc {
+        height: 400px;
+        .pc-img {
+          width: 35%;
+          right: 0;
+          top: 0;
+        }
+        p {
+          top: 150px;
+          left: 630px;
+        }
+      }
+      .mokup-mobile {
+        height: 400px;
+        .mobile-img {
+          width: 20%;
+          left: 0;
+          top: -50px;
+        }
+        p {
+          top: 170px;
+          left: 280px;
+        }
+      }
+      .mokup-tablet {
+        height: 400px;
+        .tablet-img {
+          width: 35%;
+          right: 0;
+          bottom: 0;
+        }
+        p {
+          top: 230px;
+          left: 400px;
+        }
+      }
+    }
+    .intro_history {
+      align-items: center;
+      width: 1600px;
+      height: 500px;
+      margin: 300px 0;
+      display: flex;
+      .swiper-container4 {
+        overflow: visible;
+        width: 3150px;
+        .swiper-slide {
+          position: relative;
+          text-align: left;
+          .history_box {
+            width: 4800px;
+            height: 30px;
+            background: linear-gradient(
+              90deg,
+              rgba(32, 196, 244, 1) 0%,
+              rgba(0, 94, 144, 1) 100%
+            );
+          }
+          .history_txt {
+            display: flex;
+            .history_top,
+            .history_bottom {
+              border-left: 1px solid $gray-700;
+              padding-left: 20px;
+              position: relative;
+              &:before {
+                content: "";
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                background-color: $gray-800;
+                border-radius: 50%;
+                left: -3.5px;
+                transform: translateY(-50%);
+              }
+              h3 {
+                font-size: 25px;
+                font-family: "WooridaumB";
+              }
+              p {
+                font-size: 20px;
+                font-family: "WooridaumL";
+              }
+            }
+            .history_top {
+              padding-bottom: 200px;
+              position: absolute;
+              bottom: -50px;
+              &:before {
+                bottom: -10px;
+              }
+            }
+            .history_bottom {
+              padding-top: 200px;
+              position: absolute;
+              top: -50px;
+              &:before {
+                top: 0;
+              }
+            }
+            .history_tit {
+              margin-left: 250px;
+              h3,
+              h4 {
+                display: inline;
+                font-size: 30px;
+              }
+              h4 {
+                color: $primary-400;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mobile_history {
+      display: none;
+    }
+    .intro_insurance,
+    .intro_card,
+    .intro_mydata {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      strong {
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $white;
+        font-size: 28px;
+        opacity: 0;
+      }
+      p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $white;
+        font-size: 24px;
+        opacity: 0;
+        font-family: "WooridaumL";
+      }
+    }
+    .mobile_insurance,
+    .mobile_card,
+    .mobile_mydata {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  #introduce {
+    background-image: url(../../images/introduce/tabletbg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    height: 8800px;
+    .intro_wrap {
+      position: relative;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
+      padding: 30px 20px;
+      text-align: center;
+      .intro_main {
+        height: 820px;
+        padding: 80px 0;
+        img {
+          width: 60%;
+          padding: 20px 0;
+        }
+        h2 {
+          font-size: 23px;
+          font-family: "WooridaumB";
+          line-height: 1.2;
+        }
+      }
+      .intro_mokup {
+        height: 1500px;
+        position: relative;
+        margin: 200px 0;
+        p {
+          font-size: 30px;
+          margin-top: 20px;
+          line-height: 1.2;
+          position: static;
+        }
+        img {
+          position: static;
+        }
+        .mokup-pc {
+          height: 480px;
+          .pc-img {
+            width: 60%;
+          }
+        }
+        .mokup-mobile {
+          height: 420px;
+          .mobile-img {
+            width: 20%;
+          }
+        }
+        .mokup-tablet {
+          height: 400px;
+          .tablet-img {
+            width: 35%;
+          }
+        }
+      }
+      .intro_history {
+        display: none;
+      }
+      .mobile_history {
+        display: block;
+        position: relative;
+        .history_box {
+          width: 10px;
+          height: 2000px;
+          margin-left: 50px;
+          background: linear-gradient(
+            180deg,
+            rgba(32, 196, 244, 1) 0%,
+            rgba(0, 94, 144, 1) 100%
+          );
+        }
+        .history_txt {
+          position: absolute;
+          text-align: left;
+          top: 0;
+          left: 90px;
+          .mobile_txt {
+            margin: 60px 0;
+            position: relative;
+            background-color: $white;
+            border: 1px solid $gray-300;
+            padding: 10px;
+            border-radius: 10px;
+
+            &:after {
+              content: "";
+              position: absolute;
+              left: -10px;
+              top: 50%;
+              width: 0;
+              height: 0;
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+              border-right: 10px solid $gray-300;
+              background-color: $white;
+              transform: translateY(-50%);
+            }
+            &:last-child {
+              margin-top: 150px;
+              h3,
+              h4 {
+                font-size: 20px;
+                font-family: "WooridaumB";
+              }
+              h4 {
+                color: $primary-400;
+                font-size: 20px;
+              }
+            }
+            h3,
+            h4 {
+              display: inline;
+            }
+            h3 {
+              font-family: "WooridaumB";
+            }
+            p {
+              font-family: "WooridaumL";
+            }
+          }
+        }
+      }
+      .intro_insurance,
+      .intro_card,
+      .intro_mydata {
+        display: none;
+      }
+      .mobile_insurance,
+      .mobile_card,
+      .mobile_mydata {
+        display: block;
+        position: relative;
+        img {
+          width: 100%;
+          position: relative;
+          margin: 50px 0;
+          filter: darkness(1);
+          transition: opacity 0.5s ease;
+        }
+        strong {
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: $white;
+          font-size: 28px;
+          opacity: 0;
+        }
+        p {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: $white;
+          font-size: 20px;
+          font-family: "WooridaumL";
+          opacity: 0;
+        }
+      }
+      .mobile_insurance {
+        margin-top: 300px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  #introduce {
+    background-image: url(../../images/introduce/mobilebg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    height: 7900px;
+    .intro_wrap {
+      position: relative;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
+      padding: 30px 20px;
+      text-align: center;
+      .intro_main {
+        height: 820px;
+        padding: 80px 0;
+        img {
+          width: 60%;
+          padding: 20px 0;
+        }
+        h2 {
+          font-size: 23px;
+          font-family: "WooridaumB";
+          line-height: 1.2;
+        }
+      }
+      .intro_mokup {
+        height: 1200px;
+        position: relative;
+        margin: 250px 0;
+        p {
+          font-size: 30px;
+          margin-top: 20px;
+          line-height: 1.2;
+          position: static;
+        }
+        img {
+          position: static;
+        }
+        .mokup-pc {
+          height: 400px;
+          .pc-img {
+            width: 60%;
+          }
+        }
+        .mokup-mobile {
+          height: 350px;
+          .mobile-img {
+            width: 20%;
+          }
+        }
+        .mokup-tablet {
+          height: 400px;
+          .tablet-img {
+            width: 35%;
+          }
+        }
+      }
+      .intro_history {
+        display: none;
+      }
+      .mobile_history {
+        display: block;
+        position: relative;
+        .history_box {
+          width: 10px;
+          height: 2000px;
+          margin-left: 50px;
+          background: linear-gradient(
+            180deg,
+            rgba(32, 196, 244, 1) 0%,
+            rgba(0, 94, 144, 1) 100%
+          );
+        }
+        .history_txt {
+          position: absolute;
+          text-align: left;
+          top: 0;
+          left: 90px;
+          .mobile_txt {
+            margin: 60px 0;
+            position: relative;
+            background-color: $white;
+            border: 1px solid $gray-300;
+            padding: 10px;
+            border-radius: 10px;
+
+            &:after {
+              content: "";
+              position: absolute;
+              left: -10px;
+              top: 50%;
+              width: 0;
+              height: 0;
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+              border-right: 10px solid $gray-300;
+              background-color: $white;
+              transform: translateY(-50%);
+            }
+            &:last-child {
+              margin-top: 150px;
+              h3,
+              h4 {
+                font-size: 20px;
+                font-family: "WooridaumB";
+              }
+              h4 {
+                color: $primary-400;
+                font-size: 20px;
+              }
+            }
+            h3,
+            h4 {
+              display: inline;
+            }
+            h3 {
+              font-family: "WooridaumB";
+            }
+            p {
+              font-family: "WooridaumL";
+            }
+          }
+        }
+      }
+      .intro_insurance,
+      .intro_card,
+      .intro_mydata {
+        display: none;
+      }
+      .mobile_insurance,
+      .mobile_card,
+      .mobile_mydata {
+        display: block;
+        position: relative;
+        img {
+          width: 100%;
+          position: relative;
+          margin: 50px 0;
+          filter: darkness(1);
+          transition: opacity 0.5s ease;
+        }
+        strong {
+          position: absolute;
+          top: 43%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: $white;
+          font-size: 23px;
+          opacity: 0;
+        }
+        p {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: $white;
+          font-size: 16px;
+          font-family: "WooridaumL";
+          opacity: 0;
+        }
+      }
+      .mobile_insurance {
+        margin-top: 300px;
+      }
+    }
+  }
+}

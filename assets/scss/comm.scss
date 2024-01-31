@@ -1,11 +1,17 @@
 @import "variables", "mixins", "fonts", "reset", "menu";
 
+// 메인 길이에 상관 없이 푸터 하단 고정
+#main {
+  height: auto;
+  min-height: $main-height;
+}
+
 // 헤더
 #header {
   width: 100%;
   height: $hd-height;
   position: relative;
-  border-bottom: 2px solid $primary-400;
+  border-bottom: 1px solid $primary-400;
   .hd_wrap {
     position: relative;
     display: flex;
@@ -44,7 +50,35 @@
         }
       }
       .tnb_lang {
+        position: relative;
         float: right;
+        cursor: pointer;
+        .la-angle-up {
+          display: none;
+        }
+        .tnb_lang_sel {
+          display: none;
+          overflow: hidden;
+          position: absolute;
+          z-index: 100;
+          top: 20px;
+          left: 0;
+          text-align: center;
+          border-radius: 6px;
+          background-color: $white;
+          border: 1px solid $gray-300;
+          li {
+            width: 75px;
+            height: 40px;
+            padding: 0 12px;
+            text-align: center;
+            line-height: 40px;
+            border-bottom: 1px solid $gray-300;
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
       }
     }
     .gnb {
@@ -53,26 +87,27 @@
       margin: 0 auto;
       margin-right: 280px;
       .gnb_1depth {
-        position: relative;
         li {
-          position: relative;
           display: inline-block;
           font-family: "WooridaumB";
           font-size: 18px;
-          padding: 0 25px;
+          padding: 5px 25px;
           .gnb_2depth {
+            display: none;
+            overflow: hidden;
             position: absolute;
-            top: 100%;
+            top: 102%;
             left: 50%;
             transform: translateX(-50%);
-            z-index: 100;
-            padding: 10px;
-            min-width: 140px;
+            padding: 20px;
+            width: 100vw;
             background-color: $white;
-            border: 1px solid $primary-200;
+            border-bottom: 1px solid $gray-300;
+            text-align: center;
+            z-index: 100;
             li {
-              display: block;
-              padding: 8px;
+              display: inline-block;
+              padding: 8px 30px;
               font-family: "WooridaumL";
               font-size: 14px;
             }
@@ -86,17 +121,393 @@
         font-size: 25px;
         .gnb_search {
           margin-right: 15px;
+          cursor: pointer;
         }
       }
+    }
+    .mobile_left,
+    .mobile_right {
+      display: none;
     }
   }
 }
 
 // 푸터
 #footer {
-  display: none;
   width: 100%;
   height: $ft-height;
+  position: relative;
+  transform: $main-height;
+  border-top: 1px solid $gray-300;
+  .ft_wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 1220px;
+    height: 100%;
+    margin: 0 auto;
+    .ft_left {
+      .ft_more {
+        .ft_more_1depth {
+          position: relative;
+          display: flex;
+          li {
+            padding-right: 100px;
+            font-size: 15px;
+            .fa-circle-chevron-up {
+              padding-left: 10px;
+              color: $primary-400;
+            }
+            .ft_more_2depth {
+              display: none;
+              overflow: hidden;
+              position: absolute;
+              z-index: 100;
+              background-color: $white;
+              border: 1px solid $gray-300;
+              border-radius: 6px;
+              padding: 8px;
+              top: -135px;
+              li {
+                padding: 0 5px;
+                font-size: 12px;
+                font-family: "WooridaumL";
+              }
+            }
+            .ft_more_other {
+              left: -32px;
+            }
+            .ft_more_family {
+              left: 202px;
+            }
+            .ft_more_sns {
+              top: -117px;
+              left: 425px;
+            }
+          }
+        }
+      }
+      .ft_link {
+        font-size: 15px;
+        font-family: "WooridaumL";
+        padding: 30px 0 13px 0;
+        color: $gray-400;
+      }
+      .ft_copy {
+        font-size: 15px;
+        color: $gray-400;
+      }
+      .ft_img {
+        position: relative;
+        display: flex;
+        padding-top: 20px;
+        img {
+          height: 21px;
+          padding-right: 15px;
+          cursor: pointer;
+        }
+        span {
+          display: none;
+          overflow: hidden;
+          position: absolute;
+          z-index: 100;
+          font-size: 12px;
+          text-align: center;
+          line-height: 1;
+          font-family: "WooridaumL";
+          background-color: $white;
+          border: 1px solid $gray-300;
+          border-radius: 6px;
+          padding: 8px;
+          top: -27px;
+        }
+        .ft_img_info1 span {
+          left: -32px;
+        }
+        .ft_img_info2 span {
+          left: -16px;
+        }
+        .ft_img_info3 span {
+          left: 27px;
+        }
+      }
+    }
+    .ft_right {
+      position: absolute;
+      text-align: right;
+      right: 0;
+      .ft_call {
+        span {
+          font-size: 18px;
+          font-family: "WooridaumL";
+        }
+        strong {
+          font-size: 24px;
+          font-family: "WooridaumB";
+          color: $primary-400;
+        }
+        .call_internal {
+          padding-bottom: 20px;
+        }
+      }
+    }
+    .mobile_top,
+    .mobile_bottom {
+      display: none;
+    }
+  }
+}
+
+// 반응형 미디어쿼리
+@media screen and (max-width: $breakpoint-sm) {
+  #header {
+    width: 100%;
+    height: 65px;
+    position: relative;
+    border-bottom: 1px solid $primary-400;
+    .hd_wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+      .hd_logo {
+        width: 90px;
+        position: relative;
+        margin: 0 auto;
+        img {
+          width: 100%;
+        }
+      }
+      .tnb,
+      .gnb {
+        display: none;
+      }
+      .mobile_left,
+      .mobile_right {
+        display: inline;
+        position: absolute;
+        font-size: 30px;
+        color: $primary-400;
+      }
+      .mobile_left {
+        left: 20px;
+        a {
+          color: $primary-400;
+        }
+      }
+      .mobile_right {
+        right: 20px;
+        cursor: pointer;
+        a {
+          color: $primary-400;
+        }
+      }
+    }
+  }
+
+  #footer {
+    width: 100%;
+    height: 170px;
+    position: relative;
+    border-top: none;
+    background-color: $gray-200;
+    .ft_wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      padding: 20px 0;
+      .ft_left,
+      .ft_right {
+        display: none;
+      }
+      .mobile_top {
+        display: block;
+        margin: 0 auto;
+        .icons {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          padding-bottom: 15px;
+          a {
+            img {
+              width: 40px;
+            }
+            &:first-child,
+            &:nth-child(2) {
+              img {
+                border-radius: 10px;
+              }
+            }
+            &:last-child {
+              img {
+                height: 40px;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+      .mobile_bottom {
+        display: block;
+        border-top: 1px solid $gray-300;
+        width: 100%;
+        .link {
+          display: flex;
+          justify-content: center;
+          color: $gray-600;
+          font-family: "WooridaumL";
+          padding-top: 15px;
+          a {
+            color: $gray-600;
+            font-family: "WooridaumL";
+            &:last-child {
+              color: $gray-700;
+              font-family: "WooridaumR";
+            }
+          }
+        }
+        .copy {
+          color: $gray-700;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  #header {
+    width: 100%;
+    height: 65px;
+    position: relative;
+    border-bottom: 1px solid $primary-400;
+    .hd_wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+      .hd_logo {
+        width: 90px;
+        position: relative;
+        margin: 0 auto;
+        img {
+          width: 100%;
+        }
+      }
+      .tnb,
+      .gnb {
+        display: none;
+      }
+      .mobile_left,
+      .mobile_right {
+        display: inline;
+        position: absolute;
+        font-size: 30px;
+        color: $primary-400;
+      }
+      .mobile_left {
+        left: 20px;
+        a {
+          color: $primary-400;
+        }
+      }
+      .mobile_right {
+        right: 20px;
+        cursor: pointer;
+        a {
+          color: $primary-400;
+        }
+      }
+    }
+  }
+
+  #footer {
+    width: 100%;
+    height: 170px;
+    position: relative;
+    border-top: none;
+    background-color: $gray-200;
+    .ft_wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      padding: 20px 0;
+      .ft_left,
+      .ft_right {
+        display: none;
+      }
+      .mobile_top {
+        display: block;
+        margin: 0 auto;
+        .icons {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          padding-bottom: 15px;
+          a {
+            img {
+              width: 40px;
+            }
+            &:first-child,
+            &:nth-child(2) {
+              img {
+                border-radius: 10px;
+              }
+            }
+            &:last-child {
+              img {
+                height: 40px;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+      .mobile_bottom {
+        display: block;
+        border-top: 1px solid $gray-300;
+        width: 100%;
+        .link {
+          display: flex;
+          justify-content: center;
+          color: $gray-600;
+          font-family: "WooridaumL";
+          padding-top: 15px;
+          a {
+            color: $gray-600;
+            font-family: "WooridaumL";
+            &:last-child {
+              color: $gray-700;
+              font-family: "WooridaumR";
+            }
+          }
+        }
+        .copy {
+          color: $gray-700;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
 }
 
 @import "main";
+@import "introduce";
+
+@import "main", "login", "products", "introduce", "cert";
