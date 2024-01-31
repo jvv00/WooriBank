@@ -1,101 +1,208 @@
-#menu-body {
-  position: relative;
-}
-
 .menu-wrap {
   max-width: 1220px;
   width: 100%;
   background-color: $white;
   border-radius: 20px;
   position: absolute;
-  left: 25%;
-  top: 25%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   z-index: 1000;
+}
 
-  h1 {
-    font-size: 25px;
-    padding: 43px 0 30px 50px;
+@media screen and (max-width: $breakpoint-sm) {
+  .menu-wrap {
+    max-width: $breakpoint-sm;
+    width: 100%;
+    border-radius: 0;
   }
+}
 
-  .la-times:before {
-    content: "\f00d";
-    font-size: 30px;
-    position: absolute;
-    right: 30px;
-    top: 43px;
+.menu-inner {
+  width: 100%;
+  .menu-top {
+    .tit-m {
+      display: none;
+    }
+    h1 {
+      font-size: 25px;
+      padding: 43px 0 30px 50px;
+    }
+    .la-times:before {
+      content: "\f00d";
+      font-size: 30px;
+      position: absolute;
+      right: 30px;
+      top: 43px;
+    }
   }
+}
 
-  .botton {
-    font-size: 16px;
-    font-family: "WooridaumR";
-    display: flex;
-    padding-left: 50px;
-    gap: 30px;
-
-    .bottons {
-      height: 37px;
-      background-color: $white;
-      border-radius: 20px;
+@media screen and (max-width: $breakpoint-sm) {
+  .menu-inner {
+    .menu-top {
       display: flex;
-      box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.15);
-
-      a {
-        height: 37px;
-        padding: 10px;
+      h1 {
+        display: none;
+      }
+      .tit-m {
         display: flex;
-        align-items: center;
-      }
-    }
-    .bottons.clicked {
-      background-color: $primary-400;
-      a {
-        color: $white;
-      }
-    }
-  }
-
-  .menu {
-    font-family: "WooridaumL";
-    font-size: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 86px;
-    li {
-      padding: 0 0 10px 10px;
-      a {
-        &:hover {
-          color: $primary-400;
-          font-family: "WooridaumR";
+        flex-direction: column;
+        font-family: "WooridaumB";
+        font-size: 25px;
+        padding: 15px 0 0 20px;
+        span {
+          color: $primary-300;
         }
       }
     }
-    h2 {
-      font-family: "WooridaumR";
-      font-size: 20px;
-      padding-bottom: 23px;
-    }
-    .section {
-      width: 33.333%;
-      padding: 0 0 60px 50px;
-    }
-    .sec-top {
-      border-bottom: 2px solid #eeeeee;
-    }
-    .sec-bottom {
-      padding: 36px 0 86px 50px;
-    }
-    .border-r {
-      border-right: 2px solid #eeeeee;
+  }
+}
+
+.q-menu-btn {
+  font-size: 16px;
+  font-family: "WooridaumR";
+  display: flex;
+  padding-left: 50px;
+  gap: 30px;
+
+  .q-button {
+    height: 37px;
+    background-color: $white;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.15);
+
+    a {
+      height: 37px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
     }
   }
+  .q-button.clicked {
+    background-color: $primary-400;
+    a {
+      color: $white;
+    }
+  }
+}
 
-  .bar {
-    .bar-hori {
-      height: 2px;
+@media screen and (max-width: $breakpoint-sm) {
+  .q-menu-btn {
+    font-size: 15px;
+    padding: 15px 25px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    .q-button {
+      height: 35px;
+      border-radius: 25px;
+      display: flex;
+      a {
+        height: 35px;
+        padding: 6px 0;
+        display: flex;
+      }
+      .btn-1 {
+        padding: 0 26px;
+      }
+      .btn-2 {
+        padding: 0 12px;
+      }
+      .btn-3 {
+        padding: 0 5px;
+      }
+    }
+  }
+}
+
+.menu {
+  font-family: "WooridaumL";
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 60px;
+  i {
+    display: none;
+  }
+  li {
+    padding: 0 0 10px 10px;
+    a {
+      &:hover {
+        color: $primary-400;
+        font-family: "WooridaumR";
+      }
+    }
+  }
+  h2 {
+    font-family: "WooridaumR";
+    font-size: 20px;
+    padding-bottom: 23px;
+  }
+  .section {
+    width: 33.333%;
+    padding: 0 0 50px 50px;
+  }
+  .sec-top {
+    border-bottom: 2px solid #eeeeee;
+  }
+  .border-r {
+    border-right: 2px solid #eeeeee;
+  }
+  .sec-bottom {
+    padding: 36px 0 50px 50px;
+  }
+}
+
+$menu-transition-duration: 0.3s;
+@media screen and (max-width: $breakpoint-sm) {
+  .menu {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    ul {
+      overflow: hidden; // 내용이 넘칠 경우를 대비하여 overflow 속성 추가
+      max-height: 0; // 기본적으로 숨겨진 상태
+      transition: max-height $menu-transition-duration ease-in-out;
+      padding-left: 40px;
+    }
+    .sec-top {
+      border-bottom: 0;
+    }
+    .border-r {
+      border-right: 0;
+    }
+    .sec-bottom,
+    .sec-top {
+      padding: 0;
+    }
+
+    .section {
       width: 100%;
-      background-color: #eeeeee;
+      border-bottom: 2px solid #eeeeee;
+    }
+    h2 {
+      padding: 15px 30px;
+    }
+    .down-icon {
+      display: flex;
+      align-items: center;
+
+      i {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+      }
+      &.active {
+        ul {
+          max-height: 100vh; // 컨텐츠의 최대 높이
+        }
+      }
     }
   }
 }

@@ -146,6 +146,164 @@ $(document).ready(function () {
   });
 });
 
+// main 모바일
+$(document).ready(function () {
+  // 메인 슬라이드
+  var mobileSwiper1 = new Swiper(".swiper-container-m1", {
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+    loopAdditionalSlides: 1,
+    initialSlide: 0,
+  });
+
+  $(".swiper-button-play").on("click", function () {
+    mobileSwiper1.autoplay.start();
+    console.log("play");
+  });
+  $(".swiper-button-pause").on("click", function () {
+    mobileSwiper1.autoplay.stop();
+    console.log("stop");
+  });
+
+  $(".swiper-button-play").on("click", function () {
+    mobileSwiper1.autoplay.start();
+    $(".swiper-button-play").hide();
+    $(".swiper-button-pause").show();
+    console.log("play");
+  });
+
+  $(".swiper-button-pause").on("click", function () {
+    mobileSwiper1.autoplay.stop();
+    $(".swiper-button-play").show();
+    $(".swiper-button-pause").hide();
+    console.log("stop");
+  });
+
+  // 추천상품 슬라이드
+  var recSwiper = new Swiper(".swiper-container-m2", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+      el: ".custom-pagination-m",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".custom-button-next",
+      prevEl: ".custom-button-prev",
+    },
+    loop: true,
+    loopAdditionalSlides: 0,
+    initialSlide: 0,
+  });
+
+  // 이벤트 슬라이드
+  var eventSwiper = new Swiper(".swiper-container-m3", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+      el: ".custom-pagination-m2",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".custom-button-next2",
+      prevEl: ".custom-button-prev2",
+    },
+    loop: true,
+    loopAdditionalSlides: 0,
+    initialSlide: 0,
+  });
+});
+
+// main 태블릿
+$(document).ready(function () {
+  // 메인 슬라이드
+  var tabletSwiper1 = new Swiper(".swiper-container-t1", {
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+    loopAdditionalSlides: 1,
+    initialSlide: 0,
+  });
+
+  $(".swiper-button-play").on("click", function () {
+    tabletSwiper1.autoplay.start();
+    console.log("play");
+  });
+  $(".swiper-button-pause").on("click", function () {
+    tabletSwiper1.autoplay.stop();
+    console.log("stop");
+  });
+
+  $(".swiper-button-play").on("click", function () {
+    mobileSwiper1.autoplay.start();
+    $(".swiper-button-play").hide();
+    $(".swiper-button-pause").show();
+    console.log("play");
+  });
+
+  $(".swiper-button-pause").on("click", function () {
+    mobileSwiper1.autoplay.stop();
+    $(".swiper-button-play").show();
+    $(".swiper-button-pause").hide();
+    console.log("stop");
+  });
+
+  // 추천상품 슬라이드
+  var recSwiper = new Swiper(".swiper-container-m2", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+      el: ".custom-pagination-m",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".custom-button-next",
+      prevEl: ".custom-button-prev",
+    },
+    loop: true,
+    loopAdditionalSlides: 0,
+    initialSlide: 0,
+  });
+
+  // 이벤트 슬라이드
+  var eventSwiper = new Swiper(".swiper-container-m3", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+      el: ".custom-pagination-m2",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".custom-button-next2",
+      prevEl: ".custom-button-prev2",
+    },
+    loop: true,
+    loopAdditionalSlides: 0,
+    initialSlide: 0,
+  });
+});
+
 // introduce
 $(document).ready(function () {
   // 메인 텍스트 애니메이션
@@ -195,6 +353,7 @@ $(document).ready(function () {
         filter: "brightness(50%)",
         duration: 1,
         delay: 0,
+        toggleActions: "restart pause reverse pause",
       })
 
       .to(section.querySelector("strong"), { opacity: 1, duration: 1 })
@@ -206,4 +365,53 @@ $(document).ready(function () {
       animation: tl,
     });
   });
+});
+
+// introduce 모바일
+$(document).ready(function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  function handleAnimation(element, opacityValue) {
+    gsap.to(element, {
+      filter: "brightness(0.5)",
+      opacity: opacityValue,
+      duration: 1,
+      toggleActions: "restart pause reverse pause",
+    });
+  }
+
+  gsap.utils
+    .toArray(".mobile_insurance, .mobile_card, .mobile_mydata")
+    .forEach((section) => {
+      const imgElement = section.querySelector("img");
+      const strongElement = section.querySelector("strong");
+      const textElement = section.querySelector("p");
+
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top 10%",
+        onEnter: () => {
+          handleAnimation(imgElement, 1);
+          gsap.to(strongElement, {
+            opacity: 1,
+            duration: 1,
+          });
+          gsap.to(textElement, {
+            opacity: 1,
+            duration: 1,
+          });
+        },
+        onLeaveBack: () => {
+          handleAnimation(imgElement, 0);
+          gsap.to(strongElement, {
+            opacity: 0,
+            duration: 1,
+          });
+          gsap.to(textElement, {
+            opacity: 0,
+            duration: 1,
+          });
+        },
+      });
+    });
 });

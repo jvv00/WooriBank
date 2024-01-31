@@ -88,18 +88,25 @@ function toArray(nodeList) {
   
   function showTab(tabName) {
     // Hide all tabs
-    const tabs = document.querySelectorAll('.login-box');
-    tabs.forEach(tab => tab.classList.remove('active'));
-
-    // Deactivate all tab buttons
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    tabButtons.forEach(button => button.classList.remove('active'));
-
-    // Show the selected tab
     const selectedTab = document.getElementById(`${tabName}Tab`);
-    selectedTab.classList.add('active');
 
-    // Activate the corresponding tab button
-    const selectedTabButton = document.querySelector('.tab-wrap .tab-btn.' + tabName);
-    selectedTabButton.classList.add('active');
+    if (selectedTab) {
+        // Hide all tabs
+        const tabs = document.querySelectorAll('.login-box');
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        // Deactivate all tab buttons
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        tabButtons.forEach(button => button.classList.remove('active'));
+
+        // Show the selected tab
+        selectedTab.classList.add('active');
+
+        // Activate the corresponding tab button
+        const selectedTabButton = document.querySelector('.tab-wrap .tab-btn[data-tab="' + tabName + '"]');
+        if (selectedTabButton) {
+            selectedTabButton.classList.add('active');
+        }
+    }
 }
+
