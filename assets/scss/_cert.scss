@@ -22,19 +22,19 @@
   justify-content: center;
   // width: 100%;
 }
-.cert.inner  {
-    max-width: 2800px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.cert.inner {
+  max-width: 2800px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
+
 .cert-g-wrap {
   max-width: 1220px;
   display: flex;
