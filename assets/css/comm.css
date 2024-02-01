@@ -562,6 +562,7 @@ legend {
   z-index: 999;
 }
 
+
 @media screen and (max-width: 576px) {
   .modal-background {
     display: none;
@@ -2405,7 +2406,7 @@ legend {
   background-repeat: no-repeat;
   background-size: 100%;
   position: relative;
-  height: 7000px;
+  height: 6730px;
 }
 #introduce .intro_wrap {
   position: relative;
@@ -2599,6 +2600,18 @@ legend {
 #introduce .intro_wrap .mobile_mydata {
   display: none;
 }
+#introduce .intro_wrap .intro_btn ul {
+  display: flex;
+  justify-content: space-between;
+}
+#introduce .intro_wrap .intro_btn ul li {
+  border: 1px solid #0067ac;
+  padding: 20px 40px;
+  border-radius: 30px;
+}
+#introduce .intro_wrap .intro_btn ul li a {
+  color: #0067ac;
+}
 
 @media screen and (max-width: 992px) {
   #introduce {
@@ -2606,7 +2619,7 @@ legend {
     background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
-    height: 8800px;
+    height: 10450px;
   }
   #introduce .intro_wrap {
     position: relative;
@@ -2770,14 +2783,21 @@ legend {
   #introduce .intro_wrap .mobile_insurance {
     margin-top: 300px;
   }
+  #introduce .intro_wrap .intro_btn ul li {
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+  #introduce .intro_wrap .intro_btn ul li a {
+    color: #0067ac;
+  }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   #introduce {
     background-image: url(../../images/introduce/mobilebg.png);
     background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
-    height: 7900px;
+    height: 9550px;
   }
   #introduce .intro_wrap {
     position: relative;
@@ -2940,6 +2960,199 @@ legend {
   }
   #introduce .intro_wrap .mobile_insurance {
     margin-top: 300px;
+  }
+  #introduce .intro_wrap .intro_btn ul {
+    flex-direction: column;
+  }
+  #introduce .intro_wrap .intro_btn ul li {
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+  #introduce .intro_wrap .intro_btn ul li a {
+    color: #0067ac;
+  }
+}
+@media screen and (max-width: 576px) {
+  #introduce {
+    background-image: url(../../images/introduce/mobilebg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    height: 8600px;
+  }
+  #introduce .intro_wrap {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  #introduce .intro_wrap .intro_main {
+    height: 820px;
+    padding: 80px 0;
+  }
+  #introduce .intro_wrap .intro_main img {
+    width: 60%;
+    padding: 20px 0;
+  }
+  #introduce .intro_wrap .intro_main h2 {
+    font-size: 23px;
+    font-family: "WooridaumB";
+    line-height: 1.2;
+  }
+  #introduce .intro_wrap .intro_mokup {
+    height: 1200px;
+    position: relative;
+    margin: 250px 0;
+  }
+  #introduce .intro_wrap .intro_mokup p {
+    font-size: 30px;
+    margin-top: 20px;
+    line-height: 1.2;
+    position: static;
+  }
+  #introduce .intro_wrap .intro_mokup img {
+    position: static;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-pc {
+    height: 400px;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-pc .pc-img {
+    width: 60%;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-mobile {
+    height: 350px;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-mobile .mobile-img {
+    width: 20%;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-tablet {
+    height: 400px;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-tablet .tablet-img {
+    width: 35%;
+  }
+  #introduce .intro_wrap .intro_history {
+    display: none;
+  }
+  #introduce .intro_wrap .mobile_history {
+    display: block;
+    position: relative;
+  }
+  #introduce .intro_wrap .mobile_history .history_box {
+    width: 10px;
+    height: 2000px;
+    margin-left: 50px;
+    background: linear-gradient(180deg, rgb(32, 196, 244) 0%, rgb(0, 94, 144) 100%);
+  }
+  #introduce .intro_wrap .mobile_history .history_txt {
+    position: absolute;
+    text-align: left;
+    top: 0;
+    left: 90px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt {
+    margin: 60px 0;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #dadada;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #dadada;
+    background-color: #fff;
+    transform: translateY(-50%);
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child {
+    margin-top: 150px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child h3,
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child h4 {
+    font-size: 20px;
+    font-family: "WooridaumB";
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child h4 {
+    color: #0067ac;
+    font-size: 20px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt h3,
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt h4 {
+    display: inline;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt h3 {
+    font-family: "WooridaumB";
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt p {
+    font-family: "WooridaumL";
+  }
+  #introduce .intro_wrap .intro_insurance,
+  #introduce .intro_wrap .intro_card,
+  #introduce .intro_wrap .intro_mydata {
+    display: none;
+  }
+  #introduce .intro_wrap .mobile_insurance,
+  #introduce .intro_wrap .mobile_card,
+  #introduce .intro_wrap .mobile_mydata {
+    display: block;
+    position: relative;
+  }
+  #introduce .intro_wrap .mobile_insurance img,
+  #introduce .intro_wrap .mobile_card img,
+  #introduce .intro_wrap .mobile_mydata img {
+    width: 100%;
+    position: relative;
+    margin: 50px 0;
+    filter: darkness(1);
+    transition: opacity 0.5s ease;
+  }
+  #introduce .intro_wrap .mobile_insurance strong,
+  #introduce .intro_wrap .mobile_card strong,
+  #introduce .intro_wrap .mobile_mydata strong {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 23px;
+    opacity: 0;
+  }
+  #introduce .intro_wrap .mobile_insurance p,
+  #introduce .intro_wrap .mobile_card p,
+  #introduce .intro_wrap .mobile_mydata p {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 16px;
+    font-family: "WooridaumL";
+    opacity: 0;
+  }
+  #introduce .intro_wrap .mobile_insurance {
+    margin-top: 300px;
+  }
+  #introduce .intro_wrap .intro_btn ul {
+    flex-direction: column;
+  }
+  #introduce .intro_wrap .intro_btn ul li {
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+  #introduce .intro_wrap .intro_btn ul li a {
+    color: #0067ac;
   }
 }
 #main {
@@ -5332,7 +5545,7 @@ legend {
   background-repeat: no-repeat;
   background-size: 100%;
   position: relative;
-  height: 7000px;
+  height: 6730px;
 }
 #introduce .intro_wrap {
   position: relative;
@@ -5526,6 +5739,18 @@ legend {
 #introduce .intro_wrap .mobile_mydata {
   display: none;
 }
+#introduce .intro_wrap .intro_btn ul {
+  display: flex;
+  justify-content: space-between;
+}
+#introduce .intro_wrap .intro_btn ul li {
+  border: 1px solid #0067ac;
+  padding: 20px 40px;
+  border-radius: 30px;
+}
+#introduce .intro_wrap .intro_btn ul li a {
+  color: #0067ac;
+}
 
 @media screen and (max-width: 992px) {
   #introduce {
@@ -5533,7 +5758,7 @@ legend {
     background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
-    height: 8800px;
+    height: 10450px;
   }
   #introduce .intro_wrap {
     position: relative;
@@ -5697,14 +5922,21 @@ legend {
   #introduce .intro_wrap .mobile_insurance {
     margin-top: 300px;
   }
+  #introduce .intro_wrap .intro_btn ul li {
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+  #introduce .intro_wrap .intro_btn ul li a {
+    color: #0067ac;
+  }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   #introduce {
     background-image: url(../../images/introduce/mobilebg.png);
     background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
-    height: 7900px;
+    height: 9550px;
   }
   #introduce .intro_wrap {
     position: relative;
@@ -5867,6 +6099,199 @@ legend {
   }
   #introduce .intro_wrap .mobile_insurance {
     margin-top: 300px;
+  }
+  #introduce .intro_wrap .intro_btn ul {
+    flex-direction: column;
+  }
+  #introduce .intro_wrap .intro_btn ul li {
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+  #introduce .intro_wrap .intro_btn ul li a {
+    color: #0067ac;
+  }
+}
+@media screen and (max-width: 576px) {
+  #introduce {
+    background-image: url(../../images/introduce/mobilebg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    height: 8600px;
+  }
+  #introduce .intro_wrap {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  #introduce .intro_wrap .intro_main {
+    height: 820px;
+    padding: 80px 0;
+  }
+  #introduce .intro_wrap .intro_main img {
+    width: 60%;
+    padding: 20px 0;
+  }
+  #introduce .intro_wrap .intro_main h2 {
+    font-size: 23px;
+    font-family: "WooridaumB";
+    line-height: 1.2;
+  }
+  #introduce .intro_wrap .intro_mokup {
+    height: 1200px;
+    position: relative;
+    margin: 250px 0;
+  }
+  #introduce .intro_wrap .intro_mokup p {
+    font-size: 30px;
+    margin-top: 20px;
+    line-height: 1.2;
+    position: static;
+  }
+  #introduce .intro_wrap .intro_mokup img {
+    position: static;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-pc {
+    height: 400px;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-pc .pc-img {
+    width: 60%;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-mobile {
+    height: 350px;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-mobile .mobile-img {
+    width: 20%;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-tablet {
+    height: 400px;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-tablet .tablet-img {
+    width: 35%;
+  }
+  #introduce .intro_wrap .intro_history {
+    display: none;
+  }
+  #introduce .intro_wrap .mobile_history {
+    display: block;
+    position: relative;
+  }
+  #introduce .intro_wrap .mobile_history .history_box {
+    width: 10px;
+    height: 2000px;
+    margin-left: 50px;
+    background: linear-gradient(180deg, rgb(32, 196, 244) 0%, rgb(0, 94, 144) 100%);
+  }
+  #introduce .intro_wrap .mobile_history .history_txt {
+    position: absolute;
+    text-align: left;
+    top: 0;
+    left: 90px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt {
+    margin: 60px 0;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #dadada;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #dadada;
+    background-color: #fff;
+    transform: translateY(-50%);
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child {
+    margin-top: 150px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child h3,
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child h4 {
+    font-size: 20px;
+    font-family: "WooridaumB";
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child h4 {
+    color: #0067ac;
+    font-size: 20px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt h3,
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt h4 {
+    display: inline;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt h3 {
+    font-family: "WooridaumB";
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt p {
+    font-family: "WooridaumL";
+  }
+  #introduce .intro_wrap .intro_insurance,
+  #introduce .intro_wrap .intro_card,
+  #introduce .intro_wrap .intro_mydata {
+    display: none;
+  }
+  #introduce .intro_wrap .mobile_insurance,
+  #introduce .intro_wrap .mobile_card,
+  #introduce .intro_wrap .mobile_mydata {
+    display: block;
+    position: relative;
+  }
+  #introduce .intro_wrap .mobile_insurance img,
+  #introduce .intro_wrap .mobile_card img,
+  #introduce .intro_wrap .mobile_mydata img {
+    width: 100%;
+    position: relative;
+    margin: 50px 0;
+    filter: darkness(1);
+    transition: opacity 0.5s ease;
+  }
+  #introduce .intro_wrap .mobile_insurance strong,
+  #introduce .intro_wrap .mobile_card strong,
+  #introduce .intro_wrap .mobile_mydata strong {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 23px;
+    opacity: 0;
+  }
+  #introduce .intro_wrap .mobile_insurance p,
+  #introduce .intro_wrap .mobile_card p,
+  #introduce .intro_wrap .mobile_mydata p {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 16px;
+    font-family: "WooridaumL";
+    opacity: 0;
+  }
+  #introduce .intro_wrap .mobile_insurance {
+    margin-top: 300px;
+  }
+  #introduce .intro_wrap .intro_btn ul {
+    flex-direction: column;
+  }
+  #introduce .intro_wrap .intro_btn ul li {
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+  #introduce .intro_wrap .intro_btn ul li a {
+    color: #0067ac;
   }
 }
 #cert-body {
