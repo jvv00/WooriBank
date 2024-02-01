@@ -270,8 +270,6 @@ legend {
 .menu-wrap {
   max-width: 1220px;
   width: 100%;
-  background-color: #fff;
-  border-radius: 20px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -279,17 +277,22 @@ legend {
   display: flex;
   flex-direction: column;
   z-index: 1000;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 576px) {
   .menu-wrap {
+    position: relative;
     max-width: 576px;
     width: 100%;
     border-radius: 0;
   }
 }
 .menu-inner {
+  position: static;
   width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
 }
 .menu-inner .menu-top .tit-m {
   display: none;
@@ -307,6 +310,10 @@ legend {
 }
 
 @media screen and (max-width: 576px) {
+  .menu-inner {
+    position: fixed;
+    top: 0;
+  }
   .menu-inner .menu-top {
     display: flex;
   }
@@ -315,13 +322,20 @@ legend {
   }
   .menu-inner .menu-top .tit-m {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     font-family: "WooridaumB";
     font-size: 25px;
     padding: 15px 0 0 20px;
   }
+  .menu-inner .menu-top .tit-m .txt-m {
+    display: flex;
+    flex-direction: column;
+  }
   .menu-inner .menu-top .tit-m span {
     color: #0083ca;
+  }
+  .menu-inner .menu-top .tit-m img {
+    display: flex;
   }
 }
 .q-menu-btn {
@@ -356,7 +370,7 @@ legend {
     font-size: 15px;
     padding: 15px 25px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 5px;
   }
   .q-menu-btn .q-button {
@@ -423,10 +437,14 @@ legend {
     position: relative;
   }
   .menu ul {
+    font-size: 13px;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease-in-out;
     padding-left: 40px;
+  }
+  .menu ul li:last-child {
+    padding-bottom: 15px;
   }
   .menu .sec-top {
     border-bottom: 0;
@@ -443,7 +461,9 @@ legend {
     border-bottom: 2px solid #eeeeee;
   }
   .menu h2 {
-    padding: 15px 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-family: "WooridaumL";
   }
   .menu .down-icon {
     display: flex;
@@ -459,6 +479,77 @@ legend {
     max-height: 100vh;
   }
 }
+.bottom-menu-m {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .bottom-menu-m {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 43px;
+    font-size: 14px;
+    font-family: "WooridaumL";
+  }
+  .bottom-menu-m .small-btn {
+    display: flex;
+    gap: 17px;
+  }
+  .bottom-menu-m .small-btn .bottom-box {
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    padding: 0 12.5px;
+    display: flex;
+  }
+  .bottom-menu-m .small-btn a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+  }
+  .bottom-menu-m .small-btn a .btn-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+  }
+  .bottom-menu-m .small-btn a .btn-icon img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .bottom-menu-m .long-btn {
+    max-width: 331px;
+    width: 100%;
+  }
+  .bottom-menu-m .long-btn .bottom-box {
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.15);
+  }
+  .bottom-menu-m .long-btn .bottom-box a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+}
+.menu-logo-m {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .menu-logo-m {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    margin: 42px 0 15px;
+  }
+  .menu-logo-m img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 .modal-background {
   position: fixed;
   top: 0;
@@ -466,10 +557,17 @@ legend {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   z-index: 999;
 }
 
+
+@media screen and (max-width: 576px) {
+  .modal-background {
+    display: none;
+  }
+}
 #main {
   height: auto;
   min-height: calc(100vh - 100px - 220px);
@@ -2308,7 +2406,7 @@ legend {
   background-repeat: no-repeat;
   background-size: 100%;
   position: relative;
-  height: 7000px;
+  height: 6730px;
 }
 #introduce .intro_wrap {
   position: relative;
@@ -2502,6 +2600,18 @@ legend {
 #introduce .intro_wrap .mobile_mydata {
   display: none;
 }
+#introduce .intro_wrap .intro_btn ul {
+  display: flex;
+  justify-content: space-between;
+}
+#introduce .intro_wrap .intro_btn ul li {
+  border: 1px solid #0067ac;
+  padding: 20px 40px;
+  border-radius: 30px;
+}
+#introduce .intro_wrap .intro_btn ul li a {
+  color: #0067ac;
+}
 
 @media screen and (max-width: 992px) {
   #introduce {
@@ -2509,7 +2619,7 @@ legend {
     background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
-    height: 8800px;
+    height: 10450px;
   }
   #introduce .intro_wrap {
     position: relative;
@@ -2673,14 +2783,21 @@ legend {
   #introduce .intro_wrap .mobile_insurance {
     margin-top: 300px;
   }
+  #introduce .intro_wrap .intro_btn ul li {
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+  #introduce .intro_wrap .intro_btn ul li a {
+    color: #0067ac;
+  }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   #introduce {
     background-image: url(../../images/introduce/mobilebg.png);
     background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
-    height: 7900px;
+    height: 9550px;
   }
   #introduce .intro_wrap {
     position: relative;
@@ -2843,6 +2960,199 @@ legend {
   }
   #introduce .intro_wrap .mobile_insurance {
     margin-top: 300px;
+  }
+  #introduce .intro_wrap .intro_btn ul {
+    flex-direction: column;
+  }
+  #introduce .intro_wrap .intro_btn ul li {
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+  #introduce .intro_wrap .intro_btn ul li a {
+    color: #0067ac;
+  }
+}
+@media screen and (max-width: 576px) {
+  #introduce {
+    background-image: url(../../images/introduce/mobilebg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    height: 8600px;
+  }
+  #introduce .intro_wrap {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  #introduce .intro_wrap .intro_main {
+    height: 820px;
+    padding: 80px 0;
+  }
+  #introduce .intro_wrap .intro_main img {
+    width: 60%;
+    padding: 20px 0;
+  }
+  #introduce .intro_wrap .intro_main h2 {
+    font-size: 23px;
+    font-family: "WooridaumB";
+    line-height: 1.2;
+  }
+  #introduce .intro_wrap .intro_mokup {
+    height: 1200px;
+    position: relative;
+    margin: 250px 0;
+  }
+  #introduce .intro_wrap .intro_mokup p {
+    font-size: 30px;
+    margin-top: 20px;
+    line-height: 1.2;
+    position: static;
+  }
+  #introduce .intro_wrap .intro_mokup img {
+    position: static;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-pc {
+    height: 400px;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-pc .pc-img {
+    width: 60%;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-mobile {
+    height: 350px;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-mobile .mobile-img {
+    width: 20%;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-tablet {
+    height: 400px;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-tablet .tablet-img {
+    width: 35%;
+  }
+  #introduce .intro_wrap .intro_history {
+    display: none;
+  }
+  #introduce .intro_wrap .mobile_history {
+    display: block;
+    position: relative;
+  }
+  #introduce .intro_wrap .mobile_history .history_box {
+    width: 10px;
+    height: 2000px;
+    margin-left: 50px;
+    background: linear-gradient(180deg, rgb(32, 196, 244) 0%, rgb(0, 94, 144) 100%);
+  }
+  #introduce .intro_wrap .mobile_history .history_txt {
+    position: absolute;
+    text-align: left;
+    top: 0;
+    left: 90px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt {
+    margin: 60px 0;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #dadada;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #dadada;
+    background-color: #fff;
+    transform: translateY(-50%);
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child {
+    margin-top: 150px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child h3,
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child h4 {
+    font-size: 20px;
+    font-family: "WooridaumB";
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child h4 {
+    color: #0067ac;
+    font-size: 20px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt h3,
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt h4 {
+    display: inline;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt h3 {
+    font-family: "WooridaumB";
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt p {
+    font-family: "WooridaumL";
+  }
+  #introduce .intro_wrap .intro_insurance,
+  #introduce .intro_wrap .intro_card,
+  #introduce .intro_wrap .intro_mydata {
+    display: none;
+  }
+  #introduce .intro_wrap .mobile_insurance,
+  #introduce .intro_wrap .mobile_card,
+  #introduce .intro_wrap .mobile_mydata {
+    display: block;
+    position: relative;
+  }
+  #introduce .intro_wrap .mobile_insurance img,
+  #introduce .intro_wrap .mobile_card img,
+  #introduce .intro_wrap .mobile_mydata img {
+    width: 100%;
+    position: relative;
+    margin: 50px 0;
+    filter: darkness(1);
+    transition: opacity 0.5s ease;
+  }
+  #introduce .intro_wrap .mobile_insurance strong,
+  #introduce .intro_wrap .mobile_card strong,
+  #introduce .intro_wrap .mobile_mydata strong {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 23px;
+    opacity: 0;
+  }
+  #introduce .intro_wrap .mobile_insurance p,
+  #introduce .intro_wrap .mobile_card p,
+  #introduce .intro_wrap .mobile_mydata p {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 16px;
+    font-family: "WooridaumL";
+    opacity: 0;
+  }
+  #introduce .intro_wrap .mobile_insurance {
+    margin-top: 300px;
+  }
+  #introduce .intro_wrap .intro_btn ul {
+    flex-direction: column;
+  }
+  #introduce .intro_wrap .intro_btn ul li {
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+  #introduce .intro_wrap .intro_btn ul li a {
+    color: #0067ac;
   }
 }
 #main {
@@ -5221,7 +5531,7 @@ legend {
   background-repeat: no-repeat;
   background-size: 100%;
   position: relative;
-  height: 7000px;
+  height: 6730px;
 }
 #introduce .intro_wrap {
   position: relative;
@@ -5415,6 +5725,18 @@ legend {
 #introduce .intro_wrap .mobile_mydata {
   display: none;
 }
+#introduce .intro_wrap .intro_btn ul {
+  display: flex;
+  justify-content: space-between;
+}
+#introduce .intro_wrap .intro_btn ul li {
+  border: 1px solid #0067ac;
+  padding: 20px 40px;
+  border-radius: 30px;
+}
+#introduce .intro_wrap .intro_btn ul li a {
+  color: #0067ac;
+}
 
 @media screen and (max-width: 992px) {
   #introduce {
@@ -5422,7 +5744,7 @@ legend {
     background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
-    height: 8800px;
+    height: 10450px;
   }
   #introduce .intro_wrap {
     position: relative;
@@ -5586,14 +5908,21 @@ legend {
   #introduce .intro_wrap .mobile_insurance {
     margin-top: 300px;
   }
+  #introduce .intro_wrap .intro_btn ul li {
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+  #introduce .intro_wrap .intro_btn ul li a {
+    color: #0067ac;
+  }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   #introduce {
     background-image: url(../../images/introduce/mobilebg.png);
     background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
-    height: 7900px;
+    height: 9550px;
   }
   #introduce .intro_wrap {
     position: relative;
@@ -5756,6 +6085,199 @@ legend {
   }
   #introduce .intro_wrap .mobile_insurance {
     margin-top: 300px;
+  }
+  #introduce .intro_wrap .intro_btn ul {
+    flex-direction: column;
+  }
+  #introduce .intro_wrap .intro_btn ul li {
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+  #introduce .intro_wrap .intro_btn ul li a {
+    color: #0067ac;
+  }
+}
+@media screen and (max-width: 576px) {
+  #introduce {
+    background-image: url(../../images/introduce/mobilebg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    height: 8600px;
+  }
+  #introduce .intro_wrap {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  #introduce .intro_wrap .intro_main {
+    height: 820px;
+    padding: 80px 0;
+  }
+  #introduce .intro_wrap .intro_main img {
+    width: 60%;
+    padding: 20px 0;
+  }
+  #introduce .intro_wrap .intro_main h2 {
+    font-size: 23px;
+    font-family: "WooridaumB";
+    line-height: 1.2;
+  }
+  #introduce .intro_wrap .intro_mokup {
+    height: 1200px;
+    position: relative;
+    margin: 250px 0;
+  }
+  #introduce .intro_wrap .intro_mokup p {
+    font-size: 30px;
+    margin-top: 20px;
+    line-height: 1.2;
+    position: static;
+  }
+  #introduce .intro_wrap .intro_mokup img {
+    position: static;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-pc {
+    height: 400px;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-pc .pc-img {
+    width: 60%;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-mobile {
+    height: 350px;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-mobile .mobile-img {
+    width: 20%;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-tablet {
+    height: 400px;
+  }
+  #introduce .intro_wrap .intro_mokup .mokup-tablet .tablet-img {
+    width: 35%;
+  }
+  #introduce .intro_wrap .intro_history {
+    display: none;
+  }
+  #introduce .intro_wrap .mobile_history {
+    display: block;
+    position: relative;
+  }
+  #introduce .intro_wrap .mobile_history .history_box {
+    width: 10px;
+    height: 2000px;
+    margin-left: 50px;
+    background: linear-gradient(180deg, rgb(32, 196, 244) 0%, rgb(0, 94, 144) 100%);
+  }
+  #introduce .intro_wrap .mobile_history .history_txt {
+    position: absolute;
+    text-align: left;
+    top: 0;
+    left: 90px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt {
+    margin: 60px 0;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #dadada;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #dadada;
+    background-color: #fff;
+    transform: translateY(-50%);
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child {
+    margin-top: 150px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child h3,
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child h4 {
+    font-size: 20px;
+    font-family: "WooridaumB";
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt:last-child h4 {
+    color: #0067ac;
+    font-size: 20px;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt h3,
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt h4 {
+    display: inline;
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt h3 {
+    font-family: "WooridaumB";
+  }
+  #introduce .intro_wrap .mobile_history .history_txt .mobile_txt p {
+    font-family: "WooridaumL";
+  }
+  #introduce .intro_wrap .intro_insurance,
+  #introduce .intro_wrap .intro_card,
+  #introduce .intro_wrap .intro_mydata {
+    display: none;
+  }
+  #introduce .intro_wrap .mobile_insurance,
+  #introduce .intro_wrap .mobile_card,
+  #introduce .intro_wrap .mobile_mydata {
+    display: block;
+    position: relative;
+  }
+  #introduce .intro_wrap .mobile_insurance img,
+  #introduce .intro_wrap .mobile_card img,
+  #introduce .intro_wrap .mobile_mydata img {
+    width: 100%;
+    position: relative;
+    margin: 50px 0;
+    filter: darkness(1);
+    transition: opacity 0.5s ease;
+  }
+  #introduce .intro_wrap .mobile_insurance strong,
+  #introduce .intro_wrap .mobile_card strong,
+  #introduce .intro_wrap .mobile_mydata strong {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 23px;
+    opacity: 0;
+  }
+  #introduce .intro_wrap .mobile_insurance p,
+  #introduce .intro_wrap .mobile_card p,
+  #introduce .intro_wrap .mobile_mydata p {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 16px;
+    font-family: "WooridaumL";
+    opacity: 0;
+  }
+  #introduce .intro_wrap .mobile_insurance {
+    margin-top: 300px;
+  }
+  #introduce .intro_wrap .intro_btn ul {
+    flex-direction: column;
+  }
+  #introduce .intro_wrap .intro_btn ul li {
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+  #introduce .intro_wrap .intro_btn ul li a {
+    color: #0067ac;
   }
 }
 #cert-body {
