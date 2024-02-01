@@ -1,22 +1,12 @@
-#product-body::before {
-  content: "";
-  background-image: url(../../images/products/body.png);
-  background-size: cover;
-  top: 0;
-  left: 0;
-  opacity: 0.5;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
 #product-body {
   position: relative;
   font-family: "Noto Sans KR", sans-serif;
   white-space: nowrap;
   overflow-x: hidden;
-  // height: 1000vh;
+}
+
+.wrap {
+  display: block;
 }
 
 .intro {
@@ -28,8 +18,9 @@
     font-size: 80px;
     text-align: center;
     position: absolute;
-    left: 40%;
-    top: 40%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     span {
       color: #008cdf;
     }
@@ -287,8 +278,13 @@
 .app {
   background-color: #f0f9ff;
   display: flex;
-  justify-content: space-between;
-  padding: 130px 350px 130px 433px;
+  justify-content: center;
+  padding: 130px 0;
+  .app-inner {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+  }
 
   strong {
     font-size: 65px;
@@ -358,6 +354,51 @@
       text-align: center;
       font-size: 45px;
       font-weight: 400;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .wrap {
+    display: none;
+  }
+
+  .product-top-m {
+    background-color: $white;
+    border-radius: 30px;
+    padding: 7px;
+    box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.1);
+    margin: 0 8px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .product-banner-m {
+    background-color: #f9fafb;
+    border-radius: 10px;
+    padding: 15px 0;
+    display: flex;
+    .banner-icon-m {
+      border-radius: 10px;
+      background-color: #ff4848;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .product-contents-m {
+    .contents {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin-right: 20px;
+      padding: 10px;
+    }
+    img {
+      height: 150px;
+      object-fit: cover;
     }
   }
 }
