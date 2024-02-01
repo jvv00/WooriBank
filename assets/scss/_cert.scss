@@ -13,7 +13,6 @@
   top: 0;
   left: 0;
   object-fit: contain;
-  height: 1000px;
   width: 100%;
 }
 .cert.inner  {
@@ -50,7 +49,7 @@
     margin: 15px 10px;
     padding: 30px 20px;
     border-radius: 10px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid $gray-300;
     background: $white;
     .cert-icon {
       img {
@@ -91,7 +90,7 @@
   align-items: center;
   gap: 10px;
   border-radius: 20px;
-  border: 1px solid #e2e2e2;
+  border: 1px solid $gray-300;
   background: $white;
   margin-right: 8px;
   transition: all 0.1s;
@@ -158,12 +157,13 @@
   }
   .cert-mb-menu-tit {
     margin-bottom: 16px;
+    border-radius: 10px;
+    border: 1px solid $gray-300;
+    background: $white;
+    cursor: pointer;
     .link{
       display: flex;
       align-items: center;
-      border-radius: 10px;
-      border: 1px solid #E2E2E2;
-      background: $white;
       padding: 16px ;
       padding-left: 13px;
       .cert-mb-icon {
@@ -175,52 +175,83 @@
       border: 0px;
     }
   }
-  .cert-mb-cont {
-    display: none;
-  }
+ .cert-mb-cont {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
   .Won-slide {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: 100%;
   }
   .cert-slide {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     font-size: 18px;
     background: $white; 
     align-items: center;
     padding: 20px 10px 10px 10px;
+    height: 300px;
+    .cert-slide-cont{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
     img {
-      height: 90px;
+      height: 100px;
       padding: 5px;
     }
     span {
       color: $default;
       text-align: center;
       font-family: "WooridaumR";
-      font-size: 15px;
+      font-size: 16px;
       line-height: 22px;
       letter-spacing: -0.45px;
       padding: 8px;
       padding-top: 10px;
     }
     p {
-      color: #555;
+      color: $gray-800;
       text-align: center;
-      font-family: "WooridaumL";
-      font-size: 12px;
-      line-height: 16px; /* 133.333% */
-      letter-spacing: -0.36px;
-      padding: 2px;
+      font-family: "Noto Sans KR";
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 18px; /* 133.333% */
+      padding: 2px 40px;
       padding-top: 0;
-      width: 75%;
+      // width: 75%;
     }
   }
+  .cert-next-btn {
+    position: static;
+    background: $primary-300;
+    display: flex;
+    width: 200px;
+    padding: 10px 15px;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 30px;
+    color: $white;
+    // font-family: "WooridaumR";
+    font-size: 14px;
+    line-height: 30px;
+    &::after{
+      content: "";
+    }
+  }
+
   .cert-pagination{
     position: static;
+    padding-bottom: 10px;
     .swiper-pagination-bullet {
       font-family:"Noto-Sans-KR";
       width: 15px;
@@ -238,4 +269,4 @@
       background: $primary-300;
     }
   }
-  }
+}
