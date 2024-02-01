@@ -319,7 +319,7 @@ $(document).ready(function () {
     gsap.from(element, {
       opacity: 0,
       x: direction === "left" ? -50 : 50,
-      duration: 3,
+      duration: 2,
       ease: "power2.out",
       scrollTrigger: {
         trigger: element,
@@ -341,30 +341,51 @@ $(document).ready(function () {
   });
 
   // 상품 스크롤트리거
-  const sections = document.querySelectorAll(
-    ".intro_insurance, .intro_card, .intro_mydata"
-  );
+  gsap.registerPlugin(ScrollTrigger);
 
-  sections.forEach((section) => {
-    const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
-
-    tl.from(section.querySelector("img"), { opacity: 0, y: 100, duration: 1 })
-      .to(section.querySelector("img"), {
-        filter: "brightness(50%)",
-        duration: 1,
-        delay: 0,
-        toggleActions: "restart pause reverse pause",
-      })
-
-      .to(section.querySelector("strong"), { opacity: 1, duration: 1 })
-      .to(section.querySelector("p"), { opacity: 1, duration: 1 });
-
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top 70%",
-      animation: tl,
+  function handleAnimation(element, opacityValue) {
+    gsap.to(element, {
+      filter: "brightness(0.5)",
+      opacity: opacityValue,
+      duration: 1,
+      toggleActions: "restart pause reverse pause",
     });
-  });
+  }
+
+  gsap.utils
+    .toArray(".intro_insurance, .intro_card, .intro_mydata")
+    .forEach((section) => {
+      const imgElement = section.querySelector("img");
+      const strongElement = section.querySelector("strong");
+      const textElement = section.querySelector("p");
+
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top 10%",
+        onEnter: () => {
+          handleAnimation(imgElement, 1);
+          gsap.to(strongElement, {
+            opacity: 1,
+            duration: 1,
+          });
+          gsap.to(textElement, {
+            opacity: 1,
+            duration: 1,
+          });
+        },
+        onLeaveBack: () => {
+          handleAnimation(imgElement, 0);
+          gsap.to(strongElement, {
+            opacity: 0,
+            duration: 1,
+          });
+          gsap.to(textElement, {
+            opacity: 0,
+            duration: 1,
+          });
+        },
+      });
+    });
 });
 
 // introduce 모바일
