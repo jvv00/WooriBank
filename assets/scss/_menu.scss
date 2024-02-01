@@ -1,8 +1,6 @@
 .menu-wrap {
   max-width: 1220px;
   width: 100%;
-  background-color: $white;
-  border-radius: 20px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -10,10 +8,12 @@
   display: flex;
   flex-direction: column;
   z-index: 1000;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: $breakpoint-sm) {
   .menu-wrap {
+    position: relative;
     max-width: $breakpoint-sm;
     width: 100%;
     border-radius: 0;
@@ -21,7 +21,10 @@
 }
 
 .menu-inner {
+  position: static;
   width: 100%;
+  background-color: $white;
+  border-radius: 20px;
   .menu-top {
     .tit-m {
       display: none;
@@ -42,6 +45,8 @@
 
 @media screen and (max-width: $breakpoint-sm) {
   .menu-inner {
+    position: fixed;
+    top: 0;
     .menu-top {
       display: flex;
       h1 {
@@ -49,12 +54,19 @@
       }
       .tit-m {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         font-family: "WooridaumB";
         font-size: 25px;
         padding: 15px 0 0 20px;
+        .txt-m {
+          display: flex;
+          flex-direction: column;
+        }
         span {
           color: $primary-300;
+        }
+        img {
+          display: flex;
         }
       }
     }
@@ -95,7 +107,7 @@
     font-size: 15px;
     padding: 15px 25px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 5px;
     .q-button {
       height: 35px;
@@ -165,10 +177,14 @@ $menu-transition-duration: 0.3s;
     flex-direction: column;
     position: relative;
     ul {
-      overflow: hidden; // 내용이 넘칠 경우를 대비하여 overflow 속성 추가
-      max-height: 0; // 기본적으로 숨겨진 상태
+      font-size: 13px;
+      overflow: hidden;
+      max-height: 0;
       transition: max-height $menu-transition-duration ease-in-out;
       padding-left: 40px;
+      li:last-child {
+        padding-bottom: 15px;
+      }
     }
     .sec-top {
       border-bottom: 0;
@@ -186,7 +202,9 @@ $menu-transition-duration: 0.3s;
       border-bottom: 2px solid #eeeeee;
     }
     h2 {
-      padding: 15px 30px;
+      padding: 10px 30px;
+      font-size: 15px;
+      font-family: "WooridaumL";
     }
     .down-icon {
       display: flex;
@@ -200,9 +218,84 @@ $menu-transition-duration: 0.3s;
       }
       &.active {
         ul {
-          max-height: 100vh; // 컨텐츠의 최대 높이
+          max-height: 100vh;
         }
       }
+    }
+  }
+}
+
+.bottom-menu-m {
+  display: none;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .bottom-menu-m {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 43px;
+    font-size: 14px;
+    font-family: "WooridaumL";
+
+    .small-btn {
+      display: flex;
+      gap: 17px;
+
+      .bottom-box {
+        border-radius: 10px;
+        box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.15);
+        padding: 0 12.5px;
+        display: flex;
+      }
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        .btn-icon {
+          width: 45px;
+          display: flex;
+          justify-content: center;
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .long-btn {
+      max-width: 331px;
+      width: 100%;
+
+      .bottom-box {
+        border-radius: 10px;
+        box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.15);
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+.menu-logo-m {
+  display: none;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .menu-logo-m {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    margin: 42px 0 15px;
+    img {
+      object-fit: cover;
     }
   }
 }
@@ -216,4 +309,10 @@ $menu-transition-duration: 0.3s;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(20px);
   z-index: 999;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .modal-background {
+    display: none;
+  }
 }

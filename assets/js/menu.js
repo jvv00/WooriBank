@@ -7,7 +7,7 @@ function closeModal() {
   document.body.classList.remove("modal-open");
 }
 
-// 전체 메뉴 열었을 때
+// 전체 메뉴 열기
 function openModal() {
   const modal = document.querySelector(".menu-wrap");
   const modalBackground = document.getElementById("modalBackground");
@@ -28,14 +28,22 @@ function changeColor(element) {
   });
 }
 
-// 모바일 액티브 추가 (메뉴 아이콘 클릭시 ul 나타남)
+// 모바일: 액티브 추가 (메뉴 아이콘 클릭시 ul 나타남)
 document.addEventListener("DOMContentLoaded", function () {
   var downIcons = document.querySelectorAll(".down-icon i");
   var menus = document.querySelectorAll(".menu ul");
 
+  menus[0].classList.add("active");
+  downIcons[0].style.transform = "rotate(180deg)";
+  menus[0].style.maxHeight = menus[0].scrollHeight + "px";
+
   downIcons.forEach(function (downIcon, index) {
     downIcon.addEventListener("click", function () {
       menus[index].classList.toggle("active");
+      downIcon.style.transform = menus[index].classList.contains("active")
+        ? "rotate(180deg)"
+        : "rotate(0deg)";
+
       if (menus[index].classList.contains("active")) {
         menus[index].style.maxHeight = menus[index].scrollHeight + "px";
       } else {
@@ -44,24 +52,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-// Add the following code to handle click events on the angle-down icons
-// document.addEventListener("DOMContentLoaded", function () {
-//   const angleDownIcons = document.querySelectorAll(".las.la-angle-down");
-
-//   angleDownIcons.forEach(function (icon) {
-//     icon.addEventListener("click", function () {
-//       const section = icon.closest(".section");
-//       const isActive = section.classList.toggle("active");
-
-//       // Close other sections if any
-//       document
-//         .querySelectorAll(".section.active")
-//         .forEach(function (activeSection) {
-//           if (activeSection !== section) {
-//             activeSection.classList.remove("active");
-//           }
-//         });
-//     });
-//   });
-// });
