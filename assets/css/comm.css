@@ -267,97 +267,198 @@ legend {
   content: "";
 }
 
-#menu-body {
-  position: relative;
-}
-
 .menu-wrap {
   max-width: 1220px;
   width: 100%;
   background-color: #fff;
   border-radius: 20px;
   position: absolute;
-  left: 25%;
-  top: 25%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   z-index: 1000;
 }
-.menu-wrap h1 {
+
+@media screen and (max-width: 576px) {
+  .menu-wrap {
+    max-width: 576px;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+.menu-inner {
+  width: 100%;
+}
+.menu-inner .menu-top .tit-m {
+  display: none;
+}
+.menu-inner .menu-top h1 {
   font-size: 25px;
   padding: 43px 0 30px 50px;
 }
-.menu-wrap .la-times:before {
+.menu-inner .menu-top .la-times:before {
   content: "\f00d";
   font-size: 30px;
   position: absolute;
   right: 30px;
   top: 43px;
 }
-.menu-wrap .botton {
+
+@media screen and (max-width: 576px) {
+  .menu-inner .menu-top {
+    display: flex;
+  }
+  .menu-inner .menu-top h1 {
+    display: none;
+  }
+  .menu-inner .menu-top .tit-m {
+    display: flex;
+    flex-direction: column;
+    font-family: "WooridaumB";
+    font-size: 25px;
+    padding: 15px 0 0 20px;
+  }
+  .menu-inner .menu-top .tit-m span {
+    color: #0083ca;
+  }
+}
+.q-menu-btn {
   font-size: 16px;
   font-family: "WooridaumR";
   display: flex;
   padding-left: 50px;
   gap: 30px;
 }
-.menu-wrap .botton .bottons {
+.q-menu-btn .q-button {
   height: 37px;
   background-color: #fff;
   border-radius: 20px;
   display: flex;
   box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.15);
 }
-.menu-wrap .botton .bottons a {
+.q-menu-btn .q-button a {
   height: 37px;
   padding: 10px;
   display: flex;
   align-items: center;
 }
-.menu-wrap .botton .bottons.clicked {
+.q-menu-btn .q-button.clicked {
   background-color: #0067ac;
 }
-.menu-wrap .botton .bottons.clicked a {
+.q-menu-btn .q-button.clicked a {
   color: #fff;
 }
-.menu-wrap .menu {
+
+@media screen and (max-width: 576px) {
+  .q-menu-btn {
+    font-size: 15px;
+    padding: 15px 25px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  .q-menu-btn .q-button {
+    height: 35px;
+    border-radius: 25px;
+    display: flex;
+  }
+  .q-menu-btn .q-button a {
+    height: 35px;
+    padding: 6px 0;
+    display: flex;
+  }
+  .q-menu-btn .q-button .btn-1 {
+    padding: 0 26px;
+  }
+  .q-menu-btn .q-button .btn-2 {
+    padding: 0 12px;
+  }
+  .q-menu-btn .q-button .btn-3 {
+    padding: 0 5px;
+  }
+}
+.menu {
   font-family: "WooridaumL";
   font-size: 20px;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 86px;
+  padding-top: 60px;
 }
-.menu-wrap .menu li {
+.menu i {
+  display: none;
+}
+.menu li {
   padding: 0 0 10px 10px;
 }
-.menu-wrap .menu li a:hover {
+.menu li a:hover {
   color: #0067ac;
   font-family: "WooridaumR";
 }
-.menu-wrap .menu h2 {
+.menu h2 {
   font-family: "WooridaumR";
   font-size: 20px;
   padding-bottom: 23px;
 }
-.menu-wrap .menu .section {
+.menu .section {
   width: 33.333%;
-  padding: 0 0 60px 50px;
+  padding: 0 0 50px 50px;
 }
-.menu-wrap .menu .sec-top {
+.menu .sec-top {
   border-bottom: 2px solid #eeeeee;
 }
-.menu-wrap .menu .sec-bottom {
-  padding: 36px 0 86px 50px;
-}
-.menu-wrap .menu .border-r {
+.menu .border-r {
   border-right: 2px solid #eeeeee;
 }
-.menu-wrap .bar .bar-hori {
-  height: 2px;
-  width: 100%;
-  background-color: #eeeeee;
+.menu .sec-bottom {
+  padding: 36px 0 50px 50px;
 }
 
+@media screen and (max-width: 576px) {
+  .menu {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .menu ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    padding-left: 40px;
+  }
+  .menu .sec-top {
+    border-bottom: 0;
+  }
+  .menu .border-r {
+    border-right: 0;
+  }
+  .menu .sec-bottom,
+  .menu .sec-top {
+    padding: 0;
+  }
+  .menu .section {
+    width: 100%;
+    border-bottom: 2px solid #eeeeee;
+  }
+  .menu h2 {
+    padding: 15px 30px;
+  }
+  .menu .down-icon {
+    display: flex;
+    align-items: center;
+  }
+  .menu .down-icon i {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+  }
+  .menu .down-icon.active ul {
+    max-height: 100vh;
+  }
+}
 .modal-background {
   position: fixed;
   top: 0;
@@ -4310,15 +4411,6 @@ legend {
   padding: 8px;
   outline: none; /* 선택 시 검은 테두리 제거 */
 }
-.id-login-box .inner-box .section-id ::-moz-placeholder, .id-login-box .inner-box .section-pw ::-moz-placeholder {
-  color: #8c8c8c;
-  font-family: "Noto Sans KR";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 350;
-  line-height: normal;
-  letter-spacing: -0.36px;
-}
 .id-login-box .inner-box .section-id ::placeholder,
 .id-login-box .inner-box .section-pw ::placeholder {
   color: #8c8c8c;
@@ -4821,8 +4913,7 @@ legend {
   left: 0;
   width: 100%;
   height: 1200px;
-  -webkit-clip-path: circle(800px at center center);
-          clip-path: circle(800px at center center);
+  clip-path: circle(800px at center center);
 }
 .intro .circle img {
   position: absolute;
@@ -4830,8 +4921,7 @@ legend {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .products h1 {
@@ -4885,8 +4975,7 @@ legend {
 .product1 ul .pd2 {
   display: flex;
   flex-direction: row-reverse;
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align-last: left;
 }
 
 .product2 {
@@ -4948,8 +5037,7 @@ legend {
   flex-direction: column;
 }
 .product3 ul li img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .product3 ul li .txt {
   padding-top: 70px;
@@ -5091,8 +5179,7 @@ legend {
 }
 .app .mokup img {
   height: 682px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .service {
@@ -5684,7 +5771,6 @@ legend {
   top: 0;
   left: 0;
   object-fit: contain;
-  height: 1000px;
   width: 100%;
 }
 
@@ -5698,8 +5784,7 @@ legend {
 .cert.inner img {
   width: 100%;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .cert-g-wrap {
@@ -5732,8 +5817,7 @@ legend {
   width: 100px;
   height: 100px;
   padding: 10px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .cert-type-box .cert-contain .cert-cont {
   width: 100%;
@@ -5829,13 +5913,14 @@ legend {
   }
   .cert-mb-menu-tit {
     margin-bottom: 16px;
+    border-radius: 10px;
+    border: 1px solid #E2E2E2;
+    background: #fff;
+    cursor: pointer;
   }
   .cert-mb-menu-tit .link {
     display: flex;
     align-items: center;
-    border-radius: 10px;
-    border: 1px solid #E2E2E2;
-    background: #fff;
     padding: 16px;
     padding-left: 13px;
   }
@@ -5851,21 +5936,29 @@ legend {
   .Won-slide {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: 100%;
   }
   .cert-slide {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     font-size: 18px;
     background: #fff;
     align-items: center;
     padding: 20px 10px 10px 10px;
+    height: 300px;
+  }
+  .cert-slide .cert-slide-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
   }
   .cert-slide img {
-    height: 90px;
+    height: 100px;
     padding: 5px;
   }
   .cert-slide span {
@@ -5885,12 +5978,30 @@ legend {
     font-size: 12px;
     line-height: 16px; /* 133.333% */
     letter-spacing: -0.36px;
-    padding: 2px;
+    padding: 2px 40px;
     padding-top: 0;
-    width: 75%;
+  }
+  .cert-next-btn {
+    position: static;
+    background: #0083ca;
+    display: flex;
+    width: 200px;
+    padding: 10px 15px;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .cert-next-btn::after {
+    content: "";
   }
   .cert-pagination {
     position: static;
+    padding-bottom: 10px;
   }
   .cert-pagination .swiper-pagination-bullet {
     font-family: "Noto-Sans-KR";
@@ -5908,4 +6019,3 @@ legend {
     background: #0083ca;
   }
 }/*# sourceMappingURL=comm.css.map */
-
