@@ -27,3 +27,27 @@ function changeColor(element) {
     }
   });
 }
+
+// 모바일 액티브 추가
+// Your existing JavaScript code...
+
+// Add the following code to handle click events on the angle-down icons
+document.addEventListener("DOMContentLoaded", function () {
+  const angleDownIcons = document.querySelectorAll(".las.la-angle-down");
+
+  angleDownIcons.forEach(function (icon) {
+    icon.addEventListener("click", function () {
+      const section = icon.closest(".section");
+      const isActive = section.classList.toggle("active");
+
+      // Close other sections if any
+      document
+        .querySelectorAll(".section.active")
+        .forEach(function (activeSection) {
+          if (activeSection !== section) {
+            activeSection.classList.remove("active");
+          }
+        });
+    });
+  });
+});
