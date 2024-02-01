@@ -1,0 +1,318 @@
+.menu-wrap {
+  max-width: 1220px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .menu-wrap {
+    position: relative;
+    max-width: $breakpoint-sm;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+.menu-inner {
+  position: static;
+  width: 100%;
+  background-color: $white;
+  border-radius: 20px;
+  .menu-top {
+    .tit-m {
+      display: none;
+    }
+    h1 {
+      font-size: 25px;
+      padding: 43px 0 30px 50px;
+    }
+    .la-times:before {
+      content: "\f00d";
+      font-size: 30px;
+      position: absolute;
+      right: 30px;
+      top: 43px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .menu-inner {
+    position: fixed;
+    top: 0;
+    .menu-top {
+      display: flex;
+      h1 {
+        display: none;
+      }
+      .tit-m {
+        display: flex;
+        flex-direction: row;
+        font-family: "WooridaumB";
+        font-size: 25px;
+        padding: 15px 0 0 20px;
+        .txt-m {
+          display: flex;
+          flex-direction: column;
+        }
+        span {
+          color: $primary-300;
+        }
+        img {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+.q-menu-btn {
+  font-size: 16px;
+  font-family: "WooridaumR";
+  display: flex;
+  padding-left: 50px;
+  gap: 30px;
+
+  .q-button {
+    height: 37px;
+    background-color: $white;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.15);
+
+    a {
+      height: 37px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .q-button.clicked {
+    background-color: $primary-400;
+    a {
+      color: $white;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .q-menu-btn {
+    font-size: 15px;
+    padding: 15px 25px 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    .q-button {
+      height: 35px;
+      border-radius: 25px;
+      display: flex;
+      a {
+        height: 35px;
+        padding: 6px 0;
+        display: flex;
+      }
+      .btn-1 {
+        padding: 0 26px;
+      }
+      .btn-2 {
+        padding: 0 12px;
+      }
+      .btn-3 {
+        padding: 0 5px;
+      }
+    }
+  }
+}
+
+.menu {
+  font-family: "WooridaumL";
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 60px;
+  i {
+    display: none;
+  }
+  li {
+    padding: 0 0 10px 10px;
+    a {
+      &:hover {
+        color: $primary-400;
+        font-family: "WooridaumR";
+      }
+    }
+  }
+  h2 {
+    font-family: "WooridaumR";
+    font-size: 20px;
+    padding-bottom: 23px;
+  }
+  .section {
+    width: 33.333%;
+    padding: 0 0 50px 50px;
+  }
+  .sec-top {
+    border-bottom: 2px solid #eeeeee;
+  }
+  .border-r {
+    border-right: 2px solid #eeeeee;
+  }
+  .sec-bottom {
+    padding: 36px 0 50px 50px;
+  }
+}
+
+$menu-transition-duration: 0.3s;
+@media screen and (max-width: $breakpoint-sm) {
+  .menu {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    ul {
+      font-size: 13px;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height $menu-transition-duration ease-in-out;
+      padding-left: 40px;
+      li:last-child {
+        padding-bottom: 15px;
+      }
+    }
+    .sec-top {
+      border-bottom: 0;
+    }
+    .border-r {
+      border-right: 0;
+    }
+    .sec-bottom,
+    .sec-top {
+      padding: 0;
+    }
+
+    .section {
+      width: 100%;
+      border-bottom: 2px solid #eeeeee;
+    }
+    h2 {
+      padding: 10px 30px;
+      font-size: 15px;
+      font-family: "WooridaumL";
+    }
+    .down-icon {
+      display: flex;
+      align-items: center;
+
+      i {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+      }
+      &.active {
+        ul {
+          max-height: 100vh;
+        }
+      }
+    }
+  }
+}
+
+.bottom-menu-m {
+  display: none;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .bottom-menu-m {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 43px;
+    font-size: 14px;
+    font-family: "WooridaumL";
+
+    .small-btn {
+      display: flex;
+      gap: 17px;
+
+      .bottom-box {
+        border-radius: 10px;
+        box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.15);
+        padding: 0 12.5px;
+        display: flex;
+      }
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        .btn-icon {
+          width: 45px;
+          display: flex;
+          justify-content: center;
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .long-btn {
+      max-width: 331px;
+      width: 100%;
+
+      .bottom-box {
+        border-radius: 10px;
+        box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.15);
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+.menu-logo-m {
+  display: none;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .menu-logo-m {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    margin: 42px 0 15px;
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .modal-background {
+    display: none;
+  }
+}

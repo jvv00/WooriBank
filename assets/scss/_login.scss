@@ -10,7 +10,7 @@
     justify-content: center;
     
 }
-.inner {
+.login.inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,10 +20,21 @@
     max-width: 1220px;
     // padding: 0 350px;
 }
+
+@media screen and (max-width: $breakpoint-sm) {
+    .login.inner {
+        width: 100%;
+        padding: 0 16px; /* Adjust padding for smaller screens */
+    }
+  }
+  
 .login-title-wrap {
     // padding: 0 350px;
     // margin:45px 350px 20px 350px;
     width: 100%;
+    .login-mobile-title{
+        display: none;
+    }
 
     .notice-title {
         text-align: center;
@@ -49,12 +60,66 @@
         }
     }
 }
+
+@media screen and (max-width: $breakpoint-sm) {
+ 
+    .login-title-wrap {
+        display: flex;
+        justify-content: center;
+        .title {
+            display: none;
+        }
+        .login-mobile-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .home-btn,
+            .menu-btn {
+            display: flex;
+            align-items: center;
+            }
+            .material-symbols-outlined {
+                display: flex;
+                width: 100%;
+                font-size: 28px;
+                line-height: 65px;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 200,
+                'GRAD' 0,
+                'opsz' 24
+              }
+        }
+        .notice {
+            display: none;
+        }
+           
+    }
+    
+}
+
+
 .login-type-box{
     display: flex;
     justify-content: space-between;
     padding: 15px 0;   
     width: 100%; 
     gap: 20px;
+    .tab-wrap {
+        display: none;
+    }
+    
+}
+.login-box{
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-start;
+    align-items: center;
+    width: 33.333%;
+    height: 360px;
+    border: solid 1px #e2e2e2;
+    border-radius: 10px;
     h3 {
         color: $default;
         text-align: center;
@@ -71,17 +136,6 @@
         font-weight: 400;
         margin-top: 15px ;
     }
-    
-}
-.login-box{
-    display: flex;
-    flex-direction: column;
-    // justify-content: flex-start;
-    align-items: center;
-    width: 33.333%;
-    height: 360px;
-    border: solid 1px #e2e2e2;
-    border-radius: 10px;
 
     .btn-box {
         display: flex;
@@ -107,10 +161,8 @@
             
         }
     }
-    .cert-box {
-        padding: 30px 0 20px 0;
-    }
     .Won-icon img{
+        display: block;
         width: 100px;
         height: 100px;
     }
@@ -151,7 +203,6 @@
     .inner-box {
         display: flex;
         flex-direction: column;
-        
         .section-id,
         .section-pw {
         display: flex;
@@ -199,7 +250,7 @@
         align-items: center;
         // gap: 10px;
         border-radius: 3px;
-        background: $gray-300;
+        background: #8FBBD6;
         color: $white;
         text-align: center;
         font-family: "WooridaumR";
@@ -226,6 +277,9 @@
         cursor: pointer;
     }
 }
+.cert-box {
+    padding: 30px 0 20px 0;
+}
 .select-pop {
     display: flex;
     gap: 20px;
@@ -251,7 +305,104 @@
         }
     }
 }
+
+@media screen and (max-width : $breakpoint-sm) {
+    .login-type-box {
+        flex-direction: column; /* Stack boxes vertically for smaller screens */
+        gap: 0; /* Add some space between login boxes */
+        padding: 0;
+        margin-bottom: 16px;
+        .tab-wrap {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+      }
+    
+        .tab-btn {
+            width: 33.333%;
+            border-radius: 10px 10px 0px 0px;
+            border-bottom: 2px solid $gray-200;
+            background: $white;
+            text-align: center;
+            padding: 18.5px 22.5px;
+            cursor: pointer;
+        }
+        .tab-btn.active {
+            border-bottom: 2px solid $primary-300; /* 활성화된 경우 색 지정 (예: 빨간색) */
+        }
+        
+    }
+    .login-box {
+        display: none;
+        justify-content: center;
+        width: 100%; /* Take full width for smaller screens */
+        height: 190px;
+        border-radius: 0 0 10px 10px;
+        margin-bottom: 0; /* Add some space between login boxes */
+        padding: 0px;
+        h3, p{
+            display: none;
+        }
+        .Won-icon img{
+            display: none;
+        } 
+        .btn-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .btn1 {
+                padding: 5px 0;
+            }
+            .main-btn {
+                display: flex;
+                width: 200px;
+                padding: 10px 15px;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                border-radius: 30px;
+                color: $white;
+                background: $primary-300;
+                font-family: "WooridaumR";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 30px;
+                
+            }
+        }
+    }
+    .login-box.active {
+        display: flex;
+        
+        
+        /* Additional styling as needed */
+    }
+    
+    .id-login-box {
+        padding: 0;
+        .inner-box{
+            .section-id,
+            .section-pw {
+            padding: 5px 5px 5px 0;
+            
+        }
+    }
+    }
+    .cert-box {
+        padding: 0;
+    }
+    .select-pop {
+        display: none;
+    }
+    .menu-list {
+        margin: 0;
+        padding-top: 15px;
+    }
+}
+
 .notice-wrap {
+    display: flex;
     width: 100%;
     padding: 15px 0;   
 
@@ -302,144 +453,18 @@
     color: $gray-700;
     }
 }
+@media screen and (max-width : $breakpoint-sm) {
+    .notice-wrap {
+        display: none;
+    }
+}
 .service-wrap{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 15px 0;   
-
-    // padding: 15px 350px;
-    .service {
-        display: flex;
-        justify-content: space-between;
-        padding: 30px 84px;
-        align-items:flex-start;
-        border-radius: 15px;
-        width: 100%;
-        border: 1px solid #E2E2E2;
-        background: $white;
-        
-        .faq-list {
-            // width: 50%;
-            color: $default;
-            font-family: "WooridaumL";
-            font-size: 14px;
-            font-weight: 400;
-            // letter-spacing: -0.42px;
-            padding: 10px 20px 10px 0;
-            // border-top: 2px solid #148a75;
-            // border-bottom: 1px solid #ddd;
-            white-space: initial;
-
-            dt {
-                border-top: 1px solid $gray-300;
-                padding: 10px;
-                position: relative;
-                cursor: pointer;
-                padding-right: 50px;
-                &::before {
-                    content: "Q ";
-                    display: inline-block;
-                    padding-right: 10px;
-                }
-                &::after {
-                    content: "+";
-                    display: inline-block;
-                    position: absolute;
-                    // width: 15px;
-                    text-align: center;
-                    right: 10px;
-                    // top: 23px;
-                }
-                &.selected {
-                    color:  $primary-300;
-                    &::before {
-                        color:  $primary-300;
-                    }
-                    &::after {
-                        content: "-";
-                        text-align: center;
-                    }
-                }
-            }
-            dd {
-                display: none;
-                border-top: 1px solid $gray-300;
-                padding: 10px;
-                position: relative;
-                background: $gray-100;
-                &::before {
-                    content: "A ";
-                    display: inline-block;
-                    padding-right: 10px;
-                }
-                li {
-                    white-space: initial;
-                }
-            }
-            .faq-list dt:first-child {
-                border-top: 0;
-            }
-
-        }
-        .cs-contact-wrap {
-            display: flex;
-            flex-direction: column;
-            // width: 50%;
-
-            .contact-list {
-                display: flex;
-                padding: 13px 0 18px 0;
-                .tel01 {
-                    color: $gray-700;
-                    text-align: center;
-                    font-family: "WooridaumR";
-                    font-size: 18px;
-                    font-weight: 400;
-                    letter-spacing: -0.54px;
-                    padding-right: 45px;
-                }
-                .tel-tit {
-                    color: #008CDF;
-                    font-size: 14px;
-                    letter-spacing: -0.42px;
-                    text-align: left;
-                }
-                .tel02, .tel03 {
-                    padding: 5px 0;
-                    a {
-                        padding-right: 7px ;
-                    }
-                }
-                .tel02 {
-                     color: $gray-700;
-                    text-align: left;
-                    font-family: "WooridaumR";
-                    font-size: 12px;
-                    font-weight: 400;
-                    letter-spacing: -0.36px;
-                    padding-right: 45px;
-                }
-                .tel03 {
-                    color: $gray-700;
-                    text-align: left;
-                    font-family: "WooridaumR";
-                    font-size: 12px;
-                    font-weight: 400;
-                    letter-spacing: -0.36px;
-                    ul {
-                        display: flex;
-                        li{
-                            padding-right: 5px;
-                        }
-                    }
-            
-                }
-            }
-        }
-        
-    
+    flex-shrink: 1;
     h3 {
         color: $default;
         font-family: "WooridaumB";
@@ -458,6 +483,238 @@
         }
     }
 
+    // padding: 15px 350px;
+    
 }
+.service-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 84px;
+    align-items:flex-start;
+    border-radius: 15px;
+    width: 100%;
+    border: 1px solid #E2E2E2;
+    background: $white;
+    overflow: auto;
+    .service-tit-mb {
+        display: none;
+    }
+}
+.faq-wrap{
+    width: 50%;
+}
+.faq-list {
+    color: $default;
+    font-family: "Noto Sans KR";
+    font-size: 14px;
+    font-weight: 400;
+    // letter-spacing: -0.42px;
+    padding: 10px 20px 10px 0;
+    // border-top: 2px solid #148a75;
+    // border-bottom: 1px solid #ddd;
+    white-space: initial;
 
+    dt {
+        display: block;
+        border-top: 1px solid $gray-300;
+        padding: 10px;
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        padding-right: 50px;
+        font-size: 14px;
+        font-weight: 400;
+        color: $default;
+        &::before {
+            content: "Q ";
+            display: inline-block;
+            padding-right: 10px;
+        }
+        &::after {
+            font-family: 'Material Symbols Rounded';
+            content: "\e145";
+            display: inline-block;
+            position: absolute;
+            // width: 15px;
+            text-align: center;
+            right: 10px;
+            // top: 23px;
+        }
+        &.selected {
+            color:  $primary-300;
+            text-overflow: clip;
+            white-space: initial;
+            &::before {
+                color:  $primary-300;
+            }
+            &::after {
+                font-family: 'Material Symbols Rounded';
+                content: "\e931";
+                text-align: center;
+                padding-left: 10px;
+            }
+        }
+    }
+    dd {
+        display: none;
+        border-top: 1px solid $gray-300;
+        padding: 10px;
+        position: relative;
+        background: $gray-100;
+        font-weight: 400;
+        &::before {
+            content: "A ";
+            display: inline-block;
+            padding-right: 10px;
+        }
+        li {
+            white-space: initial;
+            b{
+                font-weight: 500;
+            }
+            div {
+                padding: 3px 0;
+            }
+        }
+    }
+    .faq-list dt:first-child {
+        border-top: 0;
+    }
+
+}
+.cs-contact-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    .contact-list {
+        display: flex;
+        padding: 13px 0 18px 0;
+    }
+    .tel01 {
+        color: $gray-700;
+        text-align: center;
+        font-family: "WooridaumR";
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: -0.54px;
+        padding-right: 45px;
+        .tel-tit {
+            display: none;
+        }
+    }
+    .tel-tit {
+        color: #008CDF;
+        font-size: 14px;
+        letter-spacing: -0.42px;
+        text-align: left;
+    }
+    .tel02, .tel03 {
+        padding: 5px 0;
+        a {
+            padding-right: 7px ;
+        }
+    }
+    .tel02 {
+         color: $gray-700;
+        text-align: left;
+        font-family: "WooridaumR";
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: -0.36px;
+        padding-right: 45px;
+    }
+    .tel03 {
+        color: $gray-700;
+        text-align: left;
+        font-family: "WooridaumR";
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: -0.36px;
+        .tel-depth2 {
+            display: flex;
+            li{
+                padding-right: 5px;
+            }
+        }
+
+    }
+    .tel-list {
+        display: flex;
+    }
+}
+@media screen and (max-width : $breakpoint-sm) {
+    .service-wrap {
+        max-width: $breakpoint-sm;
+        width: 100%;
+        padding: 0;
+    }
+    .service-inner {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        align-items: center;
+        border: 0px;
+        h3 {
+            display: none;
+        }
+        .service-tit-mb {
+            display: flex;
+            font-size: 16px;
+            margin: 0;
+        }
+    }
+    .faq-wrap {
+        width: 100%;
+    }
+    .faq-list,
+    .cs-contact-wrap {
+        font-size: 13px;
+        border-radius: 10px;
+        width: 100%;
+        border: 1px solid #E2E2E2;
+        background: $white;
+        padding: 12px 10px 5px 10px;
+        margin-bottom: 16px;
+    }
+    .faq-list {
+        dt {
+            border-top: 0px;
+            padding: 7px;
+            // padding-right: 10px;
+            font-size: 13px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    
+    }
+    .cs-contact-wrap {
+        .contact-list {
+            display: inline-block;
+            flex-direction: row;
+            padding: 0;
+            margin-bottom: 16px;
+            h3 {
+                display: flex;
+                font-size: 16px;
+            }
+        }
+        .tel01 {
+            padding-top: 7px;
+            .tel-tit {
+                display: block;
+            }
+            .tel-depth2 {
+                display: flex;
+                li {
+                    text-align: center;
+                    font-size: 12px;
+                    padding-right: 7px;
+                }
+            }
+
+        }
+    
+    }
 }
