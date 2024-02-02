@@ -30,12 +30,19 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- aos css -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <!-- aos js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="./assets/js/products.js"></script>
   </head>
   <body id="product-body">
@@ -239,33 +246,35 @@
       </div>
 
       <div class="app">
-        <div class="app-txt">
-          <strong class="txt-top">
-            언제, 어디서나<br />
-            <span>우리</span>
-            함께
-          </strong>
-          <div class="cfl">
-            <p class="clear">
-              Clear
-              <span>방해되는 것은 비워내고</span>
-            </p>
-            <p class="fit">
-              Fit
-              <span>금융 생활에 필요한 것들로 맞춰주고</span>
-            </p>
-            <p class="lead">
-              lead
-              <span>더 나은 금융 여정을 안내할게요</span>
-            </p>
+        <div class="app-inner">
+          <div class="app-txt">
+            <strong class="txt-top">
+              언제, 어디서나<br />
+              <span>우리</span>
+              함께
+            </strong>
+            <div class="cfl">
+              <p class="clear">
+                Clear
+                <span>방해되는 것은 비워내고</span>
+              </p>
+              <p class="fit">
+                Fit
+                <span>금융 생활에 필요한 것들로 맞춰주고</span>
+              </p>
+              <p class="lead">
+                lead
+                <span>더 나은 금융 여정을 안내할게요</span>
+              </p>
+            </div>
+            <strong class="txt-bottom">
+              간편해진 모바일 앱으로<br />
+              손쉬운 금융생활
+            </strong>
           </div>
-          <strong class="txt-bottom">
-            간편해진 모바일 앱으로<br />
-            손쉬운 금융생활
-          </strong>
-        </div>
-        <div class="mokup">
-          <img src="./images/products/mokup.png" alt="" />
+          <div class="mokup">
+            <img src="./images/products/mokup.png" alt="" />
+          </div>
         </div>
       </div>
 
@@ -296,6 +305,132 @@
               <p>펀드 기준가</p>
             </a>
           </section>
+        </div>
+      </div>
+    </div>
+    <div class="wrap-m">
+      <div class="swiper product-menu-m">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide product-top-m">전체 상품</div>
+          <div class="swiper-slide product-top-m">신용 대출</div>
+          <div class="swiper-slide product-top-m">전세 자금 대출</div>
+          <div class="swiper-slide product-top-m">기금 대출</div>
+          <div class="swiper-slide product-top-m">담보 대출</div>
+          <div class="swiper-slide product-top-m">자동차 대출</div>
+          <div class="swiper-slide product-top-m">기업 대출</div>
+        </div>
+      </div>
+
+      <div class="product-banner-m">
+        <p>내 또래 신용 점수는 ? 내 신용 점수와 비교하기</p>
+        <div class="banner-icon-m">GO</div>
+      </div>
+
+      <h2>청년 추천 상품</h2>
+      <div class="swiper product-contents-m">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide contents-m">
+            <div class="contents">
+              <img src="./images/products/house1.png" alt="" />
+              <span>버팀목 전세 자금</span>
+              <p>주택 도시 기금 대출<br />금리 2.1% ~ 2.9%</p>
+            </div>
+          </div>
+          <div class="swiper-slide contents-m">
+            <div class="contents">
+              <img src="./images/products/money hands.png" alt="" />
+              <span>주거 안정 월세 대출</span>
+              <p>취준생 우대<br />정부 지원 월세 대출</p>
+            </div>
+          </div>
+          <div class="swiper-slide contents-m">
+            <div class="contents">
+              <img src="./images/products/people.png" alt="" />
+              <span>우리청년 맞춤형 전세 대출</span>
+              <p>전세 자금 대출<br />COFIX기준금리 4.74%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>스마트 대출 상품</h2>
+      <div class="swiper product-contents-m">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide contents-m">
+            <div class="contents">
+              <img src="./images/products/house1.png" alt="" />
+              <span>버팀목 전세 자금</span>
+              <p>주택 도시 기금 대출<br />금리 2.1% ~ 2.9%</p>
+            </div>
+          </div>
+          <div class="swiper-slide contents-m">
+            <div class="contents">
+              <img src="./images/products/money hands.png" alt="" />
+              <span>주거 안정 월세 대출</span>
+              <p>취준생 우대<br />정부 지원 월세 대출</p>
+            </div>
+          </div>
+          <div class="swiper-slide contents-m">
+            <div class="contents">
+              <img src="./images/products/people.png" alt="" />
+              <span>우리청년 맞춤형 전세 대출</span>
+              <p>전세 자금 대출<br />COFIX기준금리 4.74%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>스마트 대출 상품</h2>
+      <div class="swiper product-contents-m">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide contents-m">
+            <div class="contents">
+              <img src="./images/products/house1.png" alt="" />
+              <span>버팀목 전세 자금</span>
+              <p>주택 도시 기금 대출<br />금리 2.1% ~ 2.9%</p>
+            </div>
+          </div>
+          <div class="swiper-slide contents-m">
+            <div class="contents">
+              <img src="./images/products/money hands.png" alt="" />
+              <span>주거 안정 월세 대출</span>
+              <p>취준생 우대<br />정부 지원 월세 대출</p>
+            </div>
+          </div>
+          <div class="swiper-slide contents-m">
+            <div class="contents">
+              <img src="./images/products/people.png" alt="" />
+              <span>우리청년 맞춤형 전세 대출</span>
+              <p>전세 자금 대출<br />COFIX기준금리 4.74%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>스마트 대출 상품</h2>
+      <div class="swiper product-contents-m">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide contents-m">
+            <div class="contents">
+              <img src="./images/products/house1.png" alt="" />
+              <span>버팀목 전세 자금</span>
+              <p>주택 도시 기금 대출<br />금리 2.1% ~ 2.9%</p>
+            </div>
+          </div>
+          <div class="swiper-slide contents-m">
+            <div class="contents">
+              <img src="./images/products/money hands.png" alt="" />
+              <span>주거 안정 월세 대출</span>
+              <p>취준생 우대<br />정부 지원 월세 대출</p>
+            </div>
+          </div>
+          <div class="swiper-slide contents-m">
+            <div class="contents">
+              <img src="./images/products/people.png" alt="" />
+              <span>우리청년 맞춤형 전세 대출</span>
+              <p>전세 자금 대출<br />COFIX기준금리 4.74%</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
