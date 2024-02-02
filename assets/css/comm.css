@@ -516,8 +516,7 @@ legend {
     justify-content: center;
   }
   .bottom-menu-m .small-btn a .btn-icon img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .bottom-menu-m .long-btn {
     max-width: 331px;
@@ -546,8 +545,7 @@ legend {
     margin: 42px 0 15px;
   }
   .menu-logo-m img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 .modal-background {
@@ -557,18 +555,17 @@ legend {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   z-index: 999;
 }
-
 
 @media screen and (max-width: 576px) {
   .modal-background {
     display: none;
   }
 }
-#main {
+#main,
+#introduce {
   height: auto;
   min-height: calc(100vh - 100px - 220px);
 }
@@ -6355,7 +6352,6 @@ legend {
   flex-direction: column;
   justify-content: space-between;
   width: 48%;
-  height: 360px;
   margin: 15px 10px;
   padding: 30px 20px;
   border-radius: 10px;
@@ -6372,7 +6368,7 @@ legend {
   width: 100%;
   white-space: wrap;
   padding: 20px;
-  color: #333333;
+  color: #666666;
   font-family: "Noto Sans KR";
   font-size: 13px;
   font-weight: 400;
@@ -6389,6 +6385,7 @@ legend {
 
 .cert-add-menu {
   display: flex;
+  flex-wrap: wrap;
   padding: 0 20px;
 }
 
@@ -6401,6 +6398,7 @@ legend {
   border: 1px solid #dadada;
   background: #fff;
   margin-right: 8px;
+  margin-bottom: 8px;
   transition: all 0.1s;
 }
 .btn3:hover {
@@ -6417,7 +6415,7 @@ legend {
   font-family: "Noto Sans KR";
   font-size: 12px;
   font-weight: 400;
-  letter-spacing: -0.36px;
+  white-space: nowrap;
 }
 
 .cert-mb.inner {
@@ -6500,7 +6498,7 @@ legend {
     background: #fff;
     align-items: center;
     padding: 20px 10px 10px 10px;
-    height: 300px;
+    max-height: 500px;
   }
   .cert-slide .cert-slide-cont {
     display: flex;
@@ -6515,7 +6513,8 @@ legend {
   .cert-slide span {
     color: #333333;
     text-align: center;
-    font-family: "WooridaumR";
+    font-family: "Noto Sans KR";
+    font-weight: 500;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: -0.45px;
@@ -6523,7 +6522,7 @@ legend {
     padding-top: 10px;
   }
   .cert-slide p {
-    color: #424242;
+    color: #666666;
     text-align: center;
     font-family: "Noto Sans KR";
     font-weight: 300;
@@ -6544,6 +6543,7 @@ legend {
     flex-shrink: 0;
     border-radius: 30px;
     color: #fff;
+    font-family: "Noto Sans KR";
     font-size: 14px;
     line-height: 30px;
   }
