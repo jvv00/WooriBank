@@ -4520,6 +4520,7 @@ legend {
 .login-wrap {
   display: flex;
   justify-content: center;
+  padding: 30px 0;
 }
 
 .login.inner {
@@ -4838,7 +4839,8 @@ legend {
     margin-bottom: 0; /* Add some space between login boxes */
     padding: 0px;
   }
-  .login-box h3, .login-box p {
+  .login-box h3,
+  .login-box p {
     display: none;
   }
   .login-box .Won-icon img {
@@ -5066,7 +5068,8 @@ legend {
   letter-spacing: -0.42px;
   text-align: left;
 }
-.cs-contact-wrap .tel02, .cs-contact-wrap .tel03 {
+.cs-contact-wrap .tel02,
+.cs-contact-wrap .tel03 {
   font-size: 14px;
   font-weight: 500;
   text-align: left;
@@ -5074,10 +5077,12 @@ legend {
   color: #666666;
   padding: 5px 0;
 }
-.cs-contact-wrap .tel02 a, .cs-contact-wrap .tel03 a {
+.cs-contact-wrap .tel02 a,
+.cs-contact-wrap .tel03 a {
   padding-right: 7px;
 }
-.cs-contact-wrap .tel02 .tel-depth2, .cs-contact-wrap .tel03 .tel-depth2 {
+.cs-contact-wrap .tel02 .tel-depth2,
+.cs-contact-wrap .tel03 .tel-depth2 {
   font-family: "Noto Sans KR";
 }
 .cs-contact-wrap .tel02 {
@@ -6459,6 +6464,7 @@ legend {
 }
 
 .cert-wrap {
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   background-repeat: no-repeat;
@@ -6721,4 +6727,123 @@ legend {
     color: #fff;
     background: #0083ca;
   }
+}
+#certft {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  transform: calc(100vh - 100px - 220px);
+  border-top: 1px solid #dadada;
+  margin-top: 1200px;
+}
+#certft .ft_wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 1220px;
+  height: 100%;
+  margin: 0 auto;
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth {
+  position: relative;
+  display: flex;
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth li {
+  padding-right: 100px;
+  font-size: 15px;
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth li .fa-circle-chevron-up {
+  padding-left: 10px;
+  color: #0067ac;
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth li .ft_more_2depth {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 6px;
+  padding: 8px;
+  top: -135px;
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth li .ft_more_2depth li {
+  padding: 0 5px;
+  font-size: 12px;
+  font-family: "WooridaumL";
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth li .ft_more_other {
+  left: -32px;
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth li .ft_more_family {
+  left: 202px;
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth li .ft_more_sns {
+  top: -117px;
+  left: 425px;
+}
+#certft .ft_wrap .ft_left .ft_link {
+  font-size: 15px;
+  font-family: "WooridaumL";
+  padding: 30px 0 13px 0;
+  color: #8c8c8c;
+}
+#certft .ft_wrap .ft_left .ft_copy {
+  font-size: 15px;
+  color: #8c8c8c;
+}
+#certft .ft_wrap .ft_left .ft_img {
+  position: relative;
+  display: flex;
+  padding-top: 20px;
+}
+#certft .ft_wrap .ft_left .ft_img img {
+  height: 21px;
+  padding-right: 15px;
+  cursor: pointer;
+}
+#certft .ft_wrap .ft_left .ft_img span {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1;
+  font-family: "WooridaumL";
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 6px;
+  padding: 8px;
+  top: -27px;
+}
+#certft .ft_wrap .ft_left .ft_img .ft_img_info1 span {
+  left: -32px;
+}
+#certft .ft_wrap .ft_left .ft_img .ft_img_info2 span {
+  left: -16px;
+}
+#certft .ft_wrap .ft_left .ft_img .ft_img_info3 span {
+  left: 27px;
+}
+#certft .ft_wrap .ft_right {
+  position: absolute;
+  text-align: right;
+  right: 0;
+}
+#certft .ft_wrap .ft_right .ft_call span {
+  font-size: 18px;
+  font-family: "WooridaumL";
+}
+#certft .ft_wrap .ft_right .ft_call strong {
+  font-size: 24px;
+  font-family: "WooridaumB";
+  color: #0067ac;
+}
+#certft .ft_wrap .ft_right .ft_call .call_internal {
+  padding-bottom: 20px;
+}
+#certft .ft_wrap .mobile_top,
+#certft .ft_wrap .mobile_bottom {
+  display: none;
 }
