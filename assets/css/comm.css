@@ -5210,7 +5210,7 @@ legend {
   font-weight: 700;
   font-size: 60px;
   text-align: center;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -5219,13 +5219,13 @@ legend {
   color: #0083ca;
 }
 .intro .circle {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 1200px;
-  -webkit-clip-path: circle(800px at center center);
-          clip-path: circle(800px at center center);
+  height: 100vh;
+  -webkit-clip-path: circle(300px at center center);
+          clip-path: circle(300px at center center);
 }
 .intro .circle img {
   position: absolute;
@@ -5235,6 +5235,12 @@ legend {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.pd-content-wrap {
+  z-index: 10;
+  position: relative;
+  margin-top: 100vh;
 }
 
 .products h1 {
