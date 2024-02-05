@@ -1,10 +1,11 @@
 // 전체 메뉴 닫기
 function closeModal() {
-  const modal = document.querySelector(".menu-wrap");
-  const modalBackground = document.getElementById("modalBackground");
-  modal.style.display = "none";
-  modalBackground.style.display = "none";
-  document.body.classList.remove("modal-open");
+  // const modal = document.querySelector(".menu-wrap");
+  // const modalBackground = document.getElementById("modalBackground");
+  // modal.style.display = "none";
+  // modalBackground.style.display = "none";
+  // document.body.classList.remove("modal-open");
+  history.back();
 }
 
 // 전체 메뉴 열기

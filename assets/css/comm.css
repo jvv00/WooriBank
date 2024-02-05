@@ -4520,6 +4520,7 @@ legend {
 .login-wrap {
   display: flex;
   justify-content: center;
+  padding: 30px 0;
 }
 
 .login.inner {
@@ -4540,6 +4541,9 @@ legend {
 }
 .login-title-wrap {
   width: 100%;
+}
+.login-title-wrap .title {
+  font-size: 20px;
 }
 .login-title-wrap .login-mobile-title {
   display: none;
@@ -4582,6 +4586,9 @@ legend {
     align-items: center;
     width: 100%;
   }
+  .login-title-wrap .login-mobile-title .mobile-title {
+    font-size: 18px;
+  }
   .login-title-wrap .login-mobile-title .home-btn,
   .login-title-wrap .login-mobile-title .menu-btn {
     display: flex;
@@ -4615,7 +4622,7 @@ legend {
   align-items: center;
   width: 33.333%;
   height: 360px;
-  border: solid 1px #e2e2e2;
+  border: solid 1px #dadada;
   border-radius: 10px;
 }
 .login-box h3 {
@@ -4629,7 +4636,7 @@ legend {
 .login-box p {
   color: #666666;
   text-align: center;
-  font-family: "WooridaumL";
+  font-family: "Noto Sans KR";
   font-size: 12px;
   font-weight: 400;
   margin-top: 15px;
@@ -4638,6 +4645,7 @@ legend {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Noto Sans KR";
 }
 .login-box .btn-box .btn1 {
   padding: 5px 0;
@@ -4648,13 +4656,11 @@ legend {
   padding: 10px 15px;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
   border-radius: 30px;
   color: #fff;
   background: #0083ca;
-  font-family: "WooridaumR";
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 500;
   line-height: 30px;
 }
 .login-box .Won-icon img {
@@ -4669,12 +4675,12 @@ legend {
 .menu-list {
   display: flex;
   margin-top: 10px;
+  font-family: "Noto Sans KR";
 }
 .menu-list li {
   display: flex;
   align-items: center;
-  font-family: "WooridaumR";
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
 }
 .menu-list li a {
@@ -4709,6 +4715,7 @@ legend {
 .id-login-box .inner-box .section-id label,
 .id-login-box .inner-box .section-pw label {
   margin-right: 10px;
+  font-weight: 500;
 }
 .id-login-box .inner-box .section-id input,
 .id-login-box .inner-box .section-pw input {
@@ -4716,7 +4723,7 @@ legend {
   width: 170px;
   align-items: center;
   border-radius: 1px;
-  border: 0.5px solid #D9D9D9;
+  border: 0.5px solid #dadada;
   background: #f5f5f5;
   padding: 8px;
   outline: none; /* 선택 시 검은 테두리 제거 */
@@ -4725,20 +4732,14 @@ legend {
   color: #8c8c8c;
   font-family: "Noto Sans KR";
   font-size: 12px;
-  font-style: normal;
-  font-weight: 350;
-  line-height: normal;
-  letter-spacing: -0.36px;
+  font-weight: 400;
 }
 .id-login-box .inner-box .section-id ::placeholder,
 .id-login-box .inner-box .section-pw ::placeholder {
   color: #8c8c8c;
   font-family: "Noto Sans KR";
   font-size: 12px;
-  font-style: normal;
-  font-weight: 350;
-  line-height: normal;
-  letter-spacing: -0.36px;
+  font-weight: 400;
 }
 .id-login-box .inner-box .section-id input:focus,
 .id-login-box .inner-box .section-pw input:focus {
@@ -4787,10 +4788,9 @@ legend {
   gap: 20px;
   color: #666666;
   text-align: center;
-  font-family: "WooridaumR";
-  font-size: 12px;
+  font-family: "Noto Sans KR";
+  font-size: 13px;
   font-weight: 400;
-  letter-spacing: -0.36px;
   margin-top: 20px;
 }
 
@@ -4839,34 +4839,12 @@ legend {
     margin-bottom: 0; /* Add some space between login boxes */
     padding: 0px;
   }
-  .login-box h3, .login-box p {
+  .login-box h3,
+  .login-box p {
     display: none;
   }
   .login-box .Won-icon img {
     display: none;
-  }
-  .login-box .btn-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .login-box .btn-box .btn1 {
-    padding: 5px 0;
-  }
-  .login-box .btn-box .main-btn {
-    display: flex;
-    width: 200px;
-    padding: 10px 15px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    border-radius: 30px;
-    color: #fff;
-    background: #0083ca;
-    font-family: "WooridaumR";
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 30px;
   }
   .login-box.active {
     display: flex;
@@ -4904,7 +4882,7 @@ legend {
   height: 150px;
   padding: 0px 84px;
   border-radius: 15px;
-  border: 1px solid #E2E2E2;
+  border: 1px solid #dadada;
   background: #fff;
 }
 .banking-notice li {
@@ -4978,7 +4956,7 @@ legend {
   align-items: flex-start;
   border-radius: 15px;
   width: 100%;
-  border: 1px solid #E2E2E2;
+  border: 1px solid #dadada;
   background: #fff;
   overflow: auto;
 }
@@ -4987,7 +4965,7 @@ legend {
 }
 
 .faq-wrap {
-  width: 50%;
+  width: 48%;
 }
 
 .faq-list {
@@ -4996,7 +4974,6 @@ legend {
   font-size: 14px;
   font-weight: 400;
   padding: 10px 20px 10px 0;
-  white-space: initial;
 }
 .faq-list dt {
   display: block;
@@ -5009,11 +4986,14 @@ legend {
   font-size: 14px;
   font-weight: 400;
   color: #333333;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .faq-list dt::before {
   content: "Q ";
   display: inline-block;
-  padding-right: 10px;
+  padding-right: 8px;
 }
 .faq-list dt::after {
   font-family: "Material Symbols Rounded";
@@ -5021,7 +5001,8 @@ legend {
   display: inline-block;
   position: absolute;
   text-align: center;
-  right: 10px;
+  right: 8px;
+  margin-left: 8px;
 }
 .faq-list dt.selected {
   color: #0083ca;
@@ -5044,14 +5025,12 @@ legend {
   position: relative;
   background: #f5f5f5;
   font-weight: 400;
+  white-space: initial;
 }
 .faq-list dd::before {
   content: "A ";
   display: inline-block;
   padding-right: 10px;
-}
-.faq-list dd li {
-  white-space: initial;
 }
 .faq-list dd li b {
   font-weight: 500;
@@ -5075,48 +5054,44 @@ legend {
 .cs-contact-wrap .tel01 {
   color: #666666;
   text-align: center;
-  font-family: "WooridaumR";
   font-size: 18px;
   font-weight: 400;
   letter-spacing: -0.54px;
-  padding-right: 45px;
+  padding-right: 35px;
 }
 .cs-contact-wrap .tel01 .tel-tit {
   display: none;
 }
 .cs-contact-wrap .tel-tit {
-  color: #008CDF;
-  font-size: 14px;
+  color: #0083ca;
+  font-size: 15px;
   letter-spacing: -0.42px;
   text-align: left;
 }
-.cs-contact-wrap .tel02, .cs-contact-wrap .tel03 {
+.cs-contact-wrap .tel02,
+.cs-contact-wrap .tel03 {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  letter-spacing: -0.36px;
+  color: #666666;
   padding: 5px 0;
 }
-.cs-contact-wrap .tel02 a, .cs-contact-wrap .tel03 a {
+.cs-contact-wrap .tel02 a,
+.cs-contact-wrap .tel03 a {
   padding-right: 7px;
 }
-.cs-contact-wrap .tel02 {
-  color: #666666;
-  text-align: left;
-  font-family: "WooridaumR";
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: -0.36px;
-  padding-right: 45px;
-}
-.cs-contact-wrap .tel03 {
-  color: #666666;
-  text-align: left;
-  font-family: "WooridaumR";
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: -0.36px;
-}
+.cs-contact-wrap .tel02 .tel-depth2,
 .cs-contact-wrap .tel03 .tel-depth2 {
+  font-family: "Noto Sans KR";
+}
+.cs-contact-wrap .tel02 {
+  padding-right: 35px;
+}
+.cs-contact-wrap .tel-depth2 {
   display: flex;
 }
-.cs-contact-wrap .tel03 .tel-depth2 li {
+.cs-contact-wrap .tel-depth2 li {
   padding-right: 5px;
 }
 .cs-contact-wrap .tel-list {
@@ -5152,18 +5127,21 @@ legend {
     font-size: 13px;
     border-radius: 10px;
     width: 100%;
-    border: 1px solid #E2E2E2;
+    border: 1px solid #dadada;
     background: #fff;
-    padding: 12px 10px 5px 10px;
+    padding: 16px 10px 8px 10px;
     margin-bottom: 16px;
   }
   .faq-list dt {
     border-top: 0px;
-    padding: 7px;
-    font-size: 13px;
+    padding: 10px 0px;
+    font-size: 15px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+  .faq-list dd {
+    font-size: 14px;
   }
   .cs-contact-wrap .contact-list {
     display: inline-block;
@@ -5173,7 +5151,7 @@ legend {
   }
   .cs-contact-wrap .contact-list h3 {
     display: flex;
-    font-size: 16px;
+    font-size: 18px;
   }
   .cs-contact-wrap .tel01 {
     padding-top: 7px;
@@ -5186,7 +5164,7 @@ legend {
   }
   .cs-contact-wrap .tel01 .tel-depth2 li {
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     padding-right: 7px;
   }
 }
@@ -6490,6 +6468,7 @@ legend {
 }
 
 .cert-wrap {
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   background-repeat: no-repeat;
@@ -6534,7 +6513,6 @@ legend {
   flex-direction: column;
   justify-content: space-between;
   width: 48%;
-  height: 360px;
   margin: 15px 10px;
   padding: 30px 20px;
   border-radius: 10px;
@@ -6552,7 +6530,7 @@ legend {
   width: 100%;
   white-space: wrap;
   padding: 20px;
-  color: #333333;
+  color: #666666;
   font-family: "Noto Sans KR";
   font-size: 13px;
   font-weight: 400;
@@ -6569,6 +6547,7 @@ legend {
 
 .cert-add-menu {
   display: flex;
+  flex-wrap: wrap;
   padding: 0 20px;
 }
 
@@ -6581,6 +6560,7 @@ legend {
   border: 1px solid #dadada;
   background: #fff;
   margin-right: 8px;
+  margin-bottom: 8px;
   transition: all 0.1s;
 }
 .btn3:hover {
@@ -6597,7 +6577,7 @@ legend {
   font-family: "Noto Sans KR";
   font-size: 12px;
   font-weight: 400;
-  letter-spacing: -0.36px;
+  white-space: nowrap;
 }
 
 .cert-mb.inner {
@@ -6680,7 +6660,7 @@ legend {
     background: #fff;
     align-items: center;
     padding: 20px 10px 10px 10px;
-    height: 300px;
+    max-height: 500px;
   }
   .cert-slide .cert-slide-cont {
     display: flex;
@@ -6695,7 +6675,8 @@ legend {
   .cert-slide span {
     color: #333333;
     text-align: center;
-    font-family: "WooridaumR";
+    font-family: "Noto Sans KR";
+    font-weight: 500;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: -0.45px;
@@ -6703,7 +6684,7 @@ legend {
     padding-top: 10px;
   }
   .cert-slide p {
-    color: #424242;
+    color: #666666;
     text-align: center;
     font-family: "Noto Sans KR";
     font-weight: 300;
@@ -6724,6 +6705,7 @@ legend {
     flex-shrink: 0;
     border-radius: 30px;
     color: #fff;
+    font-family: "Noto Sans KR";
     font-size: 14px;
     line-height: 30px;
   }
@@ -6749,4 +6731,123 @@ legend {
     color: #fff;
     background: #0083ca;
   }
-}/*# sourceMappingURL=comm.css.map */
+}
+#certft {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  transform: calc(100vh - 100px - 220px);
+  border-top: 1px solid #dadada;
+  margin-top: 1200px;
+}
+#certft .ft_wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 1220px;
+  height: 100%;
+  margin: 0 auto;
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth {
+  position: relative;
+  display: flex;
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth li {
+  padding-right: 100px;
+  font-size: 15px;
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth li .fa-circle-chevron-up {
+  padding-left: 10px;
+  color: #0067ac;
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth li .ft_more_2depth {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 6px;
+  padding: 8px;
+  top: -135px;
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth li .ft_more_2depth li {
+  padding: 0 5px;
+  font-size: 12px;
+  font-family: "WooridaumL";
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth li .ft_more_other {
+  left: -32px;
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth li .ft_more_family {
+  left: 202px;
+}
+#certft .ft_wrap .ft_left .ft_more .ft_more_1depth li .ft_more_sns {
+  top: -117px;
+  left: 425px;
+}
+#certft .ft_wrap .ft_left .ft_link {
+  font-size: 15px;
+  font-family: "WooridaumL";
+  padding: 30px 0 13px 0;
+  color: #8c8c8c;
+}
+#certft .ft_wrap .ft_left .ft_copy {
+  font-size: 15px;
+  color: #8c8c8c;
+}
+#certft .ft_wrap .ft_left .ft_img {
+  position: relative;
+  display: flex;
+  padding-top: 20px;
+}
+#certft .ft_wrap .ft_left .ft_img img {
+  height: 21px;
+  padding-right: 15px;
+  cursor: pointer;
+}
+#certft .ft_wrap .ft_left .ft_img span {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1;
+  font-family: "WooridaumL";
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 6px;
+  padding: 8px;
+  top: -27px;
+}
+#certft .ft_wrap .ft_left .ft_img .ft_img_info1 span {
+  left: -32px;
+}
+#certft .ft_wrap .ft_left .ft_img .ft_img_info2 span {
+  left: -16px;
+}
+#certft .ft_wrap .ft_left .ft_img .ft_img_info3 span {
+  left: 27px;
+}
+#certft .ft_wrap .ft_right {
+  position: absolute;
+  text-align: right;
+  right: 0;
+}
+#certft .ft_wrap .ft_right .ft_call span {
+  font-size: 18px;
+  font-family: "WooridaumL";
+}
+#certft .ft_wrap .ft_right .ft_call strong {
+  font-size: 24px;
+  font-family: "WooridaumB";
+  color: #0067ac;
+}
+#certft .ft_wrap .ft_right .ft_call .call_internal {
+  padding-bottom: 20px;
+}
+#certft .ft_wrap .mobile_top,
+#certft .ft_wrap .mobile_bottom {
+  display: none;
+}
