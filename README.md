@@ -40,13 +40,13 @@
 
 ## :date: 진행 상황
 
-| _**No**_ | _**Page**_ | _**Update**_ | _**Status**_ | _**Note**_ |
+| _**No**_ | _**Page**_ | _**Update**_ | _**Status**_ | _**Link**_ |
 | :------: | :--------: | :----------: | :----------: | ---------- |
-|    1     |   Header   |  2024.02.08  |     완료     |            |
-|    2     |   Footer   |  2024.02.08  |     완료     |            |
-|    3     |    Main    |  2024.02.07  |     완료     |            |
-|    4     |    소개    |  2024.02.08  |     완료     |            |
-|    5     |   로그인   |  2024.02.08  |     완료     |            |
-|    6     |  인증센터  |  2024.02.08  |     완료     |            |
-|    7     |  전체메뉴  |  2024.02.08  |     완료     |            |
-|    8     |  금융상품  |  2024.02.08  |     완료     |            |
+|    1     |   Header   |  2024.02.08  |     완료     |      -     |
+|    2     |   Footer   |  2024.02.08  |     완료     |      -     |
+|    3     |    Main    |  2024.02.07  |     완료     | https://kimdust.me/WooriBank/ |
+|    4     |    소개    |  2024.02.08  |     완료     | https://kimdust.me/WooriBank/introduce.html |
+|    5     |   로그인   |  2024.02.08  |     완료     | https://kimdust.me/WooriBank/login.html |
+|    6     |  인증센터  |  2024.02.08  |     완료     | https://kimdust.me/WooriBank/cert-center.html |
+|    7     |  전체메뉴  |  2024.02.08  |     완료     | https://kimdust.me/WooriBank/menu.html |
+|    8     |  금융상품  |  2024.02.08  |     완료     | https://kimdust.me/WooriBank/products.html |
